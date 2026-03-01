@@ -1,0 +1,55 @@
+name: Quick Question / Consultation
+description: Ask a question or request a quick consultation call with Relay▸Launch
+title: "[QUESTION] "
+labels: ["question", "consultation"]
+assignees:
+  - Victor-David-Medina
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Got a question? Let's talk.
+        No commitment required. Use this form to ask something specific or request a short intro call.
+
+  - type: input
+    id: name
+    attributes:
+      label: Your Name
+      placeholder: "First and last name"
+    validations:
+      required: true
+
+  - type: input
+    id: business
+    attributes:
+      label: Business or Organization (optional)
+      placeholder: "If applicable"
+    validations:
+      required: false
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What's your question or what would you like to discuss?
+      placeholder: "Ask away — no question is too small."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: Preferred follow-up format
+      options:
+        - Email response
+        - Schedule a call
+        - Either works
+    validations:
+      required: false
+
+  - type: input
+    id: contact
+    attributes:
+      label: Best contact info
+      placeholder: "email@example.com"
+    validations:
+      required: true
