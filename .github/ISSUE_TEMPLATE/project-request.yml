@@ -1,0 +1,96 @@
+name: Project Request
+description: Submit a new project or engagement request to Relay▸Launch
+title: "[PROJECT] "
+labels: ["project-request", "triage"]
+assignees:
+  - Victor-David-Medina
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Welcome to Relay▸Launch
+        Thanks for reaching out. Please fill out the form below so we can understand your business and goals. We'll follow up within 1–2 business days.
+
+  - type: input
+    id: business_name
+    attributes:
+      label: Business Name
+      placeholder: "e.g. Sunrise Coffee Co."
+    validations:
+      required: true
+
+  - type: input
+    id: industry
+    attributes:
+      label: Industry / Type of Business
+      placeholder: "e.g. Food & Beverage, Professional Services, Retail, E-commerce"
+    validations:
+      required: true
+
+  - type: input
+    id: team_size
+    attributes:
+      label: Team Size
+      placeholder: "e.g. Just me, 5 employees, 20 people"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: package
+    attributes:
+      label: Which package are you interested in?
+      options:
+        - Signal — Discovery & Audit
+        - Blueprint — Strategy & Roadmap
+        - Relay — Build & Automate
+        - Launch — Strategic Partnership
+        - Not sure yet — I need guidance
+        - Something custom
+    validations:
+      required: true
+
+  - type: textarea
+    id: challenge
+    attributes:
+      label: What's the main challenge or goal you're working on?
+      description: Tell us what's not working, what you're trying to achieve, or where you feel stuck.
+      placeholder: "e.g. We're growing fast but our processes are a mess. Tasks are falling through the cracks and we can't keep up."
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_state
+    attributes:
+      label: What tools or systems are you currently using?
+      description: List any software, platforms, or tools your team relies on day-to-day.
+      placeholder: "e.g. Google Workspace, QuickBooks, Shopify, Slack, spreadsheets..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: timeline
+    attributes:
+      label: What's your ideal timeline to get started?
+      options:
+        - As soon as possible
+        - Within the next 2 weeks
+        - Within the next month
+        - Flexible / just exploring
+    validations:
+      required: false
+
+  - type: textarea
+    id: anything_else
+    attributes:
+      label: Anything else we should know?
+      description: Additional context, budget considerations, or specific questions.
+    validations:
+      required: false
+
+  - type: input
+    id: contact
+    attributes:
+      label: Best way to reach you
+      placeholder: "email@example.com or phone number"
+    validations:
+      required: true
