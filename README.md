@@ -110,6 +110,27 @@ We move efficiently, communicate clearly, and build things that last.
 
 ---
 
+## Tools & Technologies We Work With
+
+We're platform-agnostic and work with whatever fits your business best. Here's a sample of the tools and platforms we regularly build with and integrate:
+
+| Category | Tools & Platforms |
+|---|---|
+| Automation | Zapier, Make (Integromat), n8n, Power Automate |
+| Project Management | Asana, Monday.com, Notion, Trello, ClickUp |
+| CRM & Sales | HubSpot, Salesforce, Pipedrive, Zoho CRM |
+| Communication | Slack, Microsoft Teams, Discord |
+| Data & Analytics | Google Analytics, Looker Studio, Tableau, Power BI |
+| Docs & Knowledge | Notion, Confluence, Google Workspace, SharePoint |
+| E-commerce | Shopify, WooCommerce, Square, Stripe |
+| Marketing | Mailchimp, ConvertKit, ActiveCampaign, Buffer |
+| Development | GitHub, VS Code, HTML/CSS/JS, Python, APIs |
+| Cloud & Infrastructure | Google Cloud, AWS, Azure, Vercel |
+
+We also build custom integrations via APIs and scripting when off-the-shelf tools don't cut it.
+
+---
+
 ## Who This Is For
 
 Relay▸Launch works best with:
@@ -138,12 +159,14 @@ Every engagement delivers outputs that are:
 
 Ready to bring clarity, structure, and momentum to your business?
 
-**[Submit a Project Request →](.github/ISSUE_TEMPLATE/project-request.yml)**
+**[Submit a Project Request →](https://github.com/Relay-Launch/Main/issues/new?template=project-request.yml)**
+
+**[Ask a Quick Question →](https://github.com/Relay-Launch/Main/issues/new?template=quick-question.yml)**
 
 Or reach out directly:
 
-- **Email:** hello@relaylaunch.com *(update with your contact)*
-- **Website:** relaylaunch.com *(update with your site)*
+- **Email:** hello@relaylaunch.com
+- **Website:** [relaylaunch.com](https://relaylaunch.com)
 
 ---
 
