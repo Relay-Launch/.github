@@ -1,199 +1,566 @@
 {
-  "name": "Invoice Follow-Up Automation",
+  "name": "Invoice Follow-Up & Reminder Sequence",
   "nodes": [
     {
       "parameters": {
         "rule": {
-          "interval": [{ "field": "hours", "hoursInterval": 24 }]
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 6
+            }
+          ]
         }
       },
       "id": "schedule-trigger",
-      "name": "Daily Check",
+      "name": "Schedule - Check Every 6 Hours",
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1,
-      "position": [240, 300]
+      "position": [240, 400],
+      "notes": "Runs every 6 hours during business days to check for outstanding invoices. Adjust the frequency based on your volume -- once daily is fine for most small businesses; every 6 hours for higher-volume operations."
     },
     {
       "parameters": {
-        "operation": "getAll",
-        "filters": {
-          "status": "unpaid",
-          "dueDateBefore": "={{ $now.minus({ days: 1 }).toISO() }}"
-        },
-        "limit": 100
-      },
-      "id": "get-overdue-invoices",
-      "name": "Get Overdue Invoices",
-      "type": "n8n-nodes-base.quickbooks",
-      "typeVersion": 1,
-      "position": [460, 300],
-      "credentials": {
-        "quickBooksOAuth2Api": {
-          "id": "quickbooks-creds",
-          "name": "QuickBooks Account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "conditions": {
-          "number": [
+        "url": "={{$credentials.invoiceApiBaseUrl}}/invoices",
+        "method": "GET",
+        "headerParameters": {
+          "parameter": [
             {
-              "value1": "={{ $json.daysPastDue }}",
-              "operation": "smallerEqual",
-              "value2": 7
-            }
-          ]
-        }
-      },
-      "id": "check-days-overdue",
-      "name": "1-7 Days Overdue",
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 1,
-      "position": [680, 200]
-    },
-    {
-      "parameters": {
-        "conditions": {
-          "number": [
-            {
-              "value1": "={{ $json.daysPastDue }}",
-              "operation": "largerEqual",
-              "value2": 8
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.invoiceApiKey}}"
             },
             {
-              "value1": "={{ $json.daysPastDue }}",
-              "operation": "smallerEqual",
-              "value2": 30
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "queryParameters": {
+          "parameter": [
+            {
+              "name": "status",
+              "value": "unpaid,overdue"
+            },
+            {
+              "name": "per_page",
+              "value": "100"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 15000
+        }
+      },
+      "id": "fetch-unpaid-invoices",
+      "name": "Fetch Unpaid Invoices",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [460, 400],
+      "notes": "Pulls all unpaid and overdue invoices from your invoicing platform. This example uses a generic REST API call -- replace the URL and auth with your specific tool (QuickBooks, Xero, FreshBooks, Stripe Invoicing, Wave). Most invoicing APIs support filtering by status."
+    },
+    {
+      "parameters": {
+        "functionCode": "const now = new Date();\nconst invoices = items[0].json.invoices || items[0].json.data || items[0].json;\n\nif (!Array.isArray(invoices)) {\n  return [{ json: { error: 'No invoices array found in response', raw: items[0].json } }];\n}\n\nconst categorized = invoices.map(inv => {\n  const dueDate = new Date(inv.due_date || inv.dueDate);\n  const daysPastDue = Math.floor((now - dueDate) / (1000 * 60 * 60 * 24));\n  const invoiceAmount = parseFloat(inv.amount || inv.total || inv.amount_due || 0);\n  \n  let reminderTier;\n  let reminderAction;\n  \n  if (daysPastDue < 0) {\n    if (daysPastDue >= -3) {\n      reminderTier = 'upcoming';\n      reminderAction = 'Send courtesy reminder that payment is due soon';\n    } else {\n      reminderTier = 'not_due';\n      reminderAction = 'No action needed';\n    }\n  } else if (daysPastDue === 0) {\n    reminderTier = 'due_today';\n    reminderAction = 'Send day-of payment reminder';\n  } else if (daysPastDue <= 7) {\n    reminderTier = 'gentle';\n    reminderAction = 'Send friendly follow-up (1-7 days overdue)';\n  } else if (daysPastDue <= 21) {\n    reminderTier = 'firm';\n    reminderAction = 'Send firm reminder with urgency (8-21 days overdue)';\n  } else if (daysPastDue <= 45) {\n    reminderTier = 'final';\n    reminderAction = 'Send final notice before escalation (22-45 days overdue)';\n  } else {\n    reminderTier = 'escalate';\n    reminderAction = 'Escalate to management / collections process (45+ days overdue)';\n  }\n  \n  // Check if we already sent a reminder at this tier to prevent duplicate sends\n  const lastReminderTier = inv.metadata?.lastReminderTier || inv.custom_fields?.last_reminder_tier || null;\n  const shouldSend = reminderTier !== lastReminderTier && reminderTier !== 'not_due';\n  \n  return {\n    invoiceId: inv.id || inv.invoice_id || inv.number,\n    invoiceNumber: inv.number || inv.invoice_number || inv.id,\n    clientName: inv.client_name || inv.customer_name || inv.contact?.name || 'Client',\n    clientEmail: inv.client_email || inv.customer_email || inv.contact?.email || '',\n    amount: invoiceAmount,\n    amountFormatted: `$${invoiceAmount.toFixed(2)}`,\n    currency: inv.currency || 'USD',\n    dueDate: (inv.due_date || inv.dueDate || '').split('T')[0],\n    daysPastDue: daysPastDue,\n    reminderTier: reminderTier,\n    reminderAction: reminderAction,\n    shouldSend: shouldSend,\n    lastReminderTier: lastReminderTier,\n    invoiceUrl: inv.permalink || inv.invoice_url || inv.hosted_url || `https://yourinvoicetool.com/invoices/${inv.id}`,\n    processedAt: now.toISOString()\n  };\n});\n\n// Only return invoices that need action\nconst actionable = categorized.filter(inv => inv.shouldSend);\n\nif (actionable.length === 0) {\n  return [{ json: { noAction: true, totalChecked: invoices.length, message: 'No invoices require follow-up at this time.' } }];\n}\n\nreturn actionable.map(inv => ({ json: inv }));"
+      },
+      "id": "categorize-invoices",
+      "name": "Categorize by Overdue Status",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [680, 400],
+      "notes": "Calculates days past due for each invoice and assigns a reminder tier: upcoming (3 days before due), due_today, gentle (1-7 days), firm (8-21 days), final (22-45 days), or escalate (45+ days). Skips invoices that already received a reminder at the current tier to prevent duplicate emails."
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json.noAction}}",
+              "value2": true
             }
           ]
         }
       },
-      "id": "check-days-overdue-2",
-      "name": "8-30 Days Overdue",
+      "id": "check-any-action-needed",
+      "name": "Any Action Needed?",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
-      "position": [680, 400]
+      "position": [900, 400],
+      "notes": "If no invoices require follow-up, the workflow ends quietly. No notifications, no logs -- just a clean exit."
+    },
+    {
+      "parameters": {
+        "rules": {
+          "rules": [
+            {
+              "outputKey": "upcoming",
+              "conditions": {
+                "string": [{ "value1": "={{$json.reminderTier}}", "operation": "equals", "value2": "upcoming" }]
+              }
+            },
+            {
+              "outputKey": "due_today",
+              "conditions": {
+                "string": [{ "value1": "={{$json.reminderTier}}", "operation": "equals", "value2": "due_today" }]
+              }
+            },
+            {
+              "outputKey": "gentle",
+              "conditions": {
+                "string": [{ "value1": "={{$json.reminderTier}}", "operation": "equals", "value2": "gentle" }]
+              }
+            },
+            {
+              "outputKey": "firm",
+              "conditions": {
+                "string": [{ "value1": "={{$json.reminderTier}}", "operation": "equals", "value2": "firm" }]
+              }
+            },
+            {
+              "outputKey": "final",
+              "conditions": {
+                "string": [{ "value1": "={{$json.reminderTier}}", "operation": "equals", "value2": "final" }]
+              }
+            },
+            {
+              "outputKey": "escalate",
+              "conditions": {
+                "string": [{ "value1": "={{$json.reminderTier}}", "operation": "equals", "value2": "escalate" }]
+              }
+            }
+          ]
+        }
+      },
+      "id": "route-by-tier",
+      "name": "Route by Reminder Tier",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 2,
+      "position": [1120, 300],
+      "notes": "Routes each invoice to the appropriate email template based on its reminder tier. Each tier has a different subject line, tone, and call to action."
     },
     {
       "parameters": {
         "fromEmail": "billing@yourcompany.com",
-        "toEmail": "={{ $json.customerEmail }}",
-        "subject": "Friendly Reminder: Invoice #{{ $json.invoiceNumber }} is due",
-        "text": "Hi {{ $json.customerName }},\n\nThis is a friendly reminder that Invoice #{{ $json.invoiceNumber }} for {{ $json.amount }} was due on {{ $json.dueDate }}.\n\nIf you've already sent payment, please disregard this message. Otherwise, we'd appreciate payment at your earliest convenience.\n\nPayment link: {{ $json.paymentLink }}\n\nThanks,\n{{ $json.companyName }}"
+        "toEmail": "={{$json.clientEmail}}",
+        "subject": "Friendly reminder: Invoice {{$json.invoiceNumber}} is due in a few days",
+        "text": "",
+        "html": "<div style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n<p>Hi {{$json.clientName}},</p>\n\n<p>Just a quick heads-up that invoice <strong>#{{$json.invoiceNumber}}</strong> for <strong>{{$json.amountFormatted}}</strong> is coming due on <strong>{{$json.dueDate}}</strong>.</p>\n\n<p>No action needed if payment is already on its way. If you'd like to take care of it now, you can view and pay the invoice here:</p>\n\n<p style=\"text-align: center; margin: 25px 0;\">\n<a href=\"{{$json.invoiceUrl}}\" style=\"background-color: #48bb78; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; font-weight: bold;\">View Invoice</a>\n</p>\n\n<p>If you have any questions about this invoice, just reply to this email and we'll sort it out.</p>\n\n<p>Thanks,<br/>Billing Team</p>\n</div>",
+        "options": {}
       },
-      "id": "send-gentle-reminder",
-      "name": "Send Gentle Reminder",
+      "id": "email-upcoming",
+      "name": "Email - Courtesy Reminder",
       "type": "n8n-nodes-base.emailSend",
       "typeVersion": 1,
-      "position": [920, 200]
+      "position": [1360, 40],
+      "credentials": {
+        "smtp": {
+          "id": "smtp-credentials",
+          "name": "SMTP"
+        }
+      },
+      "notes": "Sent 3 days before the due date. Tone: friendly, no pressure. Just making sure it's on their radar."
     },
     {
       "parameters": {
         "fromEmail": "billing@yourcompany.com",
-        "toEmail": "={{ $json.customerEmail }}",
-        "subject": "Action Required: Invoice #{{ $json.invoiceNumber }} is {{ $json.daysPastDue }} days overdue",
-        "text": "Hi {{ $json.customerName }},\n\nWe wanted to follow up regarding Invoice #{{ $json.invoiceNumber }} for {{ $json.amount }}, which is now {{ $json.daysPastDue }} days past due.\n\nPlease arrange payment as soon as possible. If there's an issue with the invoice or you need to discuss payment terms, let us know and we'll work with you.\n\nPayment link: {{ $json.paymentLink }}\n\nBest regards,\n{{ $json.companyName }}"
+        "toEmail": "={{$json.clientEmail}}",
+        "subject": "Payment reminder: Invoice {{$json.invoiceNumber}} is due today",
+        "text": "",
+        "html": "<div style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n<p>Hi {{$json.clientName}},</p>\n\n<p>This is a reminder that invoice <strong>#{{$json.invoiceNumber}}</strong> for <strong>{{$json.amountFormatted}}</strong> is due today (<strong>{{$json.dueDate}}</strong>).</p>\n\n<p>If you've already sent payment, thank you -- please disregard this message. Otherwise, you can view and pay the invoice here:</p>\n\n<p style=\"text-align: center; margin: 25px 0;\">\n<a href=\"{{$json.invoiceUrl}}\" style=\"background-color: #4299e1; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; font-weight: bold;\">Pay Invoice Now</a>\n</p>\n\n<p>Let us know if there are any issues with the invoice or if you need to arrange a different payment timeline.</p>\n\n<p>Best,<br/>Billing Team</p>\n</div>",
+        "options": {}
       },
-      "id": "send-firm-reminder",
-      "name": "Send Firm Reminder",
+      "id": "email-due-today",
+      "name": "Email - Due Today",
       "type": "n8n-nodes-base.emailSend",
       "typeVersion": 1,
-      "position": [920, 400]
+      "position": [1360, 180],
+      "credentials": {
+        "smtp": {
+          "id": "smtp-credentials",
+          "name": "SMTP"
+        }
+      },
+      "notes": "Sent on the due date. Tone: direct but polite. Clear call to action."
     },
     {
       "parameters": {
-        "channel": "#billing-alerts",
-        "text": ":warning: *Overdue Invoice Alert*\n\nInvoice #{{ $json.invoiceNumber }} — {{ $json.customerName }}\nAmount: {{ $json.amount }}\nDays Overdue: {{ $json.daysPastDue }}\n\nReminder email sent automatically.",
+        "fromEmail": "billing@yourcompany.com",
+        "toEmail": "={{$json.clientEmail}}",
+        "subject": "Follow-up: Invoice {{$json.invoiceNumber}} is {{$json.daysPastDue}} days past due",
+        "text": "",
+        "html": "<div style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n<p>Hi {{$json.clientName}},</p>\n\n<p>I wanted to follow up on invoice <strong>#{{$json.invoiceNumber}}</strong> for <strong>{{$json.amountFormatted}}</strong>, which was due on <strong>{{$json.dueDate}}</strong>. It's currently <strong>{{$json.daysPastDue}} days past due</strong>.</p>\n\n<p>We understand things get busy. If there's an issue with the invoice or if you'd like to discuss payment arrangements, we're happy to work with you -- just reply to this email.</p>\n\n<p style=\"text-align: center; margin: 25px 0;\">\n<a href=\"{{$json.invoiceUrl}}\" style=\"background-color: #4299e1; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; font-weight: bold;\">View & Pay Invoice</a>\n</p>\n\n<p>Thank you for your attention to this.</p>\n\n<p>Best,<br/>Billing Team</p>\n</div>",
+        "options": {}
+      },
+      "id": "email-gentle",
+      "name": "Email - Gentle Reminder",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [1360, 320],
+      "credentials": {
+        "smtp": {
+          "id": "smtp-credentials",
+          "name": "SMTP"
+        }
+      },
+      "notes": "Sent 1-7 days after the due date. Tone: understanding but clear. Acknowledges they might be busy, offers to discuss."
+    },
+    {
+      "parameters": {
+        "fromEmail": "billing@yourcompany.com",
+        "toEmail": "={{$json.clientEmail}}",
+        "subject": "Action required: Invoice {{$json.invoiceNumber}} is now {{$json.daysPastDue}} days overdue",
+        "text": "",
+        "html": "<div style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n<p>Hi {{$json.clientName}},</p>\n\n<p>We're reaching out again regarding invoice <strong>#{{$json.invoiceNumber}}</strong> for <strong>{{$json.amountFormatted}}</strong>. This invoice was due on <strong>{{$json.dueDate}}</strong> and is now <strong>{{$json.daysPastDue}} days overdue</strong>.</p>\n\n<p>We haven't received payment or heard back from you about this balance. We'd like to resolve this as quickly as possible.</p>\n\n<p><strong>Please take one of the following actions:</strong></p>\n<ol>\n<li>Pay the invoice using the link below</li>\n<li>Reply to this email to discuss payment arrangements</li>\n<li>Let us know if there's a dispute with the charges</li>\n</ol>\n\n<p style=\"text-align: center; margin: 25px 0;\">\n<a href=\"{{$json.invoiceUrl}}\" style=\"background-color: #e53e3e; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; font-weight: bold;\">Pay Invoice Now</a>\n</p>\n\n<p>We value our relationship with {{$json.clientName}} and want to keep things running smoothly.</p>\n\n<p>Regards,<br/>Billing Team</p>\n</div>",
+        "options": {}
+      },
+      "id": "email-firm",
+      "name": "Email - Firm Reminder",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [1360, 480],
+      "credentials": {
+        "smtp": {
+          "id": "smtp-credentials",
+          "name": "SMTP"
+        }
+      },
+      "notes": "Sent 8-21 days after the due date. Tone: professional urgency. Clear action items. Red CTA button to convey importance."
+    },
+    {
+      "parameters": {
+        "fromEmail": "billing@yourcompany.com",
+        "toEmail": "={{$json.clientEmail}}",
+        "subject": "Final notice: Invoice {{$json.invoiceNumber}} - {{$json.daysPastDue}} days overdue",
+        "text": "",
+        "html": "<div style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n<p>Dear {{$json.clientName}},</p>\n\n<p>This is our final automated reminder regarding invoice <strong>#{{$json.invoiceNumber}}</strong> for <strong>{{$json.amountFormatted}}</strong>, originally due on <strong>{{$json.dueDate}}</strong>. This balance is now <strong>{{$json.daysPastDue}} days overdue</strong>.</p>\n\n<p>If we do not receive payment or a response within 7 business days, we will need to escalate this matter internally. We strongly prefer to resolve this directly with you.</p>\n\n<p style=\"text-align: center; margin: 25px 0;\">\n<a href=\"{{$json.invoiceUrl}}\" style=\"background-color: #e53e3e; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; font-weight: bold;\">Pay Invoice Immediately</a>\n</p>\n\n<p>If you've already submitted payment, please forward confirmation to this email so we can update our records.</p>\n\n<p>If you're experiencing financial difficulties and need to arrange a payment plan, please reply to this email. We're willing to work out a reasonable arrangement.</p>\n\n<p>Regards,<br/>Billing Department</p>\n</div>",
+        "options": {}
+      },
+      "id": "email-final",
+      "name": "Email - Final Notice",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [1360, 640],
+      "credentials": {
+        "smtp": {
+          "id": "smtp-credentials",
+          "name": "SMTP"
+        }
+      },
+      "notes": "Sent 22-45 days after the due date. Tone: formal, serious. Mentions escalation but still offers a path to resolution. This is the last automated email before human intervention."
+    },
+    {
+      "parameters": {
+        "channel": "#billing-escalations",
+        "text": ":warning: *Invoice Escalation Required*\n\n*Client:* {{$json.clientName}}\n*Invoice:* #{{$json.invoiceNumber}}\n*Amount:* {{$json.amountFormatted}}\n*Days Overdue:* {{$json.daysPastDue}}\n*Due Date:* {{$json.dueDate}}\n\nThis invoice is 45+ days overdue and has passed through all automated reminder stages. Manual follow-up required.\n\n*Recommended actions:*\n1. Phone call to client\n2. Review account for service suspension\n3. Consult with management on collections\n\n<{{$json.invoiceUrl}}|View Invoice>",
         "otherOptions": {}
       },
-      "id": "slack-notify",
-      "name": "Notify Team on Slack",
+      "id": "slack-escalation",
+      "name": "Slack - Escalation Alert",
       "type": "n8n-nodes-base.slack",
       "typeVersion": 1,
-      "position": [1140, 300],
+      "position": [1360, 800],
       "credentials": {
         "slackApi": {
-          "id": "slack-creds",
-          "name": "Slack Workspace"
+          "id": "slack-credentials",
+          "name": "Slack API"
         }
-      }
+      },
+      "notes": "Escalation alert for invoices 45+ days overdue. At this point, automated emails have not resolved the issue and a human needs to step in. Consider also creating a task in your PM tool for tracking."
+    },
+    {
+      "parameters": {
+        "url": "={{$credentials.invoiceApiBaseUrl}}/invoices/{{$json.invoiceId}}/metadata",
+        "method": "PATCH",
+        "headerParameters": {
+          "parameter": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.invoiceApiKey}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "body": {
+          "jsonBody": "{\n  \"metadata\": {\n    \"lastReminderTier\": \"{{$json.reminderTier}}\",\n    \"lastReminderSentAt\": \"{{$json.processedAt}}\",\n    \"reminderCount\": \"={{parseInt($json.reminderCount || '0') + 1}}\"\n  }\n}"
+        },
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "update-invoice-metadata",
+      "name": "Update Invoice - Mark Reminder Sent",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [1600, 400],
+      "notes": "Updates the invoice metadata to record which reminder tier was sent. This prevents duplicate reminders on the next workflow run. Adjust the API endpoint to match your invoicing platform's metadata/custom fields API.",
+      "continueOnFail": true
     },
     {
       "parameters": {
         "values": {
           "string": [
-            { "name": "invoiceNumber", "value": "={{ $json.invoiceNumber }}" },
-            { "name": "customerName", "value": "={{ $json.customerName }}" },
-            { "name": "reminderType", "value": "={{ $json.daysPastDue <= 7 ? 'gentle' : 'firm' }}" },
-            { "name": "sentAt", "value": "={{ $now.toISO() }}" }
+            {
+              "name": "sheetName",
+              "value": "Invoice Follow-Up Log"
+            }
           ]
-        }
+        },
+        "options": {}
       },
-      "id": "log-reminder",
-      "name": "Log Reminder Sent",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 1,
-      "position": [1360, 300]
-    },
-    {
-      "parameters": {
-        "operation": "append",
-        "sheetId": "your-google-sheet-id",
-        "range": "ReminderLog!A:D",
-        "columns": "invoiceNumber,customerName,reminderType,sentAt"
-      },
-      "id": "log-to-sheets",
-      "name": "Log to Google Sheets",
+      "id": "log-to-sheet",
+      "name": "Google Sheets - Log Activity",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 2,
-      "position": [1580, 300],
+      "position": [1600, 580],
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "google-creds",
-          "name": "Google Sheets"
+          "id": "google-sheets-credentials",
+          "name": "Google Sheets OAuth2"
         }
-      }
+      },
+      "notes": "Logs every reminder sent for audit trail and reporting. Columns: timestamp, invoiceId, invoiceNumber, clientName, clientEmail, amount, daysPastDue, reminderTier, reminderAction. Useful for understanding your collections performance over time."
     }
   ],
   "connections": {
-    "Daily Check": {
-      "main": [[{ "node": "Get Overdue Invoices", "type": "main", "index": 0 }]]
-    },
-    "Get Overdue Invoices": {
+    "Schedule - Check Every 6 Hours": {
       "main": [
         [
-          { "node": "1-7 Days Overdue", "type": "main", "index": 0 },
-          { "node": "8-30 Days Overdue", "type": "main", "index": 0 }
+          {
+            "node": "Fetch Unpaid Invoices",
+            "type": "main",
+            "index": 0
+          }
         ]
       ]
     },
-    "1-7 Days Overdue": {
-      "main": [[{ "node": "Send Gentle Reminder", "type": "main", "index": 0 }]]
+    "Fetch Unpaid Invoices": {
+      "main": [
+        [
+          {
+            "node": "Categorize by Overdue Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     },
-    "8-30 Days Overdue": {
-      "main": [[{ "node": "Send Firm Reminder", "type": "main", "index": 0 }]]
+    "Categorize by Overdue Status": {
+      "main": [
+        [
+          {
+            "node": "Any Action Needed?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     },
-    "Send Gentle Reminder": {
-      "main": [[{ "node": "Notify Team on Slack", "type": "main", "index": 0 }]]
+    "Any Action Needed?": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Route by Reminder Tier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     },
-    "Send Firm Reminder": {
-      "main": [[{ "node": "Notify Team on Slack", "type": "main", "index": 0 }]]
+    "Route by Reminder Tier": {
+      "main": [
+        [
+          {
+            "node": "Email - Courtesy Reminder",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Email - Due Today",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Email - Gentle Reminder",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Email - Firm Reminder",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Email - Final Notice",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Slack - Escalation Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     },
-    "Notify Team on Slack": {
-      "main": [[{ "node": "Log Reminder Sent", "type": "main", "index": 0 }]]
+    "Email - Courtesy Reminder": {
+      "main": [
+        [
+          {
+            "node": "Update Invoice - Mark Reminder Sent",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets - Log Activity",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     },
-    "Log Reminder Sent": {
-      "main": [[{ "node": "Log to Google Sheets", "type": "main", "index": 0 }]]
+    "Email - Due Today": {
+      "main": [
+        [
+          {
+            "node": "Update Invoice - Mark Reminder Sent",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets - Log Activity",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email - Gentle Reminder": {
+      "main": [
+        [
+          {
+            "node": "Update Invoice - Mark Reminder Sent",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets - Log Activity",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email - Firm Reminder": {
+      "main": [
+        [
+          {
+            "node": "Update Invoice - Mark Reminder Sent",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets - Log Activity",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email - Final Notice": {
+      "main": [
+        [
+          {
+            "node": "Update Invoice - Mark Reminder Sent",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets - Log Activity",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack - Escalation Alert": {
+      "main": [
+        [
+          {
+            "node": "Update Invoice - Mark Reminder Sent",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets - Log Activity",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "settings": {
     "executionOrder": "v1",
-    "timezone": "America/New_York"
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": ""
   },
+  "staticData": null,
+  "tags": [
+    {
+      "name": "finance",
+      "id": "tag-finance"
+    },
+    {
+      "name": "invoicing",
+      "id": "tag-invoicing"
+    },
+    {
+      "name": "collections",
+      "id": "tag-collections"
+    },
+    {
+      "name": "relay-launch-template",
+      "id": "tag-relay-launch"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2026-03-02T00:00:00.000Z",
+  "versionId": "1.0.0",
   "meta": {
-    "description": "Automatically sends tiered reminder emails for overdue invoices, notifies the team on Slack, and logs every reminder to Google Sheets for tracking.",
     "author": "Relay Launch",
-    "tags": ["billing", "invoicing", "automation", "follow-up"]
+    "description": "Automated invoice follow-up system that runs on a schedule, pulls unpaid invoices from your billing platform, categorizes them by how overdue they are, and sends graduated reminder emails -- from a friendly courtesy notice before the due date, through gentle and firm reminders, to a final notice and internal escalation for severely overdue accounts. Tracks all activity to prevent duplicate sends and logs everything for reporting.",
+    "version": "1.0.0",
+    "license": "MIT",
+    "supportedPlatforms": ["n8n", "Make", "Zapier", "Power Automate"],
+    "requiredCredentials": [
+      "Invoicing platform API key (QuickBooks, Xero, FreshBooks, Stripe, etc.)",
+      "SMTP credentials (or transactional email API)",
+      "Slack Bot Token",
+      "Google Sheets OAuth2"
+    ],
+    "estimatedSetupTime": "45-60 minutes",
+    "category": "Finance / Accounts Receivable",
+    "reminderSchedule": {
+      "upcoming": "3 days before due date",
+      "due_today": "On the due date",
+      "gentle": "1-7 days past due",
+      "firm": "8-21 days past due",
+      "final": "22-45 days past due",
+      "escalate": "45+ days past due (human intervention)"
+    }
   }
 }
