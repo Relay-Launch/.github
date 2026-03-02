@@ -170,14 +170,28 @@ Or reach out directly:
 
 ---
 
+## Open-Source Resources
+
+We practice what we preach. These resources are free to use, fork, and adapt for your own business:
+
+| Resource | What's Inside |
+|---|---|
+| **[Automation Templates](automation-templates/)** | Ready-to-import n8n workflows (lead capture, client onboarding, invoice follow-up), platform comparison guide, automation readiness checklist |
+| **[SOP Starter Kit](sop-starter-kit/)** | Blank SOP templates, 3 complete example SOPs (employee onboarding, client intake, monthly close), process mapping template, style guide |
+| **[Business Audit Framework](business-audit-framework/)** | 4 audit checklists (operations, digital, revenue, customer journey), scoring rubric, priority matrix framework, Python scoring calculator |
+| **[KPI Dashboard Templates](kpi-dashboard-templates/)** | KPI selection guide by business type, 3 dashboard specs (executive, sales, operations), design principles, Python dashboard generator scripts |
+| **[Integration Cookbook](integration-cookbook/)** | 4 production-ready Python integration recipes (Stripe→Slack, HubSpot→Sheets, form routing, email reports), reusable API client and webhook utilities |
+
+---
+
 ## About This Repository
 
 This is the Relay▸Launch organizational home on GitHub. It includes:
 
 - Service package documentation
-- Client intake templates
-- Project workflow automation
-- Operational resources for active engagements
+- Client intake templates and project workflow automation
+- Open-source business tools, templates, and frameworks
+- Integration recipes and automation workflow examples
 
 ---
 

@@ -1,0 +1,409 @@
+{
+  "name": "Lead Capture to CRM with Notifications",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "lead-capture",
+        "responseMode": "onReceived",
+        "responseData": "allEntries",
+        "options": {
+          "rawBody": true
+        }
+      },
+      "id": "webhook-trigger",
+      "name": "Webhook - Form Submission",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 300],
+      "webhookId": "lead-capture-webhook",
+      "notes": "Receives POST requests from Typeform, Gravity Forms, or any form tool that supports webhook delivery. Expected payload: { name, email, phone, company, source, message }"
+    },
+    {
+      "parameters": {
+        "functionCode": "// Normalize and validate the incoming lead data\nconst body = items[0].json.body || items[0].json;\n\nconst lead = {\n  firstName: (body.name || body.full_name || '').split(' ')[0] || 'Unknown',\n  lastName: (body.name || body.full_name || '').split(' ').slice(1).join(' ') || '',\n  email: (body.email || body.email_address || '').toLowerCase().trim(),\n  phone: body.phone || body.phone_number || '',\n  company: body.company || body.company_name || body.organization || '',\n  source: body.source || body.utm_source || 'website',\n  message: body.message || body.comments || body.notes || '',\n  capturedAt: new Date().toISOString(),\n  rawPayload: JSON.stringify(body)\n};\n\n// Basic email validation\nconst emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\nlead.isValidEmail = emailRegex.test(lead.email);\n\n// Detect lead quality signals\nlead.hasPhone = lead.phone.length > 0;\nlead.hasCompany = lead.company.length > 0;\nlead.hasMessage = lead.message.length > 0;\nlead.qualityScore = (lead.isValidEmail ? 1 : 0) + (lead.hasPhone ? 1 : 0) + (lead.hasCompany ? 1 : 0) + (lead.hasMessage ? 1 : 0);\n\n// Assign priority based on quality score\nif (lead.qualityScore >= 3) {\n  lead.priority = 'high';\n} else if (lead.qualityScore >= 2) {\n  lead.priority = 'medium';\n} else {\n  lead.priority = 'low';\n}\n\nreturn [{ json: lead }];"
+      },
+      "id": "normalize-data",
+      "name": "Normalize & Validate Lead Data",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [460, 300],
+      "notes": "Cleans up the incoming form data into a consistent schema. Handles field name variations across different form tools. Calculates a basic quality score for lead routing."
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json.isValidEmail}}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "check-valid-email",
+      "name": "Valid Email?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [680, 300],
+      "notes": "Gate: only proceed if the lead has a valid email address. Invalid leads get logged but not routed to the CRM."
+    },
+    {
+      "parameters": {
+        "functionCode": "// Log the invalid lead for review\nconst lead = items[0].json;\nconsole.log(`Invalid lead rejected: ${JSON.stringify(lead.rawPayload)}`);\n\nreturn [{\n  json: {\n    status: 'rejected',\n    reason: 'invalid_email',\n    email: lead.email,\n    capturedAt: lead.capturedAt,\n    rawPayload: lead.rawPayload\n  }\n}];"
+      },
+      "id": "log-invalid-lead",
+      "name": "Log Invalid Lead",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [900, 480],
+      "notes": "Captures rejected leads so you can review them later. Common causes: spam submissions, typos in email fields, bot traffic."
+    },
+    {
+      "parameters": {
+        "url": "https://api.hunter.io/v2/email-verifier",
+        "queryParameters": {
+          "parameter": [
+            {
+              "name": "email",
+              "value": "={{$json.email}}"
+            },
+            {
+              "name": "api_key",
+              "value": "={{$credentials.hunterApiKey}}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "enrich-lead",
+      "name": "Enrich - Email Verification",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [900, 180],
+      "notes": "Optional enrichment step using Hunter.io to verify the email and pull company data. Remove this node if you don't have a Hunter.io account -- the workflow works fine without it.",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "functionCode": "const lead = items[0].json;\n\n// Merge enrichment data if available\nlet enrichedLead = { ...lead };\n\ntry {\n  const enrichment = items[0].json;\n  if (enrichment && enrichment.data) {\n    enrichedLead.emailStatus = enrichment.data.status || 'unknown';\n    enrichedLead.emailScore = enrichment.data.score || 0;\n    enrichedLead.companyEnriched = enrichment.data.company || lead.company;\n    enrichedLead.enrichmentSource = 'hunter.io';\n  }\n} catch (e) {\n  enrichedLead.emailStatus = 'not_verified';\n  enrichedLead.enrichmentSource = 'skipped';\n}\n\nreturn [{ json: enrichedLead }];"
+      },
+      "id": "merge-enrichment",
+      "name": "Merge Enrichment Data",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [1120, 180],
+      "notes": "Combines the original lead data with any enrichment results. Handles cases where enrichment fails or is unavailable."
+    },
+    {
+      "parameters": {
+        "resource": "contact",
+        "operation": "create",
+        "additionalFields": {
+          "email": "={{$json.email}}",
+          "firstName": "={{$json.firstName}}",
+          "lastName": "={{$json.lastName}}",
+          "phone": "={{$json.phone}}",
+          "company": "={{$json.company}}",
+          "leadSource": "={{$json.source}}",
+          "description": "={{$json.message}}"
+        }
+      },
+      "id": "create-crm-contact",
+      "name": "CRM - Create Contact",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 1,
+      "position": [1340, 120],
+      "credentials": {
+        "hubspotApi": {
+          "id": "hubspot-credentials",
+          "name": "HubSpot API"
+        }
+      },
+      "notes": "Creates a new contact in HubSpot. Swap this for your CRM of choice -- Salesforce, Pipedrive, Zoho, etc. The field mapping above follows HubSpot's default properties; adjust for your CRM's schema.",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "resource": "deal",
+        "operation": "create",
+        "additionalFields": {
+          "dealName": "={{$json.firstName}} {{$json.lastName}} - {{$json.company || 'Inbound Lead'}}",
+          "pipeline": "default",
+          "stage": "appointmentscheduled",
+          "amount": 0
+        }
+      },
+      "id": "create-crm-deal",
+      "name": "CRM - Create Deal",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 1,
+      "position": [1340, 300],
+      "credentials": {
+        "hubspotApi": {
+          "id": "hubspot-credentials",
+          "name": "HubSpot API"
+        }
+      },
+      "notes": "Creates an associated deal/opportunity in the pipeline. Adjust the pipeline name and stage to match your CRM's sales process configuration.",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json.priority}}",
+              "operation": "equals",
+              "value2": "high"
+            }
+          ]
+        }
+      },
+      "id": "check-priority",
+      "name": "High Priority?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [1560, 300],
+      "notes": "Routes high-priority leads (score >= 3) to an urgent notification path. Medium and low priority leads still get logged but don't trigger immediate alerts."
+    },
+    {
+      "parameters": {
+        "channel": "#sales-leads",
+        "text": ":rotating_light: *High-Priority Lead Captured*\n\n*Name:* {{$json.firstName}} {{$json.lastName}}\n*Email:* {{$json.email}}\n*Company:* {{$json.company}}\n*Phone:* {{$json.phone}}\n*Source:* {{$json.source}}\n*Message:* {{$json.message}}\n*Quality Score:* {{$json.qualityScore}}/4\n*Captured:* {{$json.capturedAt}}\n\nThis lead has phone, company, and a message. Follow up within the hour.",
+        "otherOptions": {
+          "unfurl_links": false,
+          "unfurl_media": false
+        }
+      },
+      "id": "slack-urgent",
+      "name": "Slack - Urgent Lead Alert",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [1780, 180],
+      "credentials": {
+        "slackApi": {
+          "id": "slack-credentials",
+          "name": "Slack API"
+        }
+      },
+      "notes": "Posts to #sales-leads for high-priority leads. Change the channel name to match your Slack workspace. Consider also adding a DM to the sales lead owner."
+    },
+    {
+      "parameters": {
+        "channel": "#sales-leads",
+        "text": "New lead captured: {{$json.firstName}} {{$json.lastName}} ({{$json.email}}) from {{$json.source}}. Priority: {{$json.priority}}. Quality score: {{$json.qualityScore}}/4.",
+        "otherOptions": {}
+      },
+      "id": "slack-standard",
+      "name": "Slack - Standard Notification",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [1780, 420],
+      "credentials": {
+        "slackApi": {
+          "id": "slack-credentials",
+          "name": "Slack API"
+        }
+      },
+      "notes": "Standard notification for medium and low priority leads. Less noisy than the urgent alert."
+    },
+    {
+      "parameters": {
+        "fromEmail": "sales@yourcompany.com",
+        "toEmail": "={{$json.email}}",
+        "subject": "Thanks for reaching out, {{$json.firstName}}",
+        "text": "",
+        "html": "<div style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto;\">\n<p>Hi {{$json.firstName}},</p>\n<p>Thanks for getting in touch. We received your message and a member of our team will follow up within one business day.</p>\n<p>In the meantime, here are a few resources that might be helpful:</p>\n<ul>\n<li><a href=\"https://yourcompany.com/resources\">Our resource library</a></li>\n<li><a href=\"https://yourcompany.com/case-studies\">Client case studies</a></li>\n</ul>\n<p>If you need to reach us sooner, you can reply directly to this email or call us at (555) 123-4567.</p>\n<p>Best,<br/>The Team</p>\n</div>",
+        "options": {}
+      },
+      "id": "send-confirmation-email",
+      "name": "Email - Lead Confirmation",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [1560, 540],
+      "credentials": {
+        "smtp": {
+          "id": "smtp-credentials",
+          "name": "SMTP"
+        }
+      },
+      "notes": "Sends an immediate confirmation email to the lead. Customize the template, links, and sender address. Consider using your transactional email service (SendGrid, Postmark, etc.) instead of raw SMTP for better deliverability."
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "sheetName",
+              "value": "Lead Log"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "log-to-sheet",
+      "name": "Google Sheets - Log Lead",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [1560, 720],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-sheets-credentials",
+          "name": "Google Sheets OAuth2"
+        }
+      },
+      "notes": "Logs every captured lead (regardless of priority) to a Google Sheet for reporting and backup. This gives you a single source of truth outside your CRM. Columns: timestamp, name, email, phone, company, source, priority, quality score."
+    }
+  ],
+  "connections": {
+    "Webhook - Form Submission": {
+      "main": [
+        [
+          {
+            "node": "Normalize & Validate Lead Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize & Validate Lead Data": {
+      "main": [
+        [
+          {
+            "node": "Valid Email?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Valid Email?": {
+      "main": [
+        [
+          {
+            "node": "Enrich - Email Verification",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Log Invalid Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enrich - Email Verification": {
+      "main": [
+        [
+          {
+            "node": "Merge Enrichment Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge Enrichment Data": {
+      "main": [
+        [
+          {
+            "node": "CRM - Create Contact",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "CRM - Create Deal",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Email - Lead Confirmation",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets - Log Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CRM - Create Deal": {
+      "main": [
+        [
+          {
+            "node": "High Priority?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "High Priority?": {
+      "main": [
+        [
+          {
+            "node": "Slack - Urgent Lead Alert",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Slack - Standard Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": ""
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "name": "sales",
+      "id": "tag-sales"
+    },
+    {
+      "name": "lead-capture",
+      "id": "tag-lead-capture"
+    },
+    {
+      "name": "relay-launch-template",
+      "id": "tag-relay-launch"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2026-03-02T00:00:00.000Z",
+  "versionId": "1.0.0",
+  "meta": {
+    "author": "Relay Launch",
+    "description": "Captures form submissions via webhook, normalizes and validates the data, optionally enriches the lead via Hunter.io, creates a contact and deal in HubSpot, sends a confirmation email to the lead, logs everything to Google Sheets, and routes notifications to Slack based on lead quality score.",
+    "version": "1.0.0",
+    "license": "MIT",
+    "supportedPlatforms": ["n8n", "Make", "Zapier", "Power Automate"],
+    "requiredCredentials": [
+      "HubSpot API key or OAuth",
+      "Slack Bot Token",
+      "SMTP credentials (or transactional email API)",
+      "Google Sheets OAuth2",
+      "Hunter.io API key (optional)"
+    ],
+    "estimatedSetupTime": "30-45 minutes",
+    "category": "Sales / Lead Management"
+  }
+}

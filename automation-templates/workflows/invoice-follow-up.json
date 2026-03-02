@@ -1,0 +1,199 @@
+{
+  "name": "Invoice Follow-Up Automation",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "hours", "hoursInterval": 24 }]
+        }
+      },
+      "id": "schedule-trigger",
+      "name": "Daily Check",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "filters": {
+          "status": "unpaid",
+          "dueDateBefore": "={{ $now.minus({ days: 1 }).toISO() }}"
+        },
+        "limit": 100
+      },
+      "id": "get-overdue-invoices",
+      "name": "Get Overdue Invoices",
+      "type": "n8n-nodes-base.quickbooks",
+      "typeVersion": 1,
+      "position": [460, 300],
+      "credentials": {
+        "quickBooksOAuth2Api": {
+          "id": "quickbooks-creds",
+          "name": "QuickBooks Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $json.daysPastDue }}",
+              "operation": "smallerEqual",
+              "value2": 7
+            }
+          ]
+        }
+      },
+      "id": "check-days-overdue",
+      "name": "1-7 Days Overdue",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [680, 200]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $json.daysPastDue }}",
+              "operation": "largerEqual",
+              "value2": 8
+            },
+            {
+              "value1": "={{ $json.daysPastDue }}",
+              "operation": "smallerEqual",
+              "value2": 30
+            }
+          ]
+        }
+      },
+      "id": "check-days-overdue-2",
+      "name": "8-30 Days Overdue",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [680, 400]
+    },
+    {
+      "parameters": {
+        "fromEmail": "billing@yourcompany.com",
+        "toEmail": "={{ $json.customerEmail }}",
+        "subject": "Friendly Reminder: Invoice #{{ $json.invoiceNumber }} is due",
+        "text": "Hi {{ $json.customerName }},\n\nThis is a friendly reminder that Invoice #{{ $json.invoiceNumber }} for {{ $json.amount }} was due on {{ $json.dueDate }}.\n\nIf you've already sent payment, please disregard this message. Otherwise, we'd appreciate payment at your earliest convenience.\n\nPayment link: {{ $json.paymentLink }}\n\nThanks,\n{{ $json.companyName }}"
+      },
+      "id": "send-gentle-reminder",
+      "name": "Send Gentle Reminder",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [920, 200]
+    },
+    {
+      "parameters": {
+        "fromEmail": "billing@yourcompany.com",
+        "toEmail": "={{ $json.customerEmail }}",
+        "subject": "Action Required: Invoice #{{ $json.invoiceNumber }} is {{ $json.daysPastDue }} days overdue",
+        "text": "Hi {{ $json.customerName }},\n\nWe wanted to follow up regarding Invoice #{{ $json.invoiceNumber }} for {{ $json.amount }}, which is now {{ $json.daysPastDue }} days past due.\n\nPlease arrange payment as soon as possible. If there's an issue with the invoice or you need to discuss payment terms, let us know and we'll work with you.\n\nPayment link: {{ $json.paymentLink }}\n\nBest regards,\n{{ $json.companyName }}"
+      },
+      "id": "send-firm-reminder",
+      "name": "Send Firm Reminder",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [920, 400]
+    },
+    {
+      "parameters": {
+        "channel": "#billing-alerts",
+        "text": ":warning: *Overdue Invoice Alert*\n\nInvoice #{{ $json.invoiceNumber }} — {{ $json.customerName }}\nAmount: {{ $json.amount }}\nDays Overdue: {{ $json.daysPastDue }}\n\nReminder email sent automatically.",
+        "otherOptions": {}
+      },
+      "id": "slack-notify",
+      "name": "Notify Team on Slack",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [1140, 300],
+      "credentials": {
+        "slackApi": {
+          "id": "slack-creds",
+          "name": "Slack Workspace"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            { "name": "invoiceNumber", "value": "={{ $json.invoiceNumber }}" },
+            { "name": "customerName", "value": "={{ $json.customerName }}" },
+            { "name": "reminderType", "value": "={{ $json.daysPastDue <= 7 ? 'gentle' : 'firm' }}" },
+            { "name": "sentAt", "value": "={{ $now.toISO() }}" }
+          ]
+        }
+      },
+      "id": "log-reminder",
+      "name": "Log Reminder Sent",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [1360, 300]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": "your-google-sheet-id",
+        "range": "ReminderLog!A:D",
+        "columns": "invoiceNumber,customerName,reminderType,sentAt"
+      },
+      "id": "log-to-sheets",
+      "name": "Log to Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [1580, 300],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-creds",
+          "name": "Google Sheets"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Daily Check": {
+      "main": [[{ "node": "Get Overdue Invoices", "type": "main", "index": 0 }]]
+    },
+    "Get Overdue Invoices": {
+      "main": [
+        [
+          { "node": "1-7 Days Overdue", "type": "main", "index": 0 },
+          { "node": "8-30 Days Overdue", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "1-7 Days Overdue": {
+      "main": [[{ "node": "Send Gentle Reminder", "type": "main", "index": 0 }]]
+    },
+    "8-30 Days Overdue": {
+      "main": [[{ "node": "Send Firm Reminder", "type": "main", "index": 0 }]]
+    },
+    "Send Gentle Reminder": {
+      "main": [[{ "node": "Notify Team on Slack", "type": "main", "index": 0 }]]
+    },
+    "Send Firm Reminder": {
+      "main": [[{ "node": "Notify Team on Slack", "type": "main", "index": 0 }]]
+    },
+    "Notify Team on Slack": {
+      "main": [[{ "node": "Log Reminder Sent", "type": "main", "index": 0 }]]
+    },
+    "Log Reminder Sent": {
+      "main": [[{ "node": "Log to Google Sheets", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/New_York"
+  },
+  "meta": {
+    "description": "Automatically sends tiered reminder emails for overdue invoices, notifies the team on Slack, and logs every reminder to Google Sheets for tracking.",
+    "author": "Relay Launch",
+    "tags": ["billing", "invoicing", "automation", "follow-up"]
+  }
+}
