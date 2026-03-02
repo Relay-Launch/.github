@@ -1,28 +1,36 @@
 # SOP Starter Kit
 
-**By [Relay Launch](https://relaylaunch.com)** | Helping small businesses build systems that scale
+**By [Relay▸Launch](https://relaylaunch.com) -- Helping small businesses build systems that scale.**
 
 ---
 
 ## What Is This?
 
-This is a ready-to-use starter kit for building Standard Operating Procedures (SOPs) at your small business. It includes blank templates, a style guide, and fully worked examples you can adapt to your own operations.
+The SOP Starter Kit is a ready-to-use framework for documenting Standard Operating Procedures at your business. It includes blank templates, fully worked examples, and a style guide so your team can start building a real operational playbook -- not a shelf full of binders nobody reads.
 
-Fork this repository, replace the examples with your own processes, and you have the foundation of an operations manual that grows with your business.
+Whether you have 3 employees or 30, undocumented processes are a liability. This kit gives you a practical starting point to fix that.
 
 ## Why SOPs Matter
 
-Most small businesses run on tribal knowledge. The owner or a key employee holds critical processes in their head, and everything works fine -- until it doesn't. Someone gets sick, goes on vacation, or leaves the company, and suddenly nobody knows how to run payroll, onboard a new client, or close the books at month-end.
+Most small businesses run on tribal knowledge. The steps for onboarding a client, closing the books at month-end, or setting up a new employee live in someone's head. That works until:
 
-SOPs fix this by turning implicit knowledge into explicit documentation. Here is what that gets you in practice:
+- **That person goes on vacation.** Now nobody knows the password to the billing portal or which vendor to call for the thing.
+- **You hire someone new.** Training becomes a game of telephone. Quality drops. Mistakes compound.
+- **You want to grow.** You cannot scale what you cannot repeat. If your fulfillment process changes depending on who is working that day, growth just amplifies chaos.
+- **Something goes wrong.** Without documentation, there is no way to audit what happened, identify the breakdown, or prevent it from recurring.
 
-- **Consistency.** The process runs the same way every time, regardless of who is doing it. Clients get a uniform experience. Errors drop.
-- **Faster training.** New hires can get productive in days instead of weeks because the playbook already exists. You stop repeating yourself.
-- **Delegation without anxiety.** You can hand off work confidently when the steps are written down. This is how owners get out of the day-to-day.
-- **Continuous improvement.** You cannot optimize a process you have not documented. Once it is on paper, you can spot bottlenecks, eliminate waste, and measure results.
-- **Business value.** If you ever want to sell your business, acquirers pay a premium for companies with documented operations. It signals maturity and reduces risk.
+SOPs are not bureaucracy. Done well, they are the difference between a business that depends on specific people and a business that runs on reliable systems.
 
-You do not need to document everything on day one. Start with the processes that are most painful, most frequent, or most dependent on a single person. Build from there.
+### The Real Benefits
+
+| Benefit | What It Looks Like in Practice |
+|---|---|
+| **Consistency** | Every client gets the same onboarding experience, regardless of who handles it. |
+| **Faster training** | New hires ramp up in days instead of months because the process is written down. |
+| **Fewer errors** | Checklists catch the steps that memory skips, especially under pressure. |
+| **Delegation** | You can hand off work confidently when the "how" is documented. |
+| **Continuous improvement** | You cannot improve a process you have not defined. SOPs make optimization possible. |
+| **Business value** | A documented, systematized business is worth more -- to buyers, investors, and partners. |
 
 ## What Is in This Kit
 
@@ -38,109 +46,108 @@ sop-starter-kit/
 |
 |-- examples/
 |   |-- employee-onboarding.md         # Complete onboarding SOP
-|   |-- client-intake-process.md       # Complete client intake / sales SOP
+|   |-- client-intake-process.md       # Complete client intake/sales SOP
 |   |-- monthly-close-checklist.md     # Complete month-end financial close SOP
 ```
 
 ### Templates
 
-The `templates/` directory contains blank starting points:
-
-- **sop-template.md** -- A general-purpose SOP template with all the standard sections (Purpose, Scope, Procedure, etc.) and inline guidance comments explaining what to write in each section. Copy this file every time you document a new process.
-- **process-map-template.md** -- A template for creating visual process maps using Markdown and ASCII flowcharts. Useful for complex processes where a numbered list is not enough and you need to show decision points, parallel paths, or handoffs between teams.
+Start here when you need to document a new process. The **SOP Template** provides a standard structure with all the sections you need. The **Process Map Template** helps you diagram workflows visually before (or alongside) writing the detailed steps.
 
 ### Examples
 
-The `examples/` directory contains three fully worked SOPs that demonstrate what good documentation looks like in practice:
-
-- **employee-onboarding.md** -- Covers the full lifecycle from offer acceptance through the end of a new hire's first 90 days. Includes pre-arrival setup, Day 1 activities, training schedules, and check-in cadence.
-- **client-intake-process.md** -- Documents the process from first contact with a prospective client through signed agreement and project kickoff. Covers qualification, discovery, proposal, and handoff to delivery.
-- **monthly-close-checklist.md** -- A step-by-step financial close process for small businesses. Covers transaction reconciliation, accruals, reporting, and management review.
-
-These examples are written for a generic small business (roughly 10 to 50 employees). You will need to adapt the specifics -- tools, titles, timelines -- to match your organization.
+These are fully filled-out SOPs for common small business processes. They are written to be realistic and immediately useful. Fork them, adapt them to your business, and put them to work.
 
 ### Style Guide
 
-**sop-style-guide.md** defines the conventions for writing SOPs at your company: tone, formatting, naming, versioning, and review schedules. Read this before writing your first SOP. Consistency across documents makes the whole system easier to navigate.
+Read this before you start writing. It covers tone, formatting, naming conventions, and versioning so your SOPs stay consistent as your library grows.
 
 ## How to Use This Kit
 
 ### Step 1: Read the Style Guide
 
-Start with `sop-style-guide.md` to understand the conventions. Even if you modify them, having a shared standard from the beginning saves time later.
+Spend 10 minutes reading `sop-style-guide.md`. It will save you hours of rework later. Understanding the conventions before you start writing means your first SOP will not need to be reformatted when you write your tenth.
 
 ### Step 2: Identify Your First Three SOPs
 
-Do not try to document everything at once. Pick three processes based on these criteria:
+Do not try to document everything at once. Start with the three processes that cause the most pain, consume the most time, or depend most heavily on a single person. Common starting points:
 
-| Criteria | Why It Matters |
-|---|---|
-| High frequency | Processes you run daily or weekly have the most impact when standardized |
-| High pain | If something breaks regularly or causes frustration, document it first |
-| Key-person dependent | If only one person knows how to do it, that is a business risk |
-| Client-facing | Inconsistency here directly affects revenue and reputation |
+- Employee onboarding / offboarding
+- Client intake or sales process
+- Invoicing and accounts receivable
+- Month-end financial close
+- Content publishing or social media workflow
+- Customer support escalation
+- Vendor management and purchasing
 
-Common starting points: employee onboarding, client intake, invoicing, weekly reporting, inventory receiving, support ticket handling.
+### Step 3: Map the Process First
 
-### Step 3: Copy the Template
+Before you write detailed steps, use the **Process Map Template** to sketch the workflow at a high level. Identify:
 
-Duplicate `templates/sop-template.md` and rename it following the naming convention in the style guide. Fill in each section, using the examples as a reference for level of detail.
+- Where does the process start and end?
+- Who is involved at each stage?
+- Where are the decision points?
+- What are the handoffs between people or systems?
 
-### Step 4: Walk the Process
+This takes 15-20 minutes and prevents you from writing an SOP that misses entire chunks of the process.
 
-Do not write the SOP from memory. Actually perform the process (or sit with the person who does) and document each step as it happens. You will catch steps that people do unconsciously and skip when describing the process verbally.
+### Step 4: Write the SOP
 
-### Step 5: Test with Someone Else
+Copy `templates/sop-template.md` and fill it in. Use the examples as reference for the level of detail and tone. Write for the person who will actually execute this process -- not for your boss, not for an auditor, not for yourself.
 
-Hand the draft SOP to someone who has never done the process and ask them to follow it. Every place they get confused is a gap in your documentation. Revise accordingly.
+### Step 5: Test It
 
-### Step 6: Publish and Assign Ownership
+Have someone who did **not** write the SOP follow it. Watch where they get confused, stuck, or make assumptions. Those are the gaps in your documentation. Revise accordingly.
 
-Every SOP needs an owner -- someone responsible for keeping it current. This is typically the manager of the team that runs the process. Set a review date (quarterly is a good default) and put it on the calendar.
+### Step 6: Publish and Maintain
 
-### Step 7: Build the Habit
-
-SOPs are only useful if people actually reference them. Incorporate them into training, link to them in your project management tools, and reference them when processes go wrong. Over time, "check the SOP" becomes a natural reflex instead of "ask the boss."
+Store your SOPs somewhere your team can actually find them -- a shared drive, a wiki, a repository. Assign an owner to each SOP. Set a review cadence (quarterly is a good starting point). SOPs that are not maintained become dangerous: people follow outdated steps and create new problems.
 
 ## Tips for Writing Effective SOPs
 
-1. **Write for the new hire.** Assume the reader is competent but has zero context about your company. If they need to know where a file lives, tell them the exact path. If they need to log in to a tool, tell them which tool and where to find credentials.
+### Write for the Reader, Not for Yourself
 
-2. **Use numbered steps for procedures.** Bullet points are fine for lists of items, but sequential procedures should always be numbered. The reader needs to know the order.
+The most common mistake is writing SOPs that make sense to the author but confuse everyone else. You already know the process. The reader does not. Spell out what seems obvious. Link to tools and resources. Define acronyms the first time you use them.
 
-3. **Be specific about tools and locations.** "Enter the data into the spreadsheet" is not useful. "Open the Client Tracker spreadsheet in Google Drive > Operations > Active Clients and enter the data in the next empty row" is useful.
+### Be Specific
 
-4. **Include the why, not just the what.** When a step exists for a non-obvious reason, add a brief note explaining it. People follow procedures more reliably when they understand the reasoning. Example: "Send the invoice within 24 hours of project completion (delays beyond 48 hours correlate with a 15% drop in collection rate)."
+"Process the invoice" is not a step. "Open QuickBooks, navigate to Sales > Invoices, click Create Invoice, and enter the client details from the signed proposal" is a step. Specificity is what makes an SOP useful versus decorative.
 
-5. **Add screenshots sparingly.** Screenshots are helpful for complex UI workflows but become maintenance burdens because they break every time the software updates. Use them for genuinely confusing interfaces, not for obvious ones.
+### Use Action Verbs
 
-6. **Keep procedures under 20 steps.** If a process has more than 20 steps, it is probably two or three processes. Break it up. A long SOP is an unread SOP.
+Every step should start with a verb: Open, Navigate, Click, Send, Review, Confirm, Upload. This keeps instructions clear and unambiguous.
 
-7. **Document exceptions explicitly.** Every process has edge cases. Do not leave people guessing about what to do when things do not go as planned. Add an Exceptions section that covers the most common deviations.
+### Include the Why (Sparingly)
 
-8. **Version and date everything.** When you update an SOP, increment the version number and note what changed. People need to trust that the document they are reading is current.
+When a step might seem arbitrary, a brief explanation helps the reader understand its importance and reduces the chance they will skip it. But do not turn every step into a paragraph of justification. A short parenthetical or a single sentence is enough.
 
-## Frequently Asked Questions
+### Keep It Maintainable
 
-**Where should we store our SOPs?**
-Wherever your team already goes for information. Google Drive, Notion, Confluence, SharePoint, a GitHub repo -- the tool matters less than the habit. Pick one location, make it searchable, and link to SOPs from the places people already look (onboarding checklists, project templates, Slack bookmarks).
+An SOP that is 15 pages long will not get updated. Break large processes into smaller, linked SOPs. Use consistent formatting so updates are easy to make. Date everything and track revisions.
 
-**How detailed should SOPs be?**
-Detailed enough that a competent person unfamiliar with the process can complete it without asking questions. Not so detailed that it reads like a software manual for basic human tasks. Use judgment. If a step is "open your email," you do not need sub-steps for launching the browser.
+### Do Not Let Perfect Be the Enemy of Good
 
-**How often should we review SOPs?**
-Quarterly for high-frequency, high-impact processes. Annually for everything else. Also review any time the process changes -- new tools, new team structure, new regulations. The style guide has more detail on review cadence.
+A rough SOP that exists is infinitely more useful than a polished SOP that is still "in progress." Get version 1.0 out the door. You can refine it based on real-world feedback.
 
-**Who should write SOPs?**
-The person who actually does the work, with editorial support from a manager or ops lead. Do not assign SOP writing to someone who has never performed the process. They will miss critical details.
+## Adapting This Kit
 
-**What if nobody follows the SOPs?**
-That is a management problem, not a documentation problem. SOPs need enforcement. Reference them during training, use them during performance conversations, and update them when they drift from reality. Outdated SOPs are worse than no SOPs because they erode trust in the system.
+This kit uses Markdown files because they are lightweight, version-controllable, and portable. But the content works in any format:
+
+- **Google Docs / Notion / Confluence** -- Copy the structure and paste into your platform of choice.
+- **Project management tools** -- Convert SOP steps into task templates in Asana, Monday, ClickUp, or similar.
+- **Wiki systems** -- Most wikis support Markdown natively or with minor formatting adjustments.
+- **PDF** -- Render the Markdown to PDF for printing or offline reference.
+
+The format matters less than the habit of documenting, using, and maintaining your processes.
+
+## Contributing
+
+If you have built on this kit and want to share improvements, templates, or additional examples, we welcome contributions. See the main repository's [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines.
 
 ## License
 
-This starter kit is provided under the MIT License. Use it, modify it, share it. If you find it useful, we would appreciate a link back to [Relay Launch](https://relaylaunch.com).
+This kit is provided under the repository's open-source license. See [LICENSE](../LICENSE) for details.
 
 ---
 
-*Built by Relay Launch. We help small businesses design operations that run without the owner in the room. [Learn more about our consulting services.](https://relaylaunch.com)*
+**Built by Relay▸Launch** -- We help small businesses stop guessing and start operating. If you want help building SOPs, automating workflows, or structuring your operations for growth, [get in touch](https://relaylaunch.com/contact).
