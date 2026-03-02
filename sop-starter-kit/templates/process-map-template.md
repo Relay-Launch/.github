@@ -1,273 +1,298 @@
 # Process Map: [Process Name]
 
+**Process Owner:** [Name and title]
+**Date Created:** [YYYY-MM-DD]
+**Last Updated:** [YYYY-MM-DD]
+**Related SOP:** [Link to the detailed SOP for this process]
+
+---
+
+## Overview
+
 <!--
-  ABOUT THIS TEMPLATE
-
-  A process map is a visual representation of a workflow. It shows who does what,
-  in what order, and where decisions branch the process into different paths.
-
-  Use a process map when:
-  - A process involves handoffs between multiple people or teams
-  - There are decision points that change the flow
-  - You need to identify bottlenecks or redundant steps
-  - A linear numbered list does not adequately capture the process
-
-  This template uses ASCII/text-based diagrams that render in any Markdown viewer.
-  For more complex maps, consider using a dedicated tool (Lucidchart, Miro, draw.io)
-  and embedding or linking the output.
+Write 2-3 sentences describing this process at a high level. What does it
+accomplish? A process map should be understandable at a glance -- the
+overview provides context for someone seeing it for the first time.
 -->
 
-| Field | Details |
+[High-level description of the process.]
+
+---
+
+## Process Boundaries
+
+**Start Event:** [What triggers this process, e.g., "Customer submits a support request"]
+
+**End Event:** [What marks the process as complete, e.g., "Customer confirms issue is resolved"]
+
+**Key Inputs:** [What information or materials enter the process]
+
+**Key Outputs:** [What the process produces -- deliverables, decisions, records]
+
+---
+
+## Roles Involved
+
+<!--
+List each role that appears in the process map. Use short names that will
+fit in the diagram boxes. Map them to full titles here.
+-->
+
+| Abbreviation | Full Role Title |
 |---|---|
-| **Process Name** | [Name of the process] |
-| **SOP Reference** | [Link to the related SOP, if one exists] |
-| **Owner** | [Name and title] |
-| **Last Updated** | [YYYY-MM-DD] |
-| **Version** | [1.0] |
+| [MGR] | [Operations Manager] |
+| [REP] | [Sales Representative] |
+| [FIN] | [Finance / Bookkeeper] |
 
 ---
 
-## Diagram Conventions
-
-Before reading or creating a process map, understand these symbols:
-
-```
-  Standard Symbols (ASCII Representation)
-  ========================================
-
-  [ Start / End ]       Rounded box or brackets -- marks the beginning or end of the process
-
-  | Action Step |       Rectangle -- a task or action someone performs
-
-  < Decision? >         Diamond (angle brackets) -- a yes/no or branching question
-
-  (( Subprocess ))      Double parentheses -- a step that has its own separate SOP or process map
-
-  [Document]            A document or artifact produced or consumed by the step
-
-  ------>               Arrow -- shows direction of flow
-
-  - - - - >             Dashed arrow -- optional or conditional path
-```
-
----
-
-## Swimlane Map
+## Process Map
 
 <!--
-  A swimlane map organizes steps by WHO performs them. Each "lane" represents
-  a role or department. This makes handoffs visible at a glance.
+GUIDE TO BUILDING YOUR PROCESS MAP
 
-  Adapt the lane names below to match the roles in your process.
+Use the symbols below to build your flowchart. Markdown and ASCII art
+work well for simple-to-moderate processes. For highly complex processes
+with many parallel paths, consider using a diagramming tool (Lucidchart,
+Miro, draw.io) and linking to it here.
+
+SYMBOLS:
+  ( Start/End )     -- Rounded: terminal points
+  [ Action/Step ]   -- Square brackets: tasks or actions
+  { Decision? }     -- Curly braces: yes/no or branching decisions
+  [[ Sub-process ]] -- Double brackets: reference to another SOP
+  (( Document ))    -- Double parens: a document or record is created
+
+ARROWS:
+  -->               -- Flow direction
+  |                 -- Vertical connector
+  v                 -- Downward arrow
+  +-- Yes -->       -- Labeled branch
+  +-- No  -->       -- Labeled branch
+
+SWIM LANES:
+  Use headers (### Role Name) to show which role is responsible
+  for each section of the process.
+
+TIPS:
+  - Keep it to one page if possible
+  - Read the map out loud to check flow logic
+  - Every decision must have at least two exits
+  - Every path must reach an end point (no dead ends)
+  - Number steps to match the detailed SOP procedure section
 -->
 
 ```
-ROLE / DEPT        PROCESS FLOW
-=============================================================================
-
-                   [ Start: Trigger Event ]
-                              |
-                              v
-[Role A]           | Step 1: Description |
-                              |
-                              v
-                        < Decision? >
-                       /             \
-                     YES              NO
-                      |                |
-                      v                v
-[Role B]     | Step 2a: Path A |    | Step 2b: Path B |
-                      |                |
-                      v                v
-                      +-------+--------+
-                              |
-                              v
-[Role C]           | Step 3: Description |
-                              |
-                              v
-                   (( Subprocess: Name ))
-                              |
-                              v
-[Role A]           | Step 4: Description |
-                              |
-                              v
-                        < Approved? >
-                       /             \
-                     YES              NO
-                      |                |
-                      v                v
-              | Step 5: Proceed |   | Step 5b: Revise |
-                      |                |
-                      v                +----> (loops back to Step 3)
-                   [ End ]
+                        ( START )
+                            |
+                            v
+                  +-------------------+
+                  | 1. [First action] |
+                  +-------------------+
+                            |
+                            v
+                  +-------------------+
+                  | 2. [Second action]|
+                  +-------------------+
+                            |
+                            v
+                   { Decision point? }
+                    /              \
+                 Yes                No
+                  /                  \
+                 v                    v
+      +----------------+    +------------------+
+      | 3a. [Action if |    | 3b. [Action if   |
+      |     yes]       |    |     no]          |
+      +----------------+    +------------------+
+                  \                  /
+                   \                /
+                    v              v
+                  +-------------------+
+                  | 4. [Next action]  |
+                  +-------------------+
+                            |
+                            v
+                  +-------------------+
+                  | 5. [Final action] |
+                  +-------------------+
+                            |
+                            v
+                        ( END )
 ```
 
 ---
 
-## Example: Customer Support Ticket Resolution
+## Detailed Step Reference
 
-Below is a completed process map to demonstrate the format. Replace this with your own process.
+<!--
+This table maps each numbered step in the process map to additional
+detail. It bridges the visual diagram with the full SOP.
+-->
 
-### Overview
-
-This map shows how a customer support ticket moves from submission to resolution, including escalation paths.
-
-### Swimlane Diagram
-
-```
-ROLE                PROCESS FLOW
-=============================================================================
-
-                    [ Start: Customer submits support ticket ]
-                                   |
-                                   v
-[Support Rep]       | 1. Review ticket and categorize |
-                    |    (Bug / Feature Request / How-To / Billing) |
-                                   |
-                                   v
-                             < Can resolve
-                              within 15 min? >
-                            /                \
-                          YES                 NO
-                           |                   |
-                           v                   v
-[Support Rep]    | 2a. Resolve and     | 2b. Assign priority |
-                 |     reply to         |     (P1/P2/P3) and  |
-                 |     customer |       |     escalate |
-                           |                   |
-                           v                   v
-                    [ Skip to          < Priority
-                      Step 6 ]           level? >
-                                      /     |      \
-                                    P1      P2      P3
-                                     |      |       |
-                                     v      v       v
-[Support Lead]              | 3a. Assign   | 3b. Add to
-                            |  to senior   |  sprint backlog |
-                            |  rep, notify |       |
-                            |  customer    |       v
-                            |  within 1hr |  (( Standard Dev
-                                     |        Workflow ))
-                                     v             |
-[Senior Rep /               | 4. Investigate       |
- Engineering]               |    and diagnose |     |
-                                     |              |
-                                     v              |
-                              < Needs code           |
-                                fix? >               |
-                             /          \            |
-                           YES           NO          |
-                            |             |          |
-                            v             v          |
-                     (( Dev Release  | 5. Apply      |
-                        Workflow ))  | config or     |
-                            |        | workaround |  |
-                            |             |          |
-                            v             v          |
-                            +------+------+          |
-                                   |                 |
-                                   v                 |
-[Support Rep]       | 6. Send resolution to customer |
-                    |    with explanation |           |
-                                   |                 |
-                                   v                 |
-                            < Customer               |
-                              confirmed              |
-                              resolved? >            |
-                           /              \          |
-                         YES               NO        |
-                          |                 |        |
-                          v                 v        |
-                   | 7. Close       | 7b. Reopen     |
-                   |    ticket |    |     and return  |
-                          |         |     to Step 4 | |
-                          v                          |
-                   | 8. Log resolution               |
-                   |    in knowledge base |           |
-                          |                          |
-                          v                          |
-                   [ End: Ticket resolved ]          |
-                                                     |
-                                   (P3 items resolved in future sprint,
-                                    customer notified per release notes)
-```
-
-### Key Metrics to Track
-
-| Metric | Target | Measured At |
-|---|---|---|
-| First response time | Under 2 hours (business hours) | Step 1 to customer notification |
-| Resolution time (P1) | Under 4 hours | Start to Step 6 |
-| Resolution time (P2) | Under 24 hours | Start to Step 6 |
-| First-contact resolution rate | Above 40% | Step 2a vs. total tickets |
-| Reopen rate | Below 10% | Step 7b vs. Step 7 |
+| Step | Action | Responsible | System/Tool | Notes |
+|---|---|---|---|---|
+| 1 | [Description] | [Role] | [Tool] | [Any notes] |
+| 2 | [Description] | [Role] | [Tool] | [Any notes] |
+| 3a | [Description] | [Role] | [Tool] | [If yes branch] |
+| 3b | [Description] | [Role] | [Tool] | [If no branch] |
+| 4 | [Description] | [Role] | [Tool] | [Any notes] |
+| 5 | [Description] | [Role] | [Tool] | [Any notes] |
 
 ---
 
-## Blank Process Map
+## Decision Point Details
 
-Copy the structure below to map your own process.
+<!--
+For each decision in the process map, document the criteria clearly.
+Ambiguous decision points are the #1 cause of process breakdowns.
+-->
 
-```
-ROLE                PROCESS FLOW
-=============================================================================
+### Decision: [Decision point name]
 
-                    [ Start: _________________________________ ]
-                                   |
-                                   v
-[___________]       | 1. _________________________________________ |
-                                   |
-                                   v
-                             < __________________ ? >
-                            /                       \
-                          YES                        NO
-                           |                          |
-                           v                          v
-[___________]    | 2a. ___________________ |  | 2b. ___________________ |
-                           |                          |
-                           v                          v
-                           +------------+-------------+
-                                        |
-                                        v
-[___________]       | 3. _________________________________________ |
-                                        |
-                                        v
-[___________]       | 4. _________________________________________ |
-                                        |
-                                        v
-                             < __________________ ? >
-                            /                       \
-                          YES                        NO
-                           |                          |
-                           v                          v
-                    | 5a. _____________ |     | 5b. _____________ |
-                           |                          |
-                           v                          |
-                    [ End: ____________ ]              |
-                                                      v
-                                              (loops back to Step __)
-```
+- **Question:** [Exact question being evaluated]
+- **Yes criteria:** [What conditions lead to "Yes"]
+- **No criteria:** [What conditions lead to "No"]
+- **Who decides:** [Role with authority to make this call]
+- **Escalation:** [What to do if the answer is unclear]
 
 ---
 
-## Tips for Process Mapping
+## Handoff Points
 
-1. **Start with the trigger.** Every process begins with an event: a customer calls, a date arrives, someone clicks a button. Name it explicitly.
+<!--
+Handoffs -- where work transfers from one person or team to another --
+are where most process failures occur. Document each one explicitly.
+-->
 
-2. **End with the outcome.** What is the deliverable or end state? "Invoice sent," "Employee active in payroll," "Ticket closed." Be specific.
-
-3. **Limit decision points.** If your map has more than four or five decision diamonds, the process may be too complex. Consider breaking it into subprocesses.
-
-4. **Show handoffs clearly.** The swimlane format exists specifically to highlight when work moves from one person or team to another. Every handoff is a potential failure point -- make them visible.
-
-5. **Include time expectations.** Where steps have deadlines or SLAs, note them. This turns the map from a description into a performance tool.
-
-6. **Validate with the people who do the work.** The person drawing the map and the person performing the process often have different mental models. Walk through the map together step by step.
-
-7. **Keep it current.** A process map that does not match reality is worse than no map at all. Update it whenever the process changes and include a version date.
-
-8. **Use subprocesses for complexity.** If a single step on your map could itself be a 10-step procedure, represent it as a subprocess `(( Name ))` and link to a separate map or SOP.
+| From | To | What Is Handed Off | How | SLA |
+|---|---|---|---|---|
+| [Role] | [Role] | [Deliverable or information] | [Email, system notification, etc.] | [Expected timeframe] |
+| [Role] | [Role] | [Deliverable or information] | [How] | [Expected timeframe] |
 
 ---
 
-*Template provided by [Relay Launch](https://relaylaunch.com) | SOP Starter Kit*
+## Metrics & KPIs
+
+<!--
+Define how you will measure whether this process is working well.
+Without metrics, you cannot identify bottlenecks or justify improvements.
+-->
+
+| Metric | Target | How Measured | Review Frequency |
+|---|---|---|---|
+| [e.g., Total cycle time] | [e.g., < 3 business days] | [e.g., Timestamps in CRM] | [e.g., Monthly] |
+| [e.g., Error rate] | [e.g., < 2%] | [e.g., QA review log] | [e.g., Weekly] |
+
+---
+
+---
+
+# Sample Process Map: Customer Support Ticket Resolution
+
+Below is a completed example to illustrate how the template works in practice.
+
+## Overview
+
+This process covers the lifecycle of a customer support ticket from initial submission through resolution and closure. It ensures every ticket is triaged, assigned, resolved, and documented consistently.
+
+## Process Boundaries
+
+**Start Event:** Customer submits a support request (email, form, or phone)
+
+**End Event:** Ticket is marked "Closed" in the help desk system after customer confirmation
+
+**Key Inputs:** Customer contact info, issue description, account details
+
+**Key Outputs:** Resolved issue, updated knowledge base (if applicable), closed ticket record
+
+## Roles Involved
+
+| Abbreviation | Full Role Title |
+|---|---|
+| CSR | Customer Service Representative |
+| TL | Team Lead / Support Manager |
+| SPEC | Subject Matter Specialist |
+
+## Process Map
+
+```
+                          ( TICKET RECEIVED )
+                                  |
+                                  v
+                      +------------------------+
+                      | 1. CSR logs ticket in  |
+                      |    help desk system     |
+                      +------------------------+
+                                  |
+                                  v
+                      +------------------------+
+                      | 2. CSR reviews issue   |
+                      |    and categorizes      |
+                      +------------------------+
+                                  |
+                                  v
+                        { Can CSR resolve? }
+                         /              \
+                      Yes                No
+                       /                  \
+                      v                    v
+          +------------------+   +------------------------+
+          | 3a. CSR resolves |   | 3b. CSR escalates to   |
+          |     the issue    |   |     TL for assignment   |
+          +------------------+   +------------------------+
+                      |                    |
+                      |                    v
+                      |          +------------------------+
+                      |          | 4. TL assigns to SPEC  |
+                      |          +------------------------+
+                      |                    |
+                      |                    v
+                      |          +------------------------+
+                      |          | 5. SPEC investigates   |
+                      |          |    and resolves         |
+                      |          +------------------------+
+                      |                    |
+                      v                    v
+                      +------------------------+
+                      | 6. CSR notifies        |
+                      |    customer of          |
+                      |    resolution            |
+                      +------------------------+
+                                  |
+                                  v
+                     { Customer confirms fix? }
+                         /              \
+                      Yes                No
+                       /                  \
+                      v                    v
+          +------------------+   +------------------------+
+          | 7a. CSR closes   |   | 7b. Reopen ticket,     |
+          |     ticket       |   |     return to Step 2    |
+          +------------------+   +------------------------+
+                      |
+                      v
+              ( TICKET CLOSED )
+```
+
+## Decision Point Details
+
+### Decision: Can CSR resolve?
+
+- **Question:** Does the CSR have the knowledge and access to resolve this issue without specialist help?
+- **Yes criteria:** Issue matches a known solution in the knowledge base, or CSR has handled this type of issue before and has the required system access.
+- **No criteria:** Issue is technical, involves system configuration, requires elevated permissions, or is not documented in the knowledge base.
+- **Who decides:** CSR (with TL available for guidance)
+- **Escalation:** If unsure, escalate. It is better to escalate unnecessarily than to provide an incorrect resolution.
+
+### Decision: Customer confirms fix?
+
+- **Question:** Has the customer confirmed that the issue is resolved to their satisfaction?
+- **Yes criteria:** Customer replies confirming resolution, or 48 hours pass with no response after resolution notification.
+- **No criteria:** Customer reports the issue persists or a new related issue has surfaced.
+- **Who decides:** CSR based on customer response
+- **Escalation:** If the ticket is reopened more than twice, TL reviews the ticket directly.
+
+---
+
+*Use this template to map your own processes. Start simple, refine with your team, and link the finished map to its corresponding SOP.*
