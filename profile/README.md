@@ -204,7 +204,7 @@ Ready to build something that works?
 
 Or reach out directly:
 
-- **Email:** hello@relaylaunch.com
+- **Email:** V.DavidMedina@gmail.com
 - **Website:** [relaylaunch.com](https://relaylaunch.com)
 
 ---
