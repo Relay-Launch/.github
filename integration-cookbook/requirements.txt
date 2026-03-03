@@ -1,0 +1,24 @@
+# Relay▸Launch Integration Cookbook
+# Python dependencies for all recipes and utilities
+#
+# Install: pip install -r requirements.txt
+# Python:  3.8+
+
+# --- Web Framework ---
+Flask>=2.3,<4.0
+
+# --- HTTP Client ---
+requests>=2.31,<3.0
+
+# --- Environment Variables ---
+python-dotenv>=1.0,<2.0
+
+# --- Stripe (stripe-to-slack-notifications.py) ---
+stripe>=7.0,<10.0
+
+# --- Google Sheets (hubspot-to-sheets-sync.py) ---
+gspread>=5.12,<7.0
+google-auth>=2.23,<3.0
+
+# --- Retry / HTTP Adapter (utils/api_client.py) ---
+urllib3>=2.0,<3.0
