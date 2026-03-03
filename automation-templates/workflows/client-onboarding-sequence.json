@@ -1,0 +1,344 @@
+{
+  "name": "Client Onboarding Sequence",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "client-onboarding",
+        "responseMode": "onReceived",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "id": "webhook-new-client",
+      "name": "Webhook - New Client Signed",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 400],
+      "webhookId": "client-onboarding-webhook",
+      "notes": "Triggered when a new client signs a contract or completes payment. Connect this to your proposal tool (PandaDoc, DocuSign), payment processor (Stripe), or CRM deal-stage change. Expected payload: { clientName, clientEmail, contactName, contactFirstName, packageType, projectName, startDate, accountManagerEmail }"
+    },
+    {
+      "parameters": {
+        "functionCode": "const body = items[0].json.body || items[0].json;\n\nconst client = {\n  clientName: body.clientName || body.company_name || 'New Client',\n  clientEmail: (body.clientEmail || body.email || '').toLowerCase().trim(),\n  contactName: body.contactName || body.contact_name || '',\n  contactFirstName: body.contactFirstName || (body.contactName || '').split(' ')[0] || 'there',\n  packageType: body.packageType || body.package || 'standard',\n  projectName: body.projectName || body.project || `${body.clientName || 'Client'} - Onboarding`,\n  startDate: body.startDate || new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],\n  accountManagerEmail: body.accountManagerEmail || body.am_email || 'team@yourcompany.com',\n  onboardingId: `ONB-${Date.now().toString(36).toUpperCase()}`,\n  createdAt: new Date().toISOString()\n};\n\n// Calculate key dates\nconst start = new Date(client.startDate);\nclient.welcomeCallDate = new Date(start.getTime() - 3 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];\nclient.kickoffDate = client.startDate;\nclient.firstCheckInDate = new Date(start.getTime() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];\nclient.thirtyDayReviewDate = new Date(start.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];\n\n// Determine onboarding steps based on package\nif (client.packageType === 'premium' || client.packageType === 'enterprise') {\n  client.includesStrategySession = true;\n  client.includesDedicatedSlackChannel = true;\n  client.includesCustomTraining = true;\n} else {\n  client.includesStrategySession = false;\n  client.includesDedicatedSlackChannel = false;\n  client.includesCustomTraining = false;\n}\n\nreturn [{ json: client }];"
+      },
+      "id": "prepare-onboarding-data",
+      "name": "Prepare Onboarding Data",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [460, 400],
+      "notes": "Normalizes client data from the webhook, calculates key milestone dates, and determines which onboarding steps apply based on the package tier."
+    },
+    {
+      "parameters": {
+        "fromEmail": "onboarding@yourcompany.com",
+        "toEmail": "={{$json.clientEmail}}",
+        "subject": "Welcome to the team, {{$json.contactFirstName}}! Here's what happens next.",
+        "text": "",
+        "html": "<div style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n<h2 style=\"color: #2d3748;\">Welcome aboard, {{$json.contactFirstName}}!</h2>\n\n<p>We're thrilled to have {{$json.clientName}} on board. This email outlines what to expect over the next few days as we get everything set up for you.</p>\n\n<h3 style=\"color: #4a5568;\">Your Onboarding Timeline</h3>\n\n<table style=\"width: 100%; border-collapse: collapse; margin: 20px 0;\">\n<tr style=\"border-bottom: 1px solid #e2e8f0;\">\n<td style=\"padding: 12px; font-weight: bold;\">Welcome Call</td>\n<td style=\"padding: 12px;\">{{$json.welcomeCallDate}}</td>\n</tr>\n<tr style=\"border-bottom: 1px solid #e2e8f0;\">\n<td style=\"padding: 12px; font-weight: bold;\">Project Kickoff</td>\n<td style=\"padding: 12px;\">{{$json.kickoffDate}}</td>\n</tr>\n<tr style=\"border-bottom: 1px solid #e2e8f0;\">\n<td style=\"padding: 12px; font-weight: bold;\">First Check-in</td>\n<td style=\"padding: 12px;\">{{$json.firstCheckInDate}}</td>\n</tr>\n<tr>\n<td style=\"padding: 12px; font-weight: bold;\">30-Day Review</td>\n<td style=\"padding: 12px;\">{{$json.thirtyDayReviewDate}}</td>\n</tr>\n</table>\n\n<h3 style=\"color: #4a5568;\">What We Need From You</h3>\n<ol>\n<li>Fill out our <a href=\"https://yourcompany.com/intake-form\">client intake form</a> (takes about 10 minutes)</li>\n<li>Grant access to the tools and systems we'll be working with</li>\n<li>Confirm your availability for the welcome call</li>\n</ol>\n\n<h3 style=\"color: #4a5568;\">Your Account Manager</h3>\n<p>Your primary point of contact is your account manager at <a href=\"mailto:{{$json.accountManagerEmail}}\">{{$json.accountManagerEmail}}</a>. Don't hesitate to reach out with any questions.</p>\n\n<p style=\"margin-top: 30px; padding: 15px; background-color: #f7fafc; border-radius: 8px; color: #4a5568;\">Your onboarding ID is <strong>{{$json.onboardingId}}</strong>. Reference this in any communications for the fastest response.</p>\n\n<p>Looking forward to working together!</p>\n<p>The Team</p>\n</div>",
+        "options": {
+          "replyTo": "={{$json.accountManagerEmail}}"
+        }
+      },
+      "id": "send-welcome-email",
+      "name": "Email - Welcome Message",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [720, 200],
+      "credentials": {
+        "smtp": {
+          "id": "smtp-credentials",
+          "name": "SMTP"
+        }
+      },
+      "notes": "Sends the welcome email immediately upon client signup. Customize the template with your branding, links, and process. The reply-to is set to the assigned account manager."
+    },
+    {
+      "parameters": {
+        "resource": "task",
+        "operation": "create",
+        "taskList": "Client Onboarding",
+        "title": "[{{$json.onboardingId}}] {{$json.clientName}} - Onboarding Checklist",
+        "additionalFields": {
+          "dueDate": "={{$json.startDate}}",
+          "notes": "Onboarding project for {{$json.clientName}}\nPackage: {{$json.packageType}}\nContact: {{$json.contactName}} ({{$json.clientEmail}})\nAccount Manager: {{$json.accountManagerEmail}}\n\nOnboarding ID: {{$json.onboardingId}}"
+        }
+      },
+      "id": "create-master-task",
+      "name": "PM Tool - Create Master Task",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [720, 400],
+      "credentials": {
+        "asanaApi": {
+          "id": "asana-credentials",
+          "name": "Asana API"
+        }
+      },
+      "notes": "Creates the master onboarding task/project in your project management tool. This example uses Asana, but swap it for ClickUp, Monday.com, Notion, Trello, or whatever your team uses."
+    },
+    {
+      "parameters": {
+        "functionCode": "const client = items[0].json;\n\n// Define the standard onboarding subtasks\nconst subtasks = [\n  {\n    title: `Send welcome email`,\n    dueOffset: 0,\n    status: 'completed',\n    assignee: 'system'\n  },\n  {\n    title: `Receive completed intake form from ${client.contactFirstName}`,\n    dueOffset: 2,\n    status: 'pending',\n    assignee: client.accountManagerEmail\n  },\n  {\n    title: `Schedule and conduct welcome call`,\n    dueOffset: 3,\n    status: 'pending',\n    assignee: client.accountManagerEmail\n  },\n  {\n    title: `Set up client in internal systems (billing, project tracking, docs)`,\n    dueOffset: 3,\n    status: 'pending',\n    assignee: client.accountManagerEmail\n  },\n  {\n    title: `Create shared folder/workspace for ${client.clientName}`,\n    dueOffset: 3,\n    status: 'pending',\n    assignee: client.accountManagerEmail\n  },\n  {\n    title: `Conduct project kickoff meeting`,\n    dueOffset: 7,\n    status: 'pending',\n    assignee: client.accountManagerEmail\n  },\n  {\n    title: `Deliver initial project plan / statement of work`,\n    dueOffset: 10,\n    status: 'pending',\n    assignee: client.accountManagerEmail\n  },\n  {\n    title: `First week check-in call`,\n    dueOffset: 14,\n    status: 'pending',\n    assignee: client.accountManagerEmail\n  },\n  {\n    title: `30-day review and feedback collection`,\n    dueOffset: 30,\n    status: 'pending',\n    assignee: client.accountManagerEmail\n  }\n];\n\n// Add premium-only tasks\nif (client.includesStrategySession) {\n  subtasks.splice(6, 0, {\n    title: `Schedule strategy deep-dive session`,\n    dueOffset: 5,\n    status: 'pending',\n    assignee: client.accountManagerEmail\n  });\n}\n\nif (client.includesDedicatedSlackChannel) {\n  subtasks.splice(3, 0, {\n    title: `Create dedicated Slack channel #client-${client.clientName.toLowerCase().replace(/\\s+/g, '-')}`,\n    dueOffset: 1,\n    status: 'pending',\n    assignee: client.accountManagerEmail\n  });\n}\n\nif (client.includesCustomTraining) {\n  subtasks.push({\n    title: `Schedule custom training session for ${client.contactFirstName}'s team`,\n    dueOffset: 21,\n    status: 'pending',\n    assignee: client.accountManagerEmail\n  });\n}\n\n// Calculate actual due dates\nconst startDate = new Date(client.startDate);\nconst tasksWithDates = subtasks.map((task, index) => {\n  const dueDate = new Date(startDate.getTime() + task.dueOffset * 24 * 60 * 60 * 1000);\n  return {\n    ...task,\n    dueDate: dueDate.toISOString().split('T')[0],\n    order: index + 1,\n    clientName: client.clientName,\n    onboardingId: client.onboardingId\n  };\n});\n\nreturn tasksWithDates.map(task => ({ json: task }));"
+      },
+      "id": "generate-subtasks",
+      "name": "Generate Onboarding Subtasks",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [940, 400],
+      "notes": "Generates all onboarding subtasks with calculated due dates. Tasks are adjusted based on the client's package tier -- premium clients get additional steps like strategy sessions, dedicated Slack channels, and custom training."
+    },
+    {
+      "parameters": {
+        "resource": "task",
+        "operation": "create",
+        "taskList": "Client Onboarding",
+        "title": "={{$json.order}}. {{$json.title}}",
+        "additionalFields": {
+          "dueDate": "={{$json.dueDate}}",
+          "notes": "Part of onboarding {{$json.onboardingId}} for {{$json.clientName}}"
+        }
+      },
+      "id": "create-subtasks",
+      "name": "PM Tool - Create Each Subtask",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [1160, 400],
+      "credentials": {
+        "asanaApi": {
+          "id": "asana-credentials",
+          "name": "Asana API"
+        }
+      },
+      "notes": "Creates each subtask in your PM tool. This node runs once per subtask generated by the previous step."
+    },
+    {
+      "parameters": {
+        "url": "https://api.calendly.com/scheduling_links",
+        "method": "POST",
+        "headerParameters": {
+          "parameter": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.calendlyApiKey}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "bodyParameters": {
+          "parameter": [
+            {
+              "name": "max_event_count",
+              "value": "1"
+            },
+            {
+              "name": "owner",
+              "value": "={{$json.accountManagerEmail}}"
+            },
+            {
+              "name": "owner_type",
+              "value": "User"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "create-calendly-link",
+      "name": "Calendly - Create Welcome Call Link",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [720, 600],
+      "notes": "Creates a single-use Calendly scheduling link for the welcome call. If you use a different scheduling tool (Acuity, Cal.com, SavvyCal), swap this API call accordingly.",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "fromEmail": "onboarding@yourcompany.com",
+        "toEmail": "={{$json.clientEmail}}",
+        "subject": "Let's schedule your welcome call, {{$json.contactFirstName}}",
+        "text": "",
+        "html": "<div style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n<p>Hi {{$json.contactFirstName}},</p>\n\n<p>As a next step, let's get your welcome call on the calendar. This is a 30-minute call where we'll:</p>\n<ul>\n<li>Walk through our working process</li>\n<li>Answer any initial questions you have</li>\n<li>Align on priorities for your first two weeks</li>\n</ul>\n\n<p style=\"text-align: center; margin: 30px 0;\">\n<a href=\"{{$json.schedulingLink || 'https://calendly.com/yourcompany/welcome-call'}}\" style=\"background-color: #4299e1; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; font-weight: bold;\">Schedule Your Welcome Call</a>\n</p>\n\n<p>If none of the available times work, just reply to this email and we'll find something that does.</p>\n\n<p>Talk soon,<br/>The Team</p>\n</div>",
+        "options": {
+          "replyTo": "={{$json.accountManagerEmail}}"
+        }
+      },
+      "id": "send-scheduling-email",
+      "name": "Email - Schedule Welcome Call",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [940, 600],
+      "credentials": {
+        "smtp": {
+          "id": "smtp-credentials",
+          "name": "SMTP"
+        }
+      },
+      "notes": "Sends the scheduling link to the client. This is sent as a separate email from the welcome message to increase the chance it gets acted on -- too many CTAs in one email reduces action rates."
+    },
+    {
+      "parameters": {
+        "channel": "#client-onboarding",
+        "text": ":tada: *New Client Onboarded*\n\n*Client:* {{$json.clientName}}\n*Contact:* {{$json.contactName}} ({{$json.clientEmail}})\n*Package:* {{$json.packageType}}\n*Account Manager:* {{$json.accountManagerEmail}}\n*Project Start:* {{$json.startDate}}\n*Onboarding ID:* {{$json.onboardingId}}\n\nOnboarding tasks have been created and welcome emails sent. Welcome call scheduling link dispatched.",
+        "otherOptions": {}
+      },
+      "id": "slack-team-notification",
+      "name": "Slack - Notify Team",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [720, 800],
+      "credentials": {
+        "slackApi": {
+          "id": "slack-credentials",
+          "name": "Slack API"
+        }
+      },
+      "notes": "Notifies the internal team that a new client has been onboarded and all automated steps have been executed. Change the channel to match your workspace."
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "sheetName",
+              "value": "Onboarding Log"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "log-to-sheet",
+      "name": "Google Sheets - Log Onboarding",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [720, 980],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-sheets-credentials",
+          "name": "Google Sheets OAuth2"
+        }
+      },
+      "notes": "Logs the onboarding event for tracking and reporting. Columns: onboardingId, clientName, contactName, contactEmail, packageType, startDate, accountManager, createdAt."
+    }
+  ],
+  "connections": {
+    "Webhook - New Client Signed": {
+      "main": [
+        [
+          {
+            "node": "Prepare Onboarding Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Onboarding Data": {
+      "main": [
+        [
+          {
+            "node": "Email - Welcome Message",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "PM Tool - Create Master Task",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Calendly - Create Welcome Call Link",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Slack - Notify Team",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets - Log Onboarding",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PM Tool - Create Master Task": {
+      "main": [
+        [
+          {
+            "node": "Generate Onboarding Subtasks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Onboarding Subtasks": {
+      "main": [
+        [
+          {
+            "node": "PM Tool - Create Each Subtask",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calendly - Create Welcome Call Link": {
+      "main": [
+        [
+          {
+            "node": "Email - Schedule Welcome Call",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": ""
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "name": "onboarding",
+      "id": "tag-onboarding"
+    },
+    {
+      "name": "client-management",
+      "id": "tag-client-management"
+    },
+    {
+      "name": "relay-launch-template",
+      "id": "tag-relay-launch"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2026-03-02T00:00:00.000Z",
+  "versionId": "1.0.0",
+  "meta": {
+    "author": "Relay Launch",
+    "description": "Automates the full client onboarding sequence from contract signing through 30-day review. Sends welcome email, creates project tasks with calculated due dates (adjusted by package tier), generates a scheduling link for the welcome call, notifies the internal team, and logs everything for reporting.",
+    "version": "1.0.0",
+    "license": "MIT",
+    "supportedPlatforms": ["n8n", "Make", "Zapier", "Power Automate"],
+    "requiredCredentials": [
+      "SMTP credentials (or transactional email API)",
+      "Asana API key (or equivalent PM tool)",
+      "Calendly API key (or equivalent scheduling tool)",
+      "Slack Bot Token",
+      "Google Sheets OAuth2"
+    ],
+    "estimatedSetupTime": "45-60 minutes",
+    "category": "Operations / Client Management"
+  }
+}

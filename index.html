@@ -4,6 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Relay▸Launch — Strategy, Automation & Growth for Small Business</title>
+  <meta name="description" content="Relay Launch is a boutique consulting practice that helps small businesses build smarter systems through operational analysis, strategic planning, and custom automation.">
+  <meta name="keywords" content="small business consulting, business automation, operations optimization, strategic planning, workflow automation, SOP documentation, business growth">
+  <meta name="author" content="Relay Launch">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://relay-launch.github.io/Main/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://relay-launch.github.io/Main/">
+  <meta property="og:title" content="Relay Launch — Strategy, Automation & Growth for Small Business">
+  <meta property="og:description" content="We help small businesses cut through complexity, build smarter systems, and move with purpose. Boutique consulting from audit to execution.">
+  <meta property="og:site_name" content="Relay Launch">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Relay Launch — Strategy, Automation & Growth">
+  <meta name="twitter:description" content="Boutique consulting for small businesses. Operations audits, strategic roadmaps, and custom automation.">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Relay Launch",
+    "description": "Boutique consulting practice specializing in business automation, operations optimization, and strategic planning for small businesses.",
+    "url": "https://relaylaunch.com",
+    "serviceType": ["Business Consulting", "Operations Optimization", "Business Automation", "Strategic Planning"],
+    "areaServed": "US",
+    "priceRange": "$$-$$$$",
+    "knowsAbout": [
+      "Business Process Automation",
+      "Operations Management",
+      "Strategic Planning",
+      "Workflow Optimization",
+      "Small Business Growth",
+      "KPI Dashboard Development",
+      "SOP Documentation"
+    ]
+  }
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -300,15 +340,41 @@
     footer p { font-size: 0.85rem; color: var(--text-secondary); }
     footer strong { color: var(--text-primary); }
 
+    /* SKIP LINK */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 16px;
+      background: var(--brand-accent);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 0 0 6px 6px;
+      z-index: 100;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .skip-link:focus {
+      top: 0;
+      text-decoration: none;
+    }
+
     @media (max-width: 600px) {
       .hero { padding: 48px 0 40px; }
       section { padding: 48px 0; }
+    }
+
+    @media print {
+      body { background: #fff; color: #000; }
+      nav, .hero-actions, .package-cta, .cta-section, .skip-link { display: none; }
+      .card, .package-card { border-color: #ccc; background: #f9f9f9; }
     }
   </style>
 </head>
 <body>
 
-  <nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav role="navigation" aria-label="Main navigation">
     <div class="container">
       <span class="brand">Relay<span>▸</span>Launch</span>
       <ul>
@@ -319,18 +385,18 @@
     </div>
   </nav>
 
-  <div class="container">
+  <main id="main-content" class="container">
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-heading">
       <div class="hero-eyebrow">Strategy · Automation · Growth</div>
-      <h1>Relay<span class="arrow">▸</span>Launch</h1>
+      <h1 id="hero-heading">Relay<span class="arrow">▸</span>Launch</h1>
       <p class="hero-sub">
         We help small businesses and growing companies cut through complexity,
         build smarter systems, and move with purpose.
       </p>
       <div class="hero-actions">
-        <a href="https://github.com/Relay-Launch/demo-repository/issues/new/choose" class="btn-primary">Start a Project</a>
+        <a href="https://github.com/Relay-Launch/Main/issues/new/choose" class="btn-primary">Start a Project</a>
         <a href="#services" class="btn-secondary">See Packages</a>
       </div>
     </section>
@@ -392,7 +458,7 @@
             <li>Priority Matrix</li>
             <li>30-Day Action Plan</li>
           </ul>
-          <a href="https://github.com/Relay-Launch/demo-repository/issues/new/choose" class="package-cta">Get Started</a>
+          <a href="https://github.com/Relay-Launch/Main/issues/new/choose" class="package-cta">Get Started</a>
         </div>
         <div class="package-card">
           <div class="package-name">Blueprint</div>
@@ -403,7 +469,7 @@
             <li>90-Day Roadmap</li>
             <li>Automation Opportunity Map</li>
           </ul>
-          <a href="https://github.com/Relay-Launch/demo-repository/issues/new/choose" class="package-cta">Get Started</a>
+          <a href="https://github.com/Relay-Launch/Main/issues/new/choose" class="package-cta">Get Started</a>
         </div>
         <div class="package-card featured">
           <div class="package-badge">Most Popular</div>
@@ -416,7 +482,7 @@
             <li>Tool Configuration Guide</li>
             <li>30-Day Launch Support</li>
           </ul>
-          <a href="https://github.com/Relay-Launch/demo-repository/issues/new/choose" class="package-cta">Get Started</a>
+          <a href="https://github.com/Relay-Launch/Main/issues/new/choose" class="package-cta">Get Started</a>
         </div>
         <div class="package-card">
           <div class="package-name">Launch</div>
@@ -428,7 +494,7 @@
             <li>Continuous Optimization</li>
             <li>Priority Access</li>
           </ul>
-          <a href="https://github.com/Relay-Launch/demo-repository/issues/new/choose" class="package-cta">Get Started</a>
+          <a href="https://github.com/Relay-Launch/Main/issues/new/choose" class="package-cta">Get Started</a>
         </div>
       </div>
     </section>
@@ -471,11 +537,11 @@
       <h2>Ready to move forward?</h2>
       <p>Start with a project request or reach out directly. We respond fast.</p>
       <div class="hero-actions">
-        <a href="https://github.com/Relay-Launch/demo-repository/issues/new/choose" class="btn-primary">Submit a Project Request</a>
+        <a href="https://github.com/Relay-Launch/Main/issues/new/choose" class="btn-primary">Submit a Project Request</a>
       </div>
     </section>
 
-  </div>
+  </main>
 
   <footer>
     <p><strong>Relay▸Launch</strong> — Operational clarity. Strategic momentum. Real results.</p>

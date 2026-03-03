@@ -110,6 +110,27 @@ We move efficiently, communicate clearly, and build things that last.
 
 ---
 
+## Tools & Technologies We Work With
+
+We're platform-agnostic and work with whatever fits your business best. Here's a sample of the tools and platforms we regularly build with and integrate:
+
+| Category | Tools & Platforms |
+|---|---|
+| Automation | Zapier, Make (Integromat), n8n, Power Automate |
+| Project Management | Asana, Monday.com, Notion, Trello, ClickUp |
+| CRM & Sales | HubSpot, Salesforce, Pipedrive, Zoho CRM |
+| Communication | Slack, Microsoft Teams, Discord |
+| Data & Analytics | Google Analytics, Looker Studio, Tableau, Power BI |
+| Docs & Knowledge | Notion, Confluence, Google Workspace, SharePoint |
+| E-commerce | Shopify, WooCommerce, Square, Stripe |
+| Marketing | Mailchimp, ConvertKit, ActiveCampaign, Buffer |
+| Development | GitHub, VS Code, HTML/CSS/JS, Python, APIs |
+| Cloud & Infrastructure | Google Cloud, AWS, Azure, Vercel |
+
+We also build custom integrations via APIs and scripting when off-the-shelf tools don't cut it.
+
+---
+
 ## Who This Is For
 
 Relay▸Launch works best with:
@@ -138,12 +159,28 @@ Every engagement delivers outputs that are:
 
 Ready to bring clarity, structure, and momentum to your business?
 
-**[Submit a Project Request →](.github/ISSUE_TEMPLATE/project-request.yml)**
+**[Submit a Project Request →](https://github.com/Relay-Launch/Main/issues/new?template=project-request.yml)**
+
+**[Ask a Quick Question →](https://github.com/Relay-Launch/Main/issues/new?template=quick-question.yml)**
 
 Or reach out directly:
 
-- **Email:** hello@relaylaunch.com *(update with your contact)*
-- **Website:** relaylaunch.com *(update with your site)*
+- **Email:** hello@relaylaunch.com
+- **Website:** [relaylaunch.com](https://relaylaunch.com)
+
+---
+
+## Open-Source Resources
+
+We practice what we preach. These resources are free to use, fork, and adapt for your own business:
+
+| Resource | What's Inside |
+|---|---|
+| **[Automation Templates](automation-templates/)** | Ready-to-import n8n workflows (lead capture, client onboarding, invoice follow-up), platform comparison guide, automation readiness checklist |
+| **[SOP Starter Kit](sop-starter-kit/)** | Blank SOP templates, 3 complete example SOPs (employee onboarding, client intake, monthly close), process mapping template, style guide |
+| **[Business Audit Framework](business-audit-framework/)** | 4 audit checklists (operations, digital, revenue, customer journey), scoring rubric, priority matrix framework, Python scoring calculator |
+| **[KPI Dashboard Templates](kpi-dashboard-templates/)** | KPI selection guide by business type, 3 dashboard specs (executive, sales, operations), design principles, Python dashboard generator scripts |
+| **[Integration Cookbook](integration-cookbook/)** | 4 production-ready Python integration recipes (Stripe→Slack, HubSpot→Sheets, form routing, email reports), reusable API client and webhook utilities |
 
 ---
 
@@ -152,9 +189,9 @@ Or reach out directly:
 This is the Relay▸Launch organizational home on GitHub. It includes:
 
 - Service package documentation
-- Client intake templates
-- Project workflow automation
-- Operational resources for active engagements
+- Client intake templates and project workflow automation
+- Open-source business tools, templates, and frameworks
+- Integration recipes and automation workflow examples
 
 ---
 
