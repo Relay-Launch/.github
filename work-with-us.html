@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work With Us — Relay▸Launch</title>
+  <meta name="description" content="Start a project with Relay Launch. Contract engagements, W-2 roles, and retainer partnerships for small businesses and startups.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://relay-launch.github.io/Main/work-with-us.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://relay-launch.github.io/Main/work-with-us.html">
+  <meta property="og:title" content="Work With Us — Relay▸Launch">
+  <meta property="og:description" content="Contract, W-2, or retainer — we flex to fit what your business needs. Let's figure out the right engagement.">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand-dark: #0d1117;
+      --brand-accent: #238636;
+      --brand-accent-light: #2ea043;
+      --brand-muted: #8b949e;
+      --brand-border: #21262d;
+      --brand-surface: #161b22;
+      --text-primary: #e6edf3;
+      --text-secondary: #8b949e;
+      --text-link: #58a6ff;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background-color: var(--brand-dark);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    a { color: var(--text-link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    nav { border-bottom: 1px solid var(--brand-border); padding: 16px 0; }
+    nav .container { display: flex; align-items: center; justify-content: space-between; }
+    .brand { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); letter-spacing: -0.01em; }
+    .brand span { color: var(--brand-accent-light); }
+    nav ul { list-style: none; display: flex; gap: 24px; }
+    nav ul a { color: var(--text-secondary); font-size: 0.9rem; transition: color 0.2s; }
+    nav ul a:hover { color: var(--text-primary); text-decoration: none; }
+    nav ul a.active { color: var(--text-primary); }
+
+    .hero { padding: 80px 0 64px; text-align: center; }
+    .hero-eyebrow {
+      display: inline-block;
+      background: rgba(35, 134, 54, 0.15);
+      border: 1px solid rgba(35, 134, 54, 0.4);
+      color: var(--brand-accent-light);
+      font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 20px; margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800; line-height: 1.1;
+      letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .hero-sub {
+      font-size: 1.15rem; color: var(--text-secondary);
+      max-width: 640px; margin: 0 auto;
+    }
+
+    section { padding: 64px 0; }
+    .section-label {
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--brand-accent-light); margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-weight: 700; letter-spacing: -0.01em; margin-bottom: 16px;
+    }
+    .divider { border: none; border-top: 1px solid var(--brand-border); }
+
+    .engagement-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+    .engagement-card {
+      background: var(--brand-surface);
+      border: 1px solid var(--brand-border);
+      border-radius: 10px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+    }
+    .engagement-card.featured {
+      border-color: var(--brand-accent);
+      position: relative;
+    }
+    .engagement-badge {
+      position: absolute;
+      top: -1px; right: 20px;
+      background: var(--brand-accent); color: #fff;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 0 0 6px 6px;
+    }
+    .engagement-card h3 {
+      font-size: 1.15rem; font-weight: 700; margin-bottom: 6px;
+    }
+    .engagement-card .tagline {
+      font-size: 0.85rem; color: var(--brand-accent-light);
+      font-style: italic; margin-bottom: 16px;
+    }
+    .engagement-card p {
+      font-size: 0.9rem; color: var(--text-secondary);
+      line-height: 1.6; margin-bottom: 16px;
+    }
+    .engagement-card ul {
+      list-style: none; padding: 0; margin-bottom: 20px; flex: 1;
+    }
+    .engagement-card li {
+      font-size: 0.85rem; color: var(--text-secondary);
+      padding: 5px 0; padding-left: 18px; position: relative;
+    }
+    .engagement-card li::before {
+      content: '›'; position: absolute; left: 0;
+      color: var(--brand-accent-light); font-weight: 700;
+    }
+
+    .process-block {
+      background: var(--brand-surface);
+      border: 1px solid var(--brand-border);
+      border-radius: 10px;
+      padding: 40px 36px;
+      margin-bottom: 32px;
+    }
+    .process-block h2 {
+      font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;
+    }
+    .process-block > p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.7; margin-bottom: 28px; max-width: 640px;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0;
+    }
+    .p-step {
+      padding: 24px; text-align: center; position: relative;
+    }
+    .p-step-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(35,134,54,0.15); border: 2px solid var(--brand-accent);
+      color: var(--brand-accent-light); font-weight: 700;
+      font-size: 1rem; margin-bottom: 14px;
+    }
+    .p-step h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; }
+    .p-step p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
+
+    .contact-block {
+      background: var(--brand-surface);
+      border: 1px solid var(--brand-accent);
+      border-radius: 10px;
+      padding: 40px 36px;
+      text-align: center;
+    }
+    .contact-block h2 {
+      font-size: 1.5rem; font-weight: 700; margin-bottom: 12px;
+    }
+    .contact-block > p {
+      font-size: 1rem; color: var(--text-secondary);
+      margin-bottom: 32px; max-width: 540px;
+      margin-left: auto; margin-right: auto; line-height: 1.7;
+    }
+    .contact-actions {
+      display: flex; gap: 16px; justify-content: center;
+      flex-wrap: wrap; margin-bottom: 32px;
+    }
+    .contact-info {
+      display: flex; gap: 32px; justify-content: center;
+      flex-wrap: wrap; margin-top: 24px;
+      padding-top: 24px; border-top: 1px solid var(--brand-border);
+    }
+    .contact-info a {
+      font-size: 0.9rem; color: var(--text-secondary);
+      transition: color 0.2s;
+    }
+    .contact-info a:hover { color: var(--text-primary); }
+
+    .faq-section {
+      margin-top: 32px;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--brand-border);
+      padding: 20px 0;
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item h4 {
+      font-size: 0.95rem; font-weight: 700; margin-bottom: 8px;
+    }
+    .faq-item p {
+      font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;
+      max-width: 640px;
+    }
+
+    .btn-primary {
+      display: inline-block; background: var(--brand-accent); color: #fff;
+      padding: 12px 24px; border-radius: 6px;
+      font-weight: 600; font-size: 0.95rem; transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--brand-accent-light); text-decoration: none; }
+    .btn-secondary {
+      display: inline-block; background: transparent; color: var(--text-primary);
+      padding: 12px 24px; border-radius: 6px;
+      font-weight: 600; font-size: 0.95rem;
+      border: 1px solid var(--brand-border);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--text-secondary); background: var(--brand-surface); text-decoration: none; }
+
+    footer { border-top: 1px solid var(--brand-border); padding: 32px 0; text-align: center; }
+    footer p { font-size: 0.85rem; color: var(--text-secondary); }
+    footer strong { color: var(--text-primary); }
+
+    .skip-link {
+      position: absolute; top: -100%; left: 16px;
+      background: var(--brand-accent); color: #fff;
+      padding: 8px 16px; border-radius: 0 0 6px 6px;
+      z-index: 100; font-size: 0.85rem; font-weight: 600;
+    }
+    .skip-link:focus { top: 0; text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 48px 0 40px; }
+      section { padding: 48px 0; }
+      .process-block { padding: 28px 20px; }
+      .contact-block { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="brand" style="text-decoration:none;">Relay<span>▸</span>Launch</a>
+      <ul>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="index.html#services">Packages</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work-with-us.html" class="active">Work With Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content" class="container">
+
+    <section class="hero">
+      <div class="hero-eyebrow">Let's Get Started</div>
+      <h1>Tell us what you need built.</h1>
+      <p class="hero-sub">
+        Every engagement starts with a conversation. We'll figure out the right
+        scope, the right structure, and the right timeline — then we get to work.
+      </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ENGAGEMENT MODELS -->
+    <section>
+      <div class="section-label">Engagement Models</div>
+      <h2 class="section-title">Three ways to work together</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 36px; max-width: 600px;">
+        We structure engagements around what makes sense for your business — not
+        what's easiest for us. Here's how we typically work.
+      </p>
+
+      <div class="engagement-grid">
+        <div class="engagement-card featured">
+          <div class="engagement-badge">Most Flexible</div>
+          <h3>Contract / Project-Based</h3>
+          <div class="tagline">Scoped work with clear deliverables</div>
+          <p>Defined projects with milestones, timelines, and specific outcomes. You know what you're getting and when you're getting it.</p>
+          <ul>
+            <li>Website builds and redesigns</li>
+            <li>Marketing and SEO infrastructure</li>
+            <li>ERP migrations and system cutovers</li>
+            <li>Workflow automation builds</li>
+            <li>Process documentation sprints</li>
+            <li>One-time system setups</li>
+          </ul>
+        </div>
+        <div class="engagement-card">
+          <h3>W-2 / Embedded Team Member</h3>
+          <div class="tagline">Dedicated resource inside your org</div>
+          <p>A full-time or part-time team member embedded directly in your business. Handles ongoing operations, system management, and continuous builds.</p>
+          <ul>
+            <li>Ongoing month-end close operations</li>
+            <li>Continuous system administration</li>
+            <li>Long-term infrastructure management</li>
+            <li>Internal process optimization</li>
+            <li>Dedicated operational support</li>
+            <li>Team training and enablement</li>
+          </ul>
+        </div>
+        <div class="engagement-card">
+          <h3>Retainer / Advisory Partner</h3>
+          <div class="tagline">Ongoing strategic partnership</div>
+          <p>Monthly engagement with priority access, strategic reviews, and continuous optimization. For businesses that want a partner who stays in the work with them.</p>
+          <ul>
+            <li>Monthly strategy and performance reviews</li>
+            <li>Priority project queue</li>
+            <li>Ongoing SEO and marketing management</li>
+            <li>KPI dashboards and reporting</li>
+            <li>Continuous workflow refinement</li>
+            <li>Dedicated communication channel</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- HOW IT STARTS -->
+    <section>
+      <div class="process-block">
+        <div class="section-label">Getting Started</div>
+        <h2>From first conversation to active project</h2>
+        <p>We keep the onboarding process straightforward. No lengthy sales cycles, no corporate runaround — just a clear path from "we should talk" to "we're building."</p>
+
+        <div class="process-steps">
+          <div class="p-step">
+            <div class="p-step-num">1</div>
+            <h4>Reach Out</h4>
+            <p>Submit a project request or send us a message. Tell us what's going on and what you need — as detailed or high-level as you want.</p>
+          </div>
+          <div class="p-step">
+            <div class="p-step-num">2</div>
+            <h4>Discovery Call</h4>
+            <p>A focused 30-minute call where we dig into your situation, understand your goals, and start mapping the right approach.</p>
+          </div>
+          <div class="p-step">
+            <div class="p-step-num">3</div>
+            <h4>Scope & Proposal</h4>
+            <p>We define the engagement — deliverables, timeline, structure, and investment. Clear expectations for both sides before any work starts.</p>
+          </div>
+          <div class="p-step">
+            <div class="p-step-num">4</div>
+            <h4>Kick Off</h4>
+            <p>We start building. Regular check-ins, transparent progress, and working deliverables from the first sprint.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- FAQ -->
+    <section>
+      <div class="process-block">
+        <div class="section-label">Common Questions</div>
+        <h2>Before you reach out</h2>
+
+        <div class="faq-section">
+          <div class="faq-item">
+            <h4>How do I know which engagement model is right?</h4>
+            <p>That's what the discovery call is for. Most businesses start with a contract engagement around a specific project, and some evolve into ongoing retainer partnerships once we've proven the fit. We'll recommend the structure that makes the most sense for your situation.</p>
+          </div>
+          <div class="faq-item">
+            <h4>What does a typical project timeline look like?</h4>
+            <p>It depends entirely on scope. A website build or Google Business setup can be turned around in a few weeks. An ERP migration or full operational buildout is a multi-month engagement. We'll give you a realistic timeline upfront — not an optimistic one we can't hit.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Do you work with businesses outside the US?</h4>
+            <p>Our primary service area is US-based businesses, but we've worked with companies across time zones. If the work can be done remotely and the communication works, we're open to it.</p>
+          </div>
+          <div class="faq-item">
+            <h4>What industries do you work with?</h4>
+            <p>We're not industry-specific. Our two service tracks — small business growth and startup operations — apply across sectors. We've worked with professional services, retail, SaaS, food and beverage, construction, and more. The common thread is businesses that need real infrastructure, not just advice.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Can you work with the tools we already use?</h4>
+            <p>Almost certainly. We're platform-agnostic and build with whatever fits your situation best. If you're already invested in specific tools, we'll work within that ecosystem. If you're starting from scratch, we'll help you pick the right stack.</p>
+          </div>
+          <div class="faq-item">
+            <h4>What happens after the project is done?</h4>
+            <p>Everything we build comes with documentation and a clean handoff. Your team will know how to run and maintain what we've set up. If you want ongoing support, we offer retainer engagements. But we never build in a way that forces you to keep us around.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- CONTACT -->
+    <section>
+      <div class="contact-block">
+        <h2>Ready to start building?</h2>
+        <p>
+          Send us a project request with whatever details you have. We'll get back to you
+          quickly and set up a time to talk through what you need.
+        </p>
+        <div class="contact-actions">
+          <a href="https://github.com/Relay-Launch/Main/issues/new?template=project-request.yml" class="btn-primary">Submit a Project Request</a>
+          <a href="https://github.com/Relay-Launch/Main/issues/new?template=quick-question.yml" class="btn-secondary">Ask a Quick Question</a>
+        </div>
+        <div class="contact-info">
+          <a href="mailto:hello@relaylaunch.com">hello@relaylaunch.com</a>
+          <a href="https://relaylaunch.com">relaylaunch.com</a>
+          <a href="https://github.com/Relay-Launch">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>Relay▸Launch</strong> — Build smarter. Launch faster. Grow with purpose.</p>
+  </footer>
+
+</body>
+</html>

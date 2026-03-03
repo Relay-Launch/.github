@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solutions — Relay▸Launch</title>
+  <meta name="description" content="Two service tracks built for how businesses actually need help — digital growth for small businesses and operational infrastructure for startups.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://relay-launch.github.io/Main/solutions.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://relay-launch.github.io/Main/solutions.html">
+  <meta property="og:title" content="Solutions — Relay▸Launch">
+  <meta property="og:description" content="Digital growth infrastructure for small businesses. Operational systems for startups. Two tracks, one standard of work.">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand-dark: #0d1117;
+      --brand-accent: #238636;
+      --brand-accent-light: #2ea043;
+      --brand-muted: #8b949e;
+      --brand-border: #21262d;
+      --brand-surface: #161b22;
+      --text-primary: #e6edf3;
+      --text-secondary: #8b949e;
+      --text-link: #58a6ff;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background-color: var(--brand-dark);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    a { color: var(--text-link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    nav { border-bottom: 1px solid var(--brand-border); padding: 16px 0; }
+    nav .container { display: flex; align-items: center; justify-content: space-between; }
+    .brand { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); letter-spacing: -0.01em; }
+    .brand span { color: var(--brand-accent-light); }
+    nav ul { list-style: none; display: flex; gap: 24px; }
+    nav ul a { color: var(--text-secondary); font-size: 0.9rem; transition: color 0.2s; }
+    nav ul a:hover { color: var(--text-primary); text-decoration: none; }
+    nav ul a.active { color: var(--text-primary); }
+
+    .hero { padding: 80px 0 64px; text-align: center; }
+    .hero-eyebrow {
+      display: inline-block;
+      background: rgba(35, 134, 54, 0.15);
+      border: 1px solid rgba(35, 134, 54, 0.4);
+      color: var(--brand-accent-light);
+      font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 20px; margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800; line-height: 1.1;
+      letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .hero-sub {
+      font-size: 1.15rem; color: var(--text-secondary);
+      max-width: 640px; margin: 0 auto;
+    }
+
+    section { padding: 64px 0; }
+    .section-label {
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--brand-accent-light); margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700; letter-spacing: -0.01em; margin-bottom: 16px;
+    }
+    .section-sub {
+      color: var(--text-secondary); font-size: 1rem;
+      max-width: 600px; margin-bottom: 48px;
+    }
+    .divider { border: none; border-top: 1px solid var(--brand-border); }
+
+    .track-block {
+      background: var(--brand-surface);
+      border: 1px solid var(--brand-border);
+      border-radius: 10px;
+      padding: 40px 36px;
+      margin-bottom: 32px;
+    }
+    .track-block h2 {
+      font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;
+    }
+    .track-block .track-tagline {
+      font-size: 1rem; color: var(--brand-accent-light);
+      font-style: italic; margin-bottom: 20px;
+    }
+    .track-block .track-intro {
+      font-size: 1rem; color: var(--text-secondary);
+      margin-bottom: 28px; max-width: 680px; line-height: 1.7;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+    .service-item {
+      background: var(--brand-dark);
+      border: 1px solid var(--brand-border);
+      border-radius: 8px;
+      padding: 24px;
+    }
+    .service-item h4 {
+      font-size: 0.95rem; font-weight: 700; margin-bottom: 8px;
+    }
+    .service-item p {
+      font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55;
+    }
+
+    .track-ideal {
+      background: rgba(35, 134, 54, 0.06);
+      border: 1px solid rgba(35, 134, 54, 0.2);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 8px;
+    }
+    .track-ideal h4 {
+      font-size: 0.85rem; font-weight: 700;
+      color: var(--brand-accent-light);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 10px;
+    }
+    .track-ideal ul {
+      list-style: none; padding: 0;
+    }
+    .track-ideal li {
+      font-size: 0.88rem; color: var(--text-secondary);
+      padding: 3px 0; padding-left: 18px; position: relative;
+    }
+    .track-ideal li::before {
+      content: '›'; position: absolute; left: 0;
+      color: var(--brand-accent-light); font-weight: 700;
+    }
+
+    .diff-section {
+      background: var(--brand-surface);
+      border: 1px solid var(--brand-border);
+      border-radius: 10px;
+      padding: 40px 36px;
+      margin-top: 32px;
+    }
+    .diff-section h3 {
+      font-size: 1.2rem; font-weight: 700; margin-bottom: 16px;
+    }
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .diff-item h4 {
+      font-size: 0.9rem; font-weight: 700; margin-bottom: 6px;
+    }
+    .diff-item p {
+      font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55;
+    }
+
+    .btn-primary {
+      display: inline-block; background: var(--brand-accent); color: #fff;
+      padding: 12px 24px; border-radius: 6px;
+      font-weight: 600; font-size: 0.95rem; transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--brand-accent-light); text-decoration: none; }
+    .btn-secondary {
+      display: inline-block; background: transparent; color: var(--text-primary);
+      padding: 12px 24px; border-radius: 6px;
+      font-weight: 600; font-size: 0.95rem;
+      border: 1px solid var(--brand-border);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--text-secondary); background: var(--brand-surface); text-decoration: none; }
+
+    .cta-section { text-align: center; padding: 64px 0; }
+    .cta-section h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin-bottom: 16px; }
+    .cta-section p { color: var(--text-secondary); margin-bottom: 32px; font-size: 1rem; }
+    .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    footer { border-top: 1px solid var(--brand-border); padding: 32px 0; text-align: center; }
+    footer p { font-size: 0.85rem; color: var(--text-secondary); }
+    footer strong { color: var(--text-primary); }
+
+    .skip-link {
+      position: absolute; top: -100%; left: 16px;
+      background: var(--brand-accent); color: #fff;
+      padding: 8px 16px; border-radius: 0 0 6px 6px;
+      z-index: 100; font-size: 0.85rem; font-weight: 600;
+    }
+    .skip-link:focus { top: 0; text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 48px 0 40px; }
+      section { padding: 48px 0; }
+      .track-block { padding: 28px 20px; }
+      .diff-section { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="brand" style="text-decoration:none;">Relay<span>▸</span>Launch</a>
+      <ul>
+        <li><a href="solutions.html" class="active">Solutions</a></li>
+        <li><a href="index.html#services">Packages</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work-with-us.html">Work With Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content" class="container">
+
+    <section class="hero">
+      <div class="hero-eyebrow">What We Build</div>
+      <h1>Two tracks. One standard.</h1>
+      <p class="hero-sub">
+        We work with two types of businesses — and we've structured everything
+        around delivering exactly what each one needs. No filler. No fluff.
+        Just the infrastructure that moves you forward.
+      </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- TRACK 1: SMALL BUSINESS GROWTH -->
+    <section id="growth">
+      <div class="track-block">
+        <div class="section-label">Track 1</div>
+        <h2>Small Business Growth</h2>
+        <div class="track-tagline">Marketing infrastructure, digital visibility, and the automations that bring customers in the door.</div>
+        <p class="track-intro">
+          Most small businesses know they need a better online presence and smarter marketing — but they don't have
+          the time, the team, or the technical know-how to build it themselves. That's where we come in.
+          We set up everything from your Google Business page to your website to your lead capture automations
+          so you can focus on doing what you're already good at, while the digital side actually starts
+          working for you.
+        </p>
+
+        <div class="service-grid">
+          <div class="service-item">
+            <h4>Marketing Strategy</h4>
+            <p>We map out where your customers are, what they're searching for, and how to put your business in front of them — then we build the systems to make it happen consistently.</p>
+          </div>
+          <div class="service-item">
+            <h4>SEO & Search Visibility</h4>
+            <p>On-page optimization, keyword targeting, content structure, and technical SEO that gets your business ranking for the searches that actually matter to your bottom line.</p>
+          </div>
+          <div class="service-item">
+            <h4>Google Business Optimization</h4>
+            <p>Full profile buildout, review management strategy, posting schedules, and local search optimization so you show up when nearby customers are looking.</p>
+          </div>
+          <div class="service-item">
+            <h4>Custom Website Design</h4>
+            <p>Fast, modern websites built for conversions — not just looks. Deployed on reliable infrastructure with performance baked in from the start.</p>
+          </div>
+          <div class="service-item">
+            <h4>Lead Capture & CRM Automations</h4>
+            <p>Form submissions that route to your CRM, automatic follow-up sequences, appointment scheduling, and the handoff workflows that keep leads from falling through the cracks.</p>
+          </div>
+          <div class="service-item">
+            <h4>Referral & Growth Programs</h4>
+            <p>Structured referral programs, recommendation systems, and partnership frameworks designed to generate warm leads from your existing network and client base.</p>
+          </div>
+        </div>
+
+        <div class="track-ideal">
+          <h4>This track is built for</h4>
+          <ul>
+            <li>Local businesses that want more customers finding them online</li>
+            <li>Service providers who get referrals but need a digital presence to match</li>
+            <li>Small teams that know marketing matters but can't hire a department for it</li>
+            <li>Any business with a great product or service and a website that doesn't reflect it</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- TRACK 2: STARTUP & OPERATIONS BUILD -->
+    <section id="systems">
+      <div class="track-block">
+        <div class="section-label">Track 2</div>
+        <h2>Startup & Operations Build</h2>
+        <div class="track-tagline">System architecture, financial operations, and the infrastructure that keeps a growing company running.</div>
+        <p class="track-intro">
+          When a company is scaling — or trying to — the operational gaps become impossible to ignore.
+          Spreadsheets that should be databases. Manual processes that eat entire days. Financial closes
+          that take weeks when they should take hours. We step in and build the systems that make a
+          growing company actually function like one. ERP migrations, month-end close workflows,
+          process documentation, reporting dashboards — whatever the infrastructure gap is, we fill it.
+        </p>
+
+        <div class="service-grid">
+          <div class="service-item">
+            <h4>ERP Migration & Implementation</h4>
+            <p>Full migration planning, data mapping, system configuration, and cutover execution. We handle the complexity so your team stays focused on running the business.</p>
+          </div>
+          <div class="service-item">
+            <h4>Month-End Close Design</h4>
+            <p>Streamlined close processes, reconciliation workflows, reporting templates, and the documentation that turns a chaotic month-end into a repeatable system.</p>
+          </div>
+          <div class="service-item">
+            <h4>Workflow Architecture</h4>
+            <p>From intake forms to approval chains to handoff protocols — we design and build the workflows that keep work moving without bottlenecks or dropped balls.</p>
+          </div>
+          <div class="service-item">
+            <h4>System Setup & Configuration</h4>
+            <p>Tool selection, platform configuration, user provisioning, and the integrations that tie everything together into one coherent operational stack.</p>
+          </div>
+          <div class="service-item">
+            <h4>Process Documentation & SOPs</h4>
+            <p>Detailed standard operating procedures, role-based playbooks, and training materials that let your team run systems consistently without depending on tribal knowledge.</p>
+          </div>
+          <div class="service-item">
+            <h4>Operational Reporting & Dashboards</h4>
+            <p>KPI frameworks, real-time dashboards, and performance tracking systems that give leadership the visibility they need to make grounded decisions.</p>
+          </div>
+        </div>
+
+        <div class="track-ideal">
+          <h4>This track is built for</h4>
+          <ul>
+            <li>Startups that have outgrown their initial tools and need real infrastructure</li>
+            <li>Companies going through system migrations or platform consolidation</li>
+            <li>Finance teams that need month-end close processes that don't break every cycle</li>
+            <li>Growing companies that need operational backbone before they can scale further</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ENGAGEMENT OPTIONS -->
+    <section>
+      <div class="track-block" style="border-color: var(--brand-accent);">
+        <div class="section-label">Flexible Engagement</div>
+        <h2>Contract work or dedicated roles — your call</h2>
+        <p class="track-intro">
+          We offer both project-based contract engagements and traditional W-2 arrangements
+          depending on what makes sense for your situation. Need someone embedded with your
+          team full-time? We do that. Need a focused project scoped and delivered on a timeline?
+          We do that too. The structure follows the work — not the other way around.
+        </p>
+        <div class="service-grid">
+          <div class="service-item">
+            <h4>Contract / Project-Based</h4>
+            <p>Scoped engagements with clear deliverables, milestones, and timelines. Ideal for migrations, builds, and defined infrastructure projects.</p>
+          </div>
+          <div class="service-item">
+            <h4>W-2 / Embedded Roles</h4>
+            <p>Dedicated team members embedded directly in your organization. Best for ongoing operational support, long-term system management, and continuous improvement.</p>
+          </div>
+          <div class="service-item">
+            <h4>Retainer / Advisory</h4>
+            <p>Ongoing monthly engagements with strategic reviews, priority support, and continuous optimization. For businesses that want a partner, not just a vendor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- WHAT MAKES US DIFFERENT -->
+    <section>
+      <div class="diff-section">
+        <div class="section-label">Why Relay▸Launch</div>
+        <h3>We build. We don't just plan.</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 28px; max-width: 640px; line-height: 1.7;">
+          A lot of consultants hand you a deck and disappear. We hand you working systems. Our
+          delivery approach combines deep operational expertise with modern tooling and
+          proven frameworks that let us move faster and build better than traditional consulting.
+          You get expert-level infrastructure at a pace that actually matches how fast your
+          business needs to move.
+        </p>
+        <div class="diff-grid">
+          <div class="diff-item">
+            <h4>Execution-first</h4>
+            <p>Strategy matters, but only when it ships. Every engagement produces real, working deliverables — not just documents.</p>
+          </div>
+          <div class="diff-item">
+            <h4>Modern tooling</h4>
+            <p>We use the best platforms available to build faster, smarter, and more reliably — so you get premium infrastructure on practical timelines.</p>
+          </div>
+          <div class="diff-item">
+            <h4>Proven frameworks</h4>
+            <p>Structured methodologies for everything from project scoping to system architecture — so nothing gets missed and nothing gets wasted.</p>
+          </div>
+          <div class="diff-item">
+            <h4>Full ownership transfer</h4>
+            <p>Everything we build comes with documentation and training. When we're done, your team owns it — no vendor lock-in, no dependency.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <h2>Let's figure out what you need</h2>
+      <p>Tell us what's going on with your business and we'll map out the right approach — no commitment, no pressure.</p>
+      <div class="hero-actions">
+        <a href="work-with-us.html" class="btn-primary">Start a Conversation</a>
+        <a href="index.html#services" class="btn-secondary">See Service Packages</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>Relay▸Launch</strong> — Build smarter. Launch faster. Grow with purpose.</p>
+  </footer>
+
+</body>
+</html>

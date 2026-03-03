@@ -1,27 +1,54 @@
 # Relay▸Launch
 
-> **From Signal to Scale — Strategy, Automation & Growth for Small Business**
+> **Build Smarter. Launch Faster. Grow With Purpose.**
 
-Relay▸Launch is a boutique consulting practice built for small businesses and growing companies that are ready to operate smarter. We combine deep operational analysis, targeted strategic planning, and custom automation to eliminate bottlenecks, capture missed opportunity, and build the systems that let your business actually grow.
+Relay▸Launch is a hands-on consulting practice that builds the infrastructure small businesses and startups actually need — not just plans and slide decks. We design marketing systems, deploy automations, migrate ERPs, set up financial workflows, and deliver working digital infrastructure that your team can run from day one.
 
-Whether you're a solo operator who needs structure, a small team trying to scale efficiently, or an established business exploring new territory — we design the playbook and build the systems that move you forward.
+We operate on two service tracks, each built around a specific type of business and a specific kind of need.
 
 ---
 
-## What We Do
+## Two Service Tracks
 
-We work across every layer of your business to find where effort is being lost and where opportunity is waiting. Then we get to work.
+### Small Business Growth
 
-| Focus Area | What We Analyze & Build |
+For established small businesses that need marketing lift, digital visibility, and automation to bring in more customers and run leaner.
+
+| What We Build | What That Looks Like |
 |---|---|
-| Operations & Process | Workflow gaps, inefficiencies, SOP documentation |
-| Digital Presence | Online positioning, brand consistency, content systems |
-| Customer Journey | Touchpoints, conversion paths, retention opportunities |
-| Revenue & Growth | Existing channels, expansion targets, new revenue streams |
-| Team Systems | Communication tools, task management, handoff processes |
-| Data & Reporting | KPI tracking, dashboards, business performance insight |
+| Marketing Strategy | Customer targeting, channel mapping, campaign infrastructure |
+| SEO & Search Visibility | On-page optimization, keyword targeting, technical SEO |
+| Google Business Optimization | Profile buildout, review strategy, local search ranking |
+| Custom Website Design | Fast, modern sites built for conversions on reliable hosting |
+| Lead Capture & CRM Automations | Form routing, follow-up sequences, appointment scheduling |
+| Referral & Growth Programs | Structured referral systems, partnership frameworks |
 
-No two businesses are the same. Every engagement is targeted to your specific situation — not a recycled framework.
+**Best for:** Local businesses, service providers, and small teams that need a digital presence and marketing engine that actually works.
+
+### Startup & Operations Build
+
+For startups and growing companies that need real operational infrastructure — system migrations, financial operations, workflow architecture, and hands-on builds.
+
+| What We Build | What That Looks Like |
+|---|---|
+| ERP Migration & Implementation | Data mapping, system configuration, cutover execution |
+| Month-End Close Design | Streamlined close processes, reconciliation workflows, reporting |
+| Workflow Architecture | Intake forms, approval chains, handoff protocols |
+| System Setup & Configuration | Tool selection, platform setup, integrations |
+| Process Documentation & SOPs | Role-based playbooks, training materials, knowledge bases |
+| Operational Reporting | KPI frameworks, dashboards, performance tracking |
+
+**Best for:** Startups outgrowing their initial tools, companies migrating platforms, and finance teams that need month-end processes that work.
+
+---
+
+## Engagement Models
+
+We offer flexible engagement structures depending on what your business needs:
+
+- **Contract / Project-Based** — Scoped work with clear deliverables, milestones, and timelines
+- **W-2 / Embedded Roles** — Dedicated team members embedded directly in your organization
+- **Retainer / Advisory** — Ongoing monthly partnerships with strategic reviews and priority support
 
 ---
 
@@ -112,10 +139,11 @@ We move efficiently, communicate clearly, and build things that last.
 
 ## Tools & Technologies We Work With
 
-We're platform-agnostic and work with whatever fits your business best. Here's a sample of the tools and platforms we regularly build with and integrate:
+We're platform-agnostic and choose tools based on what fits — not what's familiar. Here's a snapshot of what we build with regularly:
 
 | Category | Tools & Platforms |
 |---|---|
+| Web & Hosting | Cloudflare, GitHub Pages, Vercel, custom HTML/CSS/JS builds |
 | Automation | Zapier, Make (Integromat), n8n, Power Automate |
 | Project Management | Asana, Monday.com, Notion, Trello, ClickUp |
 | CRM & Sales | HubSpot, Salesforce, Pipedrive, Zoho CRM |
@@ -123,9 +151,9 @@ We're platform-agnostic and work with whatever fits your business best. Here's a
 | Data & Analytics | Google Analytics, Looker Studio, Tableau, Power BI |
 | Docs & Knowledge | Notion, Confluence, Google Workspace, SharePoint |
 | E-commerce | Shopify, WooCommerce, Square, Stripe |
-| Marketing | Mailchimp, ConvertKit, ActiveCampaign, Buffer |
+| Marketing | Mailchimp, ConvertKit, ActiveCampaign, Buffer, Google Ads |
 | Development | GitHub, VS Code, HTML/CSS/JS, Python, APIs |
-| Cloud & Infrastructure | Google Cloud, AWS, Azure, Vercel |
+| Cloud & Infrastructure | Google Cloud, AWS, Azure, Cloudflare Workers |
 
 We also build custom integrations via APIs and scripting when off-the-shelf tools don't cut it.
 
@@ -135,12 +163,12 @@ We also build custom integrations via APIs and scripting when off-the-shelf tool
 
 Relay▸Launch works best with:
 
-- **Small businesses (1–50 people)** that have outgrown manual processes and disconnected tools
-- **Startups** that need operational infrastructure before they scale further
-- **Established businesses** exploring new markets, revenue channels, or digital expansion
-- **Founders and operators** who are great at their craft but need a systems partner to build around them
+- **Small businesses** that need more customers finding them online and better systems running behind the scenes
+- **Startups** that have outgrown spreadsheets and need real operational infrastructure before they can scale
+- **Growing companies** going through system migrations, platform consolidation, or financial operations buildout
+- **Founders and operators** who are great at their craft and need a builder to handle the digital and operational side
 
-If you're running lean and need things to work better — this is for you.
+If you need it built — not just planned — this is for you.
 
 ---
 
@@ -155,9 +183,20 @@ Every engagement delivers outputs that are:
 
 ---
 
+## Explore the Site
+
+| Page | What's There |
+|---|---|
+| **[Home](https://relay-launch.github.io/Main/)** | Overview, service tracks, and service packages |
+| **[Solutions](https://relay-launch.github.io/Main/solutions.html)** | Detailed breakdown of both service tracks and engagement options |
+| **[About](https://relay-launch.github.io/Main/about.html)** | Our approach, principles, and technology stack |
+| **[Work With Us](https://relay-launch.github.io/Main/work-with-us.html)** | Engagement models, process, FAQ, and contact |
+
+---
+
 ## Start a Conversation
 
-Ready to bring clarity, structure, and momentum to your business?
+Ready to build something that works?
 
 **[Submit a Project Request →](https://github.com/Relay-Launch/Main/issues/new?template=project-request.yml)**
 
@@ -188,11 +227,12 @@ We practice what we preach. These resources are free to use, fork, and adapt for
 
 This is the Relay▸Launch organizational home on GitHub. It includes:
 
-- Service package documentation
+- Multi-page business site (home, solutions, about, work with us)
+- Two-track service model documentation (small business growth + startup operations)
 - Client intake templates and project workflow automation
 - Open-source business tools, templates, and frameworks
 - Integration recipes and automation workflow examples
 
 ---
 
-*Relay▸Launch — Operational clarity. Strategic momentum. Real results.*
+*Relay▸Launch — Build smarter. Launch faster. Grow with purpose.*
