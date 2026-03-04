@@ -1,0 +1,107 @@
+---
+const navLinks = [
+  { label: 'Services', href: '/services' },
+  { label: 'Case Studies', href: '/case-studies/hrc' },
+  { label: 'About', href: '/about' },
+];
+
+const currentPath = Astro.url.pathname;
+
+function isActive(href: string) {
+  return currentPath === href || currentPath.startsWith(href + '/');
+}
+---
+
+<header>
+  <nav class="nav-inner container">
+    <a href="/" class="nav-brand" aria-label="RelayLaunch home">
+      <span class="brand-relay">Relay</span><span class="brand-arrow">&#x25BA;</span><span class="brand-launch">Launch</span>
+    </a>
+
+    <ul class="nav-links" role="list">
+      {navLinks.map(link => (
+        <li>
+          <a href={link.href} class:list={['nav-link', { active: isActive(link.href) }]}>
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <a href="/contact" class="btn-primary nav-cta">Start a Project</a>
+  </nav>
+</header>
+
+<style>
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13, 17, 23, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    gap: 32px;
+  }
+
+  .nav-brand {
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: none;
+    flex-shrink: 0;
+    letter-spacing: -0.5px;
+  }
+
+  .brand-relay, .brand-launch { color: var(--color-text); }
+  .brand-arrow { color: var(--color-green); margin: 0 1px; }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-muted);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
+  }
+
+  .nav-link:hover {
+    color: var(--color-text);
+    background: var(--color-surface);
+    text-decoration: none;
+  }
+
+  .nav-link.active {
+    color: var(--color-text);
+    background: var(--color-surface);
+  }
+
+  .nav-cta {
+    flex-shrink: 0;
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+    .nav-inner { justify-content: space-between; }
+  }
+</style>
