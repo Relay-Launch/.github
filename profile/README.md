@@ -2,7 +2,9 @@
 
 > **Build Smarter. Launch Faster. Grow With Purpose.**
 
-Relay▸Launch is a hands-on consulting practice that builds the infrastructure small businesses and startups actually need — not just plans and slide decks. We design marketing systems, deploy automations, migrate ERPs, set up financial workflows, and deliver working digital infrastructure that your team can run from day one.
+![RelayLaunch Repo Card](repo-card.svg)
+
+Relay▸Launch is a hands-on consulting practice that builds the infrastructure small businesses actually need — not just plans and slide decks. We connect your tools, automate your workflows, and build the digital presence that gets you seen. You became a business owner to run your business, not to spend 40 hours a week on tasks a system could handle. We build that system.
 
 We operate on two service tracks, each built around a specific type of business and a specific kind of need.
 
@@ -25,20 +27,20 @@ For established small businesses that need marketing lift, digital visibility, a
 
 **Best for:** Local businesses, service providers, and small teams that need a digital presence and marketing engine that actually works.
 
-### Startup & Operations Build
+### Operations & Infrastructure Build
 
-For startups and growing companies that need real operational infrastructure — system migrations, financial operations, workflow architecture, and hands-on builds.
+For startups and growing businesses that need real operational infrastructure — system migrations, workflow architecture, tool integration, and hands-on builds that eliminate the chaos of wearing too many hats.
 
 | What We Build | What That Looks Like |
 |---|---|
-| ERP Migration & Implementation | Data mapping, system configuration, cutover execution |
-| Month-End Close Design | Streamlined close processes, reconciliation workflows, reporting |
-| Workflow Architecture | Intake forms, approval chains, handoff protocols |
-| System Setup & Configuration | Tool selection, platform setup, integrations |
+| Business System Migration | Platform migrations, data mapping, clean cutovers, zero data loss |
+| Workflow Architecture | Intake forms, approval chains, automation triggers, handoff protocols |
+| System Setup & Integration | Tool selection, API connections, cross-platform data sync |
 | Process Documentation & SOPs | Role-based playbooks, training materials, knowledge bases |
-| Operational Reporting | KPI frameworks, dashboards, performance tracking |
+| Organizational Infrastructure | Org structure, team communication systems, operational dashboards |
+| Team Enablement | Tool training, adoption support, internal documentation, onboarding playbooks |
 
-**Best for:** Startups outgrowing their initial tools, companies migrating platforms, and finance teams that need month-end processes that work.
+**Best for:** Businesses outgrowing their current tools, operators consolidating disconnected systems, and founders who need real infrastructure before they can scale.
 
 ---
 
@@ -58,68 +60,71 @@ Every engagement starts with a conversation. We match you to the right level of 
 
 ---
 
-### Signal — Discovery & Audit
+### Signal — Visibility & Ops Audit `$500–$900`
 
-*For businesses that need clarity before they can move.*
+*For businesses that want an honest outside look before committing to anything bigger.*
 
-A rapid, targeted audit of your business operations, digital presence, and growth gaps. We surface what's working, what's broken, and what's being missed — and hand you a clear, prioritized action list so you know exactly where to focus.
+A focused audit of your business operations, digital presence, and tool stack. We identify what's working, what's broken, what's invisible online, and where you're losing hours to manual work — then hand you a clear, prioritized action plan.
 
 **Deliverables:**
-- Business Audit Report
-- Priority Matrix (quick wins vs. long-term moves)
-- 30-Day Action Plan
+- Business & Digital Presence Audit
+- Tool Stack Inventory (redundancies, gaps, what to cut)
+- Workflow Bottleneck Map
+- 30-Day Priority Action Plan
 
-**Best for:** Businesses that feel stuck or scattered and need an outside eye to cut through the noise.
+**Best for:** Businesses that feel scattered or stretched and want clarity before they invest in building.
 
 ---
 
-### Blueprint — Strategy & Roadmap
+### Blueprint — Systems Strategy `$1,200–$2,000`
 
-*For businesses ready to stop guessing and start planning.*
+*For businesses ready to stop guessing and start building with a real plan.*
 
-A comprehensive analysis of your business followed by a fully built strategic roadmap. We map your current state, size up your opportunities, and hand you a 90-day plan with clear targets — including where automation can do the heavy lifting.
+Everything in Signal, plus a full growth roadmap and automation opportunity map. We document exactly where your time is going, where automation can take over, and what your next 90 days should look like.
 
 **Deliverables:**
-- Full Business Analysis Report
+- All Signal deliverables
+- 90-Day Growth Roadmap
+- Automation Opportunity Map (exactly where manual work can go away)
 - Competitive Landscape Overview
-- 90-Day Strategic Roadmap
-- Automation Opportunity Map
+- Tech Stack Recommendation
 
-**Best for:** Businesses that know they need a plan but don't have the bandwidth to build one from the inside.
+**Best for:** Businesses that know they need to move but want a clear direction before investing in a full build.
 
 ---
 
-### Relay — Build & Automate
+### Relay — Build & Connect `$1,800–$6,000` ⭐ Most Popular
 
-*For businesses ready to execute — not just plan.*
+*For businesses ready to run leaner, be seen more, and have tools that actually work together.*
 
-Everything in Blueprint, plus we build it. Workflows get automated, systems get configured, and your team gets documented playbooks to run everything consistently. We hand off a business that's running more efficiently on day one.
+We build your unified digital infrastructure — website, automation workflows, email, social scheduling, and a single dashboard where everything reports back to you. One connected system doing the work of five disconnected tools.
 
 **Deliverables:**
-- All Blueprint deliverables
-- Custom Automation Workflows (live and operational)
-- Standard Operating Procedure (SOP) Library
-- Tool Configuration & Integration Guide
+- Custom Website (mobile-first, SEO-optimized, fast — 5–15 pages)
+- Live Automation Workflows (3–7 connected, running 24/7)
+- Email Sequences + Social Content Scheduling (4 platforms)
+- Unified Business Dashboard (all your metrics in one place)
+- SOP Library + Tool Documentation
 - 30-Day Launch Support
 
-**Best for:** Businesses ready to invest in lasting infrastructure, not just strategy documents.
+**Best for:** Local businesses and service providers ready to replace scattered tools with one system that runs the business while they focus on their clients.
 
 ---
 
-### Launch — Strategic Partnership
+### Sustain — Monthly Growth Support `$300–$500/month`
 
-*For businesses that want a long-term growth partner, not a one-time project.*
+*For businesses that want a consistent partner keeping the engine running and the momentum building.*
 
-A full-service ongoing engagement with continuous support, monthly strategy sessions, and a dedicated partner invested in your results. We stay in the work with you — analyzing, optimizing, and building as your business evolves.
+Monthly ongoing support to keep your systems optimized, your content flowing, and your growth moving. We stay in the work with you — not as a business partner, but as the operational support that keeps everything running and improving month over month.
 
 **Deliverables:**
-- All Relay deliverables
-- Monthly Strategy & Performance Reviews
-- Ongoing Reporting & KPI Dashboards
-- Continuous Workflow Optimization
-- Priority Access & Dedicated Support
+- Social Content (30 posts/month across 4 platforms)
+- SEO & Blog Maintenance (4 posts/month)
+- Automation Monitoring + New Workflows as your business evolves
+- Monthly Performance Report + Strategy Call
+- Priority Support Channel
 
-**Best for:** Businesses that want a committed partner at the table — not just a consultant who hands off and disappears.
+**Best for:** Businesses that want ongoing support from someone who stays in the work with them — not a one-time build that gets handed off and forgotten.
 
 ---
 
@@ -163,12 +168,12 @@ We also build custom integrations via APIs and scripting when off-the-shelf tool
 
 Relay▸Launch works best with:
 
-- **Small businesses** that need more customers finding them online and better systems running behind the scenes
-- **Startups** that have outgrown spreadsheets and need real operational infrastructure before they can scale
-- **Growing companies** going through system migrations, platform consolidation, or financial operations buildout
-- **Founders and operators** who are great at their craft and need a builder to handle the digital and operational side
+- **Local and small businesses** that need more customers finding them online, more time back in their day, and tools that work together instead of against each other
+- **Service providers and trades** who are great at what they do but didn't realize they'd also need to be a marketer, scheduler, social media manager, and operations director
+- **Startups and growing businesses** outgrowing their initial tools and needing real operational infrastructure before they can scale
+- **Founders and operators** who want a builder at their side — someone who can connect the dots, automate the grind, and help them see the bigger picture
 
-If you need it built — not just planned — this is for you.
+If you need it built, connected, and running — not just planned — this is for you.
 
 ---
 
