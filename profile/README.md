@@ -2,7 +2,7 @@
 
 > **Build Smarter. Launch Faster. Grow With Purpose.**
 
-![RelayLaunch Repo Card](repo-card.svg)
+![RelayLaunch Repo Card](https://raw.githubusercontent.com/Relay-Launch/.github/main/profile/repo-card.svg)
 
 Relay▸Launch is a hands-on consulting practice that builds the infrastructure small businesses actually need — not just plans and slide decks. We connect your tools, automate your workflows, and build the digital presence that gets you seen. You became a business owner to run your business, not to spend 40 hours a week on tasks a system could handle. We build that system.
 
@@ -203,9 +203,9 @@ Every engagement delivers outputs that are:
 
 Ready to build something that works?
 
-**[Submit a Project Request →](https://github.com/Relay-Launch/Main/issues/new?template=project-request.yml)**
+**[Submit a Project Request →](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml)**
 
-**[Ask a Quick Question →](https://github.com/Relay-Launch/Main/issues/new?template=quick-question.yml)**
+**[Ask a Quick Question →](https://github.com/Relay-Launch/.github/issues/new?template=quick-question.yml)**
 
 Or reach out directly:
 
