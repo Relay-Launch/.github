@@ -40,10 +40,10 @@ body:
     attributes:
       label: Which package are you interested in?
       options:
-        - Signal — Discovery & Audit
-        - Blueprint — Strategy & Roadmap
-        - Relay — Build & Automate
-        - Launch — Strategic Partnership
+        - Signal — Visibility & Ops Audit
+        - Blueprint — Systems Strategy
+        - Relay — Build & Connect
+        - Sustain — Monthly Growth Support
         - Not sure yet — I need guidance
         - Something custom
     validations:

@@ -1,0 +1,244 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact — RelayLaunch"
+  description="Start a project with RelayLaunch. Submit a project request or ask a quick question — we'll respond within 1–2 business days."
+>
+
+  <!-- ═══════════════════════════════════════════════ HERO -->
+  <section class="section hero">
+    <div class="container">
+      <span class="section-eyebrow">Get in Touch</span>
+      <h1 class="section-title" style="font-size: clamp(32px, 5vw, 52px);">
+        Every engagement starts<br />with a conversation.
+      </h1>
+      <p class="section-sub">
+        No commitment required. Tell us where you are and what you're trying to build —
+        we'll figure out the right fit and move fast.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ CONTACT OPTIONS -->
+  <section class="section">
+    <div class="container contact-grid">
+
+      <div class="contact-primary">
+        <h2 class="section-title" style="font-size: 26px; margin-bottom: 8px;">Submit a Project Request</h2>
+        <p style="color: var(--color-muted); font-size: 15px; margin-bottom: 24px;">
+          Fill out our intake form on GitHub — we'll get back to you within 1–2 business days
+          to schedule a discovery call.
+        </p>
+        <a
+          href="https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml"
+          class="btn-primary"
+          target="_blank"
+          rel="noopener"
+          style="font-size: 15px; padding: 13px 24px;"
+        >
+          Submit a Project Request →
+        </a>
+
+        <div class="divider-label">or</div>
+
+        <h2 class="section-title" style="font-size: 26px; margin-bottom: 8px;">Ask a Quick Question</h2>
+        <p style="color: var(--color-muted); font-size: 15px; margin-bottom: 24px;">
+          Not ready to submit a full request? Have a specific question? Use the quick question form.
+        </p>
+        <a
+          href="https://github.com/Relay-Launch/.github/issues/new?template=quick-question.yml"
+          class="btn-secondary"
+          target="_blank"
+          rel="noopener"
+          style="font-size: 15px; padding: 13px 24px;"
+        >
+          Ask a Quick Question
+        </a>
+      </div>
+
+      <div class="contact-sidebar">
+        <div class="card">
+          <p class="section-eyebrow" style="margin-bottom: 16px;">What to Expect</p>
+          <ol class="process-list">
+            <li>
+              <span class="step-num">1</span>
+              <div>
+                <strong>Submit your request</strong>
+                <p>Fill out the form with whatever details you have. You don't need to have everything figured out.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <div>
+                <strong>We review and respond</strong>
+                <p>Within 1–2 business days, you'll hear back to schedule a discovery call.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <div>
+                <strong>Discovery call</strong>
+                <p>30–45 minutes. We learn your business, current tools, goals, and pain points.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <div>
+                <strong>Proposal + scoping</strong>
+                <p>We send a clear proposal with scope, deliverables, timeline, and pricing. No surprises.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="card" style="margin-top: 16px; padding: 20px;">
+          <p class="section-eyebrow" style="margin-bottom: 12px;">Direct Contact</p>
+          <div class="direct-links">
+            <a href="mailto:hello@relaylaunch.com" class="direct-link">
+              <span class="direct-icon">✉</span> hello@relaylaunch.com
+            </a>
+            <a href="https://github.com/Relay-Launch" target="_blank" rel="noopener" class="direct-link">
+              <span class="direct-icon">⬡</span> github.com/Relay-Launch
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ FAQ -->
+  <section class="section" style="background: var(--color-surface);">
+    <div class="container">
+      <span class="section-eyebrow">FAQ</span>
+      <h2 class="section-title" style="margin-bottom: 40px;">Common Questions</h2>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>What do I need to know before reaching out?</h3>
+          <p>Not much. Tell us what business you run, what's frustrating you most, and roughly what you're hoping to change. That's enough to have a productive first conversation.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you only work with businesses that need a full build?</h3>
+          <p>No — the Signal audit package is specifically designed for businesses that want clarity before committing. Some clients start there and handle the build themselves.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How long do projects take?</h3>
+          <p>It depends on scope. A website build or automation setup can be turned around in a few weeks. A full operational infrastructure build is a multi-month engagement. We'll give you a realistic timeline upfront.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do I need to keep paying after the build is done?</h3>
+          <p>No. The Relay build delivers a self-running system. The Sustain retainer is for ongoing optimization, content, and growth — not keeping the lights on. Your automations keep running whether or not you're on a retainer.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What industry do you focus on?</h3>
+          <p>Any local or small business that serves clients directly — spas, wellness, trades, professional services, retail, restaurants, fitness, and more. The infrastructure problems are the same across industries.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can you work with our existing tools?</h3>
+          <p>Yes. If you have tools that work and just need to be connected, that's exactly what Systems Integration Consulting is for. We don't force a full replacement — we start with what you have.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .hero { padding-top: 80px; }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .contact-primary { display: flex; flex-direction: column; }
+
+  .divider-label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--color-muted);
+    font-size: 13px;
+    font-weight: 600;
+    margin: 32px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .divider-label::before,
+  .divider-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--color-border);
+  }
+
+  /* Process list */
+  .process-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .process-list li { display: flex; gap: 14px; align-items: flex-start; }
+
+  .step-num {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-green);
+    flex-shrink: 0;
+  }
+
+  .process-list strong { display: block; font-size: 14px; margin-bottom: 4px; }
+  .process-list p { font-size: 13px; line-height: 1.6; }
+
+  /* Direct links */
+  .direct-links { display: flex; flex-direction: column; gap: 12px; }
+
+  .direct-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--color-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .direct-link:hover { color: var(--color-text); text-decoration: none; }
+  .direct-icon { font-style: normal; color: var(--color-green); }
+
+  /* FAQ */
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+  }
+
+  .faq-item h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .faq-item p { font-size: 14px; line-height: 1.7; }
+
+  @media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,143 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="brand-link">
+        <span class="brand-relay">Relay</span><span class="brand-arrow">&#x25BA;</span><span class="brand-launch">Launch</span>
+      </a>
+      <p class="footer-tagline">Build Smarter. Launch Faster. Grow With Purpose.</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <div class="footer-col">
+        <p class="footer-col-label">Services</p>
+        <ul role="list">
+          <li><a href="/services#signal">Signal — Audit</a></li>
+          <li><a href="/services#blueprint">Blueprint — Strategy</a></li>
+          <li><a href="/services#relay">Relay — Build</a></li>
+          <li><a href="/services#sustain">Sustain — Retainer</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-label">Company</p>
+        <ul role="list">
+          <li><a href="/about">About</a></li>
+          <li><a href="/case-studies/hrc">HRC Case Study</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="https://github.com/Relay-Launch" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>&copy; {year} RelayLaunch LLC. All rights reserved.</p>
+      <p><a href="mailto:hello@relaylaunch.com">hello@relaylaunch.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: 0;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 48px;
+    padding: 56px 24px 48px;
+  }
+
+  .brand-link {
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+  }
+
+  .brand-relay, .brand-launch { color: var(--color-text); }
+  .brand-arrow { color: var(--color-green); margin: 0 1px; }
+
+  .footer-tagline {
+    font-size: 14px;
+    color: var(--color-muted);
+    margin-top: 8px;
+  }
+
+  .footer-nav {
+    display: flex;
+    gap: 48px;
+  }
+
+  .footer-col-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 12px;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-col a {
+    font-size: 14px;
+    color: var(--color-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .footer-col a:hover {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--color-border);
+    padding: 16px 0;
+  }
+
+  .footer-bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-bottom p {
+    font-size: 13px;
+    color: var(--color-muted);
+  }
+
+  .footer-bottom a {
+    color: var(--color-muted);
+    transition: color 0.15s;
+  }
+
+  .footer-bottom a:hover {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  @media (max-width: 700px) {
+    .footer-inner {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 40px 16px 32px;
+    }
+    .footer-nav { gap: 32px; }
+    .footer-bottom-inner { flex-direction: column; gap: 8px; align-items: flex-start; }
+  }
+</style>
