@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [Phase-1-Branch]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -35,4 +35,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        # Triggered from Phase-1-Branch — relaylaunch.com
+        # Deploys from main branch to GitHub Pages
