@@ -34,6 +34,7 @@ Usage:
     handler.register(app, url_prefix="/webhooks")
 """
 
+import heapq
 import os
 import hmac
 import hashlib
@@ -105,39 +106,50 @@ class IdempotencyStore:
     Redis-backed or database-backed implementation.
     """
 
-    def __init__(self, max_size: int = 10000, ttl_seconds: int = 86400):
+    def __init__(self, max_size: int = 10000, ttl_seconds: int = 86400,
+                 cleanup_interval: float = 60.0):
         """
         Args:
             max_size: Maximum number of event IDs to track.
             ttl_seconds: How long to remember an event ID (default: 24h).
+            cleanup_interval: Minimum seconds between expensive cleanup passes (default: 60).
         """
         self._store: dict[str, float] = {}
         self._max_size = max_size
         self._ttl = ttl_seconds
+        self._cleanup_interval = cleanup_interval
+        self._last_cleanup: float = 0.0
 
     def has_been_processed(self, event_id: str) -> bool:
         """Check if an event ID has already been processed."""
-        self._cleanup()
+        # Run the full cleanup pass only periodically to avoid O(n) overhead
+        # on every single webhook request.
+        now = time.time()
+        if now - self._last_cleanup >= self._cleanup_interval:
+            self._cleanup(now)
         return event_id in self._store
 
     def mark_processed(self, event_id: str) -> None:
         """Mark an event ID as processed."""
         self._store[event_id] = time.time()
 
-    def _cleanup(self) -> None:
+    def _cleanup(self, now: Optional[float] = None) -> None:
         """Remove expired entries and enforce max size."""
-        now = time.time()
+        if now is None:
+            now = time.time()
+        self._last_cleanup = now
         cutoff = now - self._ttl
 
-        # Remove expired
+        # Remove expired entries
         expired = [k for k, v in self._store.items() if v < cutoff]
         for k in expired:
             del self._store[k]
 
-        # If still over max size, remove oldest
-        if len(self._store) > self._max_size:
-            sorted_keys = sorted(self._store.keys(), key=lambda k: self._store[k])
-            for k in sorted_keys[: len(self._store) - self._max_size]:
+        # If still over max size, remove the oldest entries efficiently
+        overflow = len(self._store) - self._max_size
+        if overflow > 0:
+            oldest_keys = heapq.nsmallest(overflow, self._store, key=self._store.__getitem__)
+            for k in oldest_keys:
                 del self._store[k]
 
 

@@ -349,13 +349,15 @@ def sync_contacts_to_sheet(contacts: list[dict], worksheet: gspread.Worksheet) -
     # Execute batch updates
     if updates:
         logger.info("Updating %d existing rows", len(updates))
-        for cell_range, values in updates:
-            try:
-                worksheet.update(cell_range, values)
-            except Exception as exc:
-                logger.error("Failed to update row at %s: %s", cell_range, exc)
-                stats["errors"] += 1
-                stats["updated"] -= 1
+        try:
+            worksheet.batch_update([
+                {"range": cell_range, "values": values}
+                for cell_range, values in updates
+            ])
+        except Exception as exc:
+            logger.error("Failed to batch update rows: %s", exc)
+            stats["errors"] += len(updates)
+            stats["updated"] -= len(updates)
 
     # Append new rows
     if appends:

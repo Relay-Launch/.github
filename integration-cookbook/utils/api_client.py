@@ -41,6 +41,7 @@ Usage:
             return self.post("/customers", data={"email": email, "name": name})
 """
 
+import heapq
 import os
 import time
 import json
@@ -211,14 +212,13 @@ class ResponseCache:
         for k in expired:
             del self._cache[k]
 
-        # If still over capacity, remove least recently accessed
-        if len(self._cache) >= self.max_size:
-            sorted_keys = sorted(
-                self._cache.keys(),
-                key=lambda k: self._cache[k]["created_at"],
+        # If still over capacity, remove the oldest entries efficiently
+        overflow = len(self._cache) - self.max_size + 1
+        if overflow > 0:
+            oldest_keys = heapq.nsmallest(
+                overflow, self._cache, key=lambda k: self._cache[k]["created_at"]
             )
-            to_remove = len(self._cache) - self.max_size + 1
-            for k in sorted_keys[:to_remove]:
+            for k in oldest_keys:
                 del self._cache[k]
 
     @property

@@ -284,33 +284,36 @@ def generate_html_report(metrics: dict[str, Any], report_date: str) -> str:
         Complete HTML string ready to be sent as an email body.
     """
     # Category rows
-    category_rows = ""
+    _category_rows = []
     for cat, data in sorted(metrics["by_category"].items(), key=lambda x: x[1]["revenue"], reverse=True):
-        category_rows += f"""
+        _category_rows.append(f"""
             <tr>
                 <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">{cat}</td>
                 <td style="padding: 8px 12px; border-bottom: 1px solid #eee; text-align: right;">{data['count']}</td>
                 <td style="padding: 8px 12px; border-bottom: 1px solid #eee; text-align: right;">${data['revenue']:,.2f}</td>
-            </tr>"""
+            </tr>""")
+    category_rows = "".join(_category_rows)
 
     # Daily trend rows
-    daily_rows = ""
+    _daily_rows = []
     for day, data in metrics["by_day"].items():
-        daily_rows += f"""
+        _daily_rows.append(f"""
             <tr>
                 <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">{day}</td>
                 <td style="padding: 8px 12px; border-bottom: 1px solid #eee; text-align: right;">{data['count']}</td>
                 <td style="padding: 8px 12px; border-bottom: 1px solid #eee; text-align: right;">${data['revenue']:,.2f}</td>
-            </tr>"""
+            </tr>""")
+    daily_rows = "".join(_daily_rows)
 
     # Top customers rows
-    top_customer_rows = ""
+    _top_customer_rows = []
     for email, revenue in metrics["top_customers"]:
-        top_customer_rows += f"""
+        _top_customer_rows.append(f"""
             <tr>
                 <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">{email}</td>
                 <td style="padding: 8px 12px; border-bottom: 1px solid #eee; text-align: right;">${revenue:,.2f}</td>
-            </tr>"""
+            </tr>""")
+    top_customer_rows = "".join(_top_customer_rows)
 
     html = f"""<!DOCTYPE html>
 <html lang="en">

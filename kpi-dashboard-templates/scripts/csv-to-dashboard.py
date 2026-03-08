@@ -395,7 +395,7 @@ def generate_html(metrics, title, business_name):
     generated_at = datetime.now().strftime("%B %d, %Y at %I:%M %p")
 
     # -- KPI Cards --
-    cards_html = ""
+    _cards = []
     for m in analyzed:
         status_class = f"status-{m['status']}"
         trend_class = f"trend-{m['trend_direction']}"
@@ -406,7 +406,7 @@ def generate_html(metrics, title, business_name):
         if m["target_text"]:
             target_badge = f'<span class="kpi-target">{html_module.escape(m["target_text"])}</span>'
 
-        cards_html += f"""
+        _cards.append(f"""
         <div class="kpi-card {status_class}">
             <div class="kpi-name">{html_module.escape(m['name'])}</div>
             <div class="kpi-value">{html_module.escape(m['display_value'])}</div>
@@ -414,7 +414,8 @@ def generate_html(metrics, title, business_name):
                 <span class="{trend_class}">{arrow} {html_module.escape(m['trend_text'])} vs prev</span>
                 {target_badge}
             </div>
-        </div>"""
+        </div>""")
+    cards_html = "".join(_cards)
 
     # -- Summary Cards --
     summary_html = f"""
@@ -438,14 +439,14 @@ def generate_html(metrics, title, business_name):
     </div>"""
 
     # -- Data Table --
-    table_rows = ""
+    _table_rows = []
     for m in analyzed:
         trend_class = f"trend-{m['trend_direction']}"
         trend_arrow = {"up": "&#8593;", "down": "&#8595;", "flat": "&#8212;"}
         arrow = trend_arrow.get(m["trend_direction"], "")
         status_dot = f'<span class="status-dot status-{m["status"]}"></span>'
 
-        table_rows += f"""
+        _table_rows.append(f"""
             <tr>
                 <td class="metric-name">{html_module.escape(m['name'])}</td>
                 <td class="metric-value">{html_module.escape(m['display_value'])}</td>
@@ -454,6 +455,8 @@ def generate_html(metrics, title, business_name):
                 <td class="{trend_class}">{arrow} {html_module.escape(m['trend_text'])}</td>
                 <td>{status_dot} {html_module.escape(m['target_text']) or '--'}</td>
             </tr>"""
+        )
+    table_rows = "".join(_table_rows)
 
     # -- Chart Section --
     chart_section = ""
