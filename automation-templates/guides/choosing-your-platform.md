@@ -1,6 +1,6 @@
 # Choosing Your Automation Platform
 
-**A practical guide by [Relay Launch](https://relaylaunch.com)**
+**A practical guide by [Relay▸Launch](https://relaylaunch.com)**
 
 ---
 
@@ -234,8 +234,8 @@ If you outgrow your starting platform -- and that's a great problem to have -- w
 
 We offer a free 30-minute automation assessment call where we'll look at your specific tools, workflows, and team capabilities and give you a concrete recommendation. No pitch, no pressure -- just an honest opinion from people who've done this a lot.
 
-[Book a call with Relay Launch](https://relaylaunch.com/contact)
+[Book a call with Relay▸Launch](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml)
 
 ---
 
-*This guide is maintained by [Relay Launch](https://relaylaunch.com) and updated as platforms evolve. Part of the [Relay Launch Automation Templates](../README.md) collection.*
+*This guide is maintained by [Relay▸Launch](https://relaylaunch.com) and updated as platforms evolve. Part of the [Relay▸Launch Automation Templates](../README.md) collection.*

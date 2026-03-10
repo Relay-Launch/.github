@@ -6,9 +6,9 @@
 
 ## What This Is
 
-This is a collection of production-ready KPI dashboard templates, frameworks, and tooling built from years of implementing measurement systems for small and mid-size businesses. These are not theoretical exercises. Every template, formula, and design pattern here has been deployed in real businesses generating between $500K and $50M in annual revenue.
+You can't improve what you're not measuring. And you can't make decisions from a dashboard nobody trusts.
 
-If you have ever stared at a blank spreadsheet wondering what to measure, or inherited a dashboard that no one trusts, this collection will get you to a working measurement system in days rather than months.
+This is a collection of production-ready KPI dashboard templates, frameworks, and tooling built from years of implementing measurement systems for small and mid-size businesses. Every template, formula, and design pattern here has been deployed in real businesses generating between $500K and $50M in annual revenue. If you've ever stared at a blank spreadsheet wondering what to track, this collection will get you to a working measurement system in days rather than months.
 
 ---
 
@@ -166,13 +166,7 @@ kpi-dashboard-templates/
 
 ## About Relay▸Launch
 
-Relay▸Launch helps small businesses build the operational infrastructure they need to scale. We focus on three areas:
-
-- **Automation** — Eliminating manual work through workflow automation, integrations, and scripting
-- **Operations** — Building repeatable processes for delivery, fulfillment, and team management
-- **Strategic Planning** — Translating business goals into measurable plans with clear accountability
-
-These KPI dashboard templates are part of our open toolkit. If you need help implementing a measurement system tailored to your business, reach out at [relaylaunch.com](https://relaylaunch.com).
+[Relay▸Launch](https://relaylaunch.com) builds the systems small businesses and startups need but don't have time to figure out — marketing infrastructure, workflow automations, operational builds, and everything in between. These KPI dashboard templates are part of our open toolkit. If you need help implementing a measurement system tailored to your business, [start a conversation](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml).
 
 ---
 

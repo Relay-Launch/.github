@@ -286,4 +286,4 @@ If you're exploring on your own:
 
 ---
 
-*Questions? Reach out to [Relay▸Launch](https://relaylaunch.com/contact). We help small businesses automate the work that shouldn't require a human.*
+*Questions? Reach out to [Relay▸Launch](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml). We help small businesses automate the work that shouldn't require a human.*

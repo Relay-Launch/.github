@@ -6,9 +6,9 @@
 
 ## What Is This?
 
-The SOP Starter Kit is a ready-to-use framework for documenting Standard Operating Procedures at your business. It includes blank templates, fully worked examples, and a style guide so your team can start building a real operational playbook -- not a shelf full of binders nobody reads.
+Your best employee goes on vacation and suddenly nobody knows how to run payroll, onboard a client, or close the books. Sound familiar?
 
-Whether you have 3 employees or 30, undocumented processes are a liability. This kit gives you a practical starting point to fix that.
+The SOP Starter Kit is a ready-to-use framework for documenting Standard Operating Procedures at your business. Blank templates, fully worked examples, and a style guide — everything you need to turn tribal knowledge into a real operational playbook your whole team can follow. Whether you have 3 employees or 30, undocumented processes are a liability. This kit fixes that.
 
 ## Why SOPs Matter
 
@@ -150,4 +150,4 @@ This kit is provided under the repository's open-source license. See [LICENSE](.
 
 ---
 
-**Built by Relay▸Launch** -- We help small businesses stop guessing and start operating. If you want help building SOPs, automating workflows, or structuring your operations for growth, [get in touch](https://relaylaunch.com/contact).
+**Built by Relay▸Launch** -- We help small businesses stop guessing and start operating. If you want help building SOPs, automating workflows, or structuring your operations for growth, [get in touch](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml).

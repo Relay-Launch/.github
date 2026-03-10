@@ -1,24 +1,16 @@
 # Relay▸Launch
 
-**From Signal to Scale — Strategy, Automation & Growth for Small Business**
+**We build the systems your business needs but you don't have time to figure out.**
 
-We're a boutique consulting practice that helps small businesses and growing companies build the operational systems they need to scale. We combine deep business analysis with hands-on automation to eliminate bottlenecks and unlock growth.
+Relay▸Launch is a hands-on consulting practice that builds real infrastructure for small businesses and startups — marketing systems, workflow automations, operational builds, and everything in between. No slide decks. No theory. Just working systems your team can run from day one.
 
-### What We Do
+### Two Ways We Work
 
-- **Operations & Process** — Workflow audits, bottleneck removal, SOP documentation
-- **Business Automation** — Custom workflows that eliminate repetitive manual work
-- **Strategic Planning** — 90-day roadmaps, competitive analysis, growth strategy
-- **Data & Reporting** — KPI frameworks, dashboards, performance tracking
-- **Digital Presence** — Online positioning, brand consistency, content systems
-- **Customer Journey** — Touchpoint mapping, conversion optimization, retention strategy
-
-### Our Approach
-
-Every engagement follows a clear path: **Intake → Analysis → Strategy → Execute**. We don't hand off slide decks — we build working systems and documented processes your team can own.
+- **Small Business Growth** — Marketing strategy, SEO, custom websites, lead capture automations, Google Business optimization, and the digital presence that gets customers in the door.
+- **Startup & Operations Build** — ERP migrations, month-end close workflows, system integrations, process documentation, KPI dashboards, and the operational backbone that lets you scale.
 
 ### Get Started
 
-- [Submit a Project Request](https://github.com/Relay-Launch/Main/issues/new?template=project-request.yml)
-- [Ask a Question](https://github.com/Relay-Launch/Main/issues/new?template=quick-question.yml)
-- [View Our Services](https://github.com/Relay-Launch/Main)
+- [Start a Project](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml)
+- [Ask a Question](https://github.com/Relay-Launch/.github/issues/new?template=quick-question.yml)
+- [See Our Services](https://relay-launch.github.io/Main/)
