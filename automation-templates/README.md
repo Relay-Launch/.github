@@ -1,14 +1,14 @@
-# Relay Launch Automation Templates
+# Relay▸Launch Automation Templates
 
-**Built by [Relay Launch](https://relaylaunch.com) -- Small business automation, operations, and strategic planning.**
+**Built by [Relay▸Launch](https://relaylaunch.com) -- Small business automation, operations, and strategic planning.**
 
 ---
 
 ## What This Is
 
-This is a curated library of production-ready automation templates built from real client engagements. Every template here started as a solution to a problem we saw repeatedly across the small businesses we work with -- missed follow-ups, manual data entry, onboarding bottlenecks, invoicing headaches.
+You're spending hours on tasks a machine should handle. Missed follow-ups, manual data entry, onboarding bottlenecks, invoicing headaches — we've seen these problems in almost every small business we work with.
 
-These are not toy examples. Each workflow has been deployed in live environments, refined based on actual failure modes, and documented so you can adapt it to your stack without starting from scratch.
+So we built this. A library of production-ready automation templates pulled from real client engagements. Each workflow has been deployed in live environments, refined against actual failure modes, and documented so you can adapt it to your stack without starting from scratch.
 
 ## Who It's For
 
@@ -99,21 +99,11 @@ If you need help adapting a template to your specific setup, that's exactly what
 
 ---
 
-## About Relay Launch
+## About Relay▸Launch
 
-[Relay Launch](https://relaylaunch.com) is a business consulting firm that helps small businesses streamline operations through automation, process design, and strategic planning.
+[Relay▸Launch](https://relaylaunch.com) builds the systems small businesses and startups need but don't have time to figure out — marketing infrastructure, workflow automations, operational builds, and everything in between. We don't hand off slide decks. We build working systems your team can run from day one.
 
-We work with businesses that have outgrown their manual processes but aren't ready for (or don't need) enterprise software. Our approach is hands-on: we audit your workflows, identify the highest-impact automation opportunities, build and deploy the solutions, and train your team to maintain them.
-
-**What we do:**
-- Workflow automation design and implementation
-- Operations audits and process optimization
-- Technology stack evaluation and integration
-- Strategic planning for growth-stage businesses
-
-**Get in touch:**
-- Website: [relaylaunch.com](https://relaylaunch.com)
-- Email: hello@relaylaunch.com
+**Get in touch:** [relaylaunch.com](https://relaylaunch.com) · hello@relaylaunch.com
 
 ---
 
@@ -121,4 +111,4 @@ We work with businesses that have outgrown their manual processes but aren't rea
 
 These templates are provided under the MIT License. Use them, modify them, share them. If they save you time, we'd love to hear about it.
 
-If you want hands-on help implementing these in your business, [reach out to us](https://relaylaunch.com/contact).
+If you want hands-on help implementing these in your business, [reach out to us](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml).

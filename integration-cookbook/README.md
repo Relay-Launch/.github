@@ -6,9 +6,9 @@ Production-ready integration recipes for small businesses. Copy, configure, depl
 
 ## What This Is
 
-The Integration Cookbook is a collection of standalone Python scripts that connect the tools your business already uses — Stripe, HubSpot, Google Sheets, Slack, email — into automated workflows. Each recipe solves a specific, common problem that small businesses face when their tools don't talk to each other.
+Your tools don't talk to each other. Stripe doesn't know about Slack. HubSpot doesn't sync to your spreadsheet. Every week, someone on your team is copying data from one screen to another — and occasionally getting it wrong.
 
-These aren't toy examples. Every recipe includes proper error handling, logging, environment variable configuration, and is structured for real deployment. They're designed to run on a $5/month VPS, a Heroku dyno, or a serverless function.
+The Integration Cookbook is a collection of standalone Python scripts that fix exactly that. Each recipe connects tools your business already uses into automated workflows. Proper error handling, logging, environment variable configuration — structured for real deployment on a $5/month VPS, a Heroku dyno, or a serverless function.
 
 Built and maintained by [Relay▸Launch](https://relaylaunch.com), a business consulting firm specializing in automation, operations, and strategic planning for small businesses.
 
@@ -105,8 +105,8 @@ FLASK_PORT=5000
 ### 1. Clone and Install
 
 ```bash
-git clone https://github.com/your-org/integration-cookbook.git
-cd integration-cookbook
+git clone https://github.com/Relay-Launch/.github.git
+cd .github/integration-cookbook
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -195,8 +195,8 @@ Found a bug? Have a recipe idea? We welcome contributions.
 ## Support
 
 - **Documentation issues**: Open a GitHub issue
-- **Implementation help**: [Contact Relay▸Launch](https://relaylaunch.com/contact) for consulting
-- **Custom integrations**: We build bespoke automation for small businesses — [learn more](https://relaylaunch.com/services)
+- **Implementation help**: [Contact Relay▸Launch](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml) for consulting
+- **Custom integrations**: We build bespoke automation for small businesses — [learn more](https://relaylaunch.com)
 
 ---
 

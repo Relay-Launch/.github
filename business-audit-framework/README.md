@@ -2,9 +2,9 @@
 
 ## What This Is
 
-The Business Audit Framework is a structured diagnostic toolkit developed by Relay▸Launch to evaluate the operational health, growth trajectory, and strategic positioning of small businesses. It provides consultants and business owners with a repeatable, evidence-based methodology for identifying what is working, what is breaking, and where the highest-leverage opportunities for improvement exist.
+Most businesses know something is off. They're busy but not growing. Revenue looks healthy but profit margins are shrinking. The team is working hard but the same problems keep coming back. The issue isn't effort — it's visibility.
 
-This is not a surface-level assessment. Each audit checklist is designed to expose root causes rather than symptoms. A business that "feels busy" may score poorly on workflow efficiency. A business with strong revenue may reveal fragile customer retention. The framework makes these realities visible and actionable.
+The Business Audit Framework gives you that visibility. It's a structured diagnostic toolkit that evaluates operational health, growth trajectory, and strategic positioning using a repeatable, evidence-based methodology. Each checklist is designed to expose root causes, not symptoms. A business that "feels busy" may score poorly on workflow efficiency. A business with strong revenue may reveal fragile customer retention. This framework makes those realities visible and actionable.
 
 ## Who Should Use This
 
@@ -127,4 +127,4 @@ Present the audit results with three components:
 
 ---
 
-Built by [Relay▸Launch](https://relaylaunch.com) — Automation, Operations, and Strategic Planning for Small Businesses.
+Built by [Relay▸Launch](https://relaylaunch.com) — We build the systems small businesses and startups need but don't have time to figure out. [Start a conversation](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml).
