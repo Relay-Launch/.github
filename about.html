@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Relay▸Launch</title>
+  <title>About | Relay▸Launch</title>
   <meta name="description" content="Relay Launch is a consulting practice built around execution. We combine operational expertise with modern tooling to build the systems that small businesses and startups actually need.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://relaylaunch.com/about.html">
@@ -15,13 +15,13 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://relaylaunch.com/about.html">
-  <meta property="og:title" content="About — Relay▸Launch">
+  <meta property="og:title" content="About | Relay▸Launch">
   <meta property="og:description" content="We don't do theory. We build working infrastructure for small businesses and startups.">
   <meta property="og:site_name" content="Relay▸Launch">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="About — Relay▸Launch">
+  <meta name="twitter:title" content="About | Relay▸Launch">
   <meta name="twitter:description" content="We don't do theory. We build working infrastructure for small businesses and startups.">
 
   <!-- Structured Data -->
@@ -32,7 +32,7 @@
     "name": "Relay Launch",
     "url": "https://relaylaunch.com",
     "email": "hello@relaylaunch.com",
-    "description": "A consulting practice built around execution — we combine operational expertise with modern tooling to build the systems that small businesses and startups actually need.",
+    "description": "A consulting practice built around execution. We combine operational expertise with modern tooling to build the systems that small businesses and startups actually need.",
     "sameAs": ["https://github.com/Relay-Launch"]
   }
   </script>
@@ -92,7 +92,17 @@
     .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: var(--text-primary); }
     .nav-toggle svg { display: block; }
 
-    .hero { padding: 80px 0 64px; text-align: center; }
+    .hero { padding: 80px 0 64px; text-align: center; position: relative; }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 400px;
+      background: radial-gradient(ellipse, rgba(35, 134, 54, 0.08) 0%, transparent 70%);
+      pointer-events: none; z-index: 0;
+    }
+    .hero > * { position: relative; z-index: 1; }
     .hero-eyebrow {
       display: inline-block;
       background: rgba(35, 134, 54, 0.15);
@@ -261,6 +271,19 @@
     .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+    .back-to-top {
+      position: fixed; bottom: 24px; right: 24px;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--brand-surface); border: 1px solid var(--brand-border);
+      color: var(--text-primary); display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; cursor: pointer;
+      opacity: 0; transform: translateY(10px);
+      transition: opacity var(--transition-fast), transform var(--transition-fast), background var(--transition-fast);
+      z-index: 40; text-decoration: none;
+    }
+    .back-to-top:hover { background: var(--brand-accent); border-color: var(--brand-accent); text-decoration: none; }
+    .back-to-top.show { opacity: 1; transform: translateY(0); }
+
     @media (max-width: 768px) {
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
     }
@@ -275,7 +298,7 @@
 
     @media print {
       body { background: #fff; color: #000; }
-      nav, .hero-actions, .cta-section, .skip-link { display: none; }
+      nav, .hero-actions, .cta-section, .skip-link, .back-to-top { display: none; }
       .content-block, .value-card, .tool-category { border-color: #ccc; background: #f9f9f9; }
       a { color: #000; }
       .section-label, .brand span { color: #238636; }
@@ -333,8 +356,8 @@
         </p>
         <p>
           We work with two kinds of businesses: small businesses that need marketing lift and digital
-          infrastructure, and startups that need operational systems — ERP migrations, financial
-          workflows, process architecture. Both get the same standard of work. Both get systems
+          infrastructure, and startups that need operational systems like ERP migrations, financial
+          workflows, and process architecture. Both get the same standard of work. Both get systems
           they own when we're done.
         </p>
       </div>
@@ -350,7 +373,7 @@
         <p>
           We've built our delivery process around a few principles that let us move faster and
           build better than what most businesses expect from consulting. This isn't about cutting
-          corners — it's about using the right tools and frameworks to deliver expert-level work
+          corners. It's about using the right tools and frameworks to deliver expert-level work
           on practical timelines.
         </p>
 
@@ -367,14 +390,14 @@
           </li>
           <li>
             <strong>We leverage modern tooling aggressively.</strong> From development platforms
-            to automation builders to infrastructure tools — we use the best available technology
+            to automation builders to infrastructure tools, we use the best available technology
             to deliver faster without sacrificing quality. This is how we keep timelines tight
             and output sharp.
           </li>
           <li>
             <strong>We document everything.</strong> Every system, workflow, and process we
             build comes with documentation your team can follow. When we leave, your people
-            run it — not us.
+            run it, not us.
           </li>
           <li>
             <strong>We stay accountable.</strong> Regular check-ins, transparent progress updates,
@@ -402,11 +425,11 @@
           </div>
           <div class="value-card">
             <h4>Keep it practical</h4>
-            <p>We build what you need right now — not what might be useful in two years. The right solution is the one that works today and scales when you need it to.</p>
+            <p>We build what you need right now, not what might be useful in two years. The right solution is the one that works today and scales when you need it to.</p>
           </div>
           <div class="value-card">
             <h4>Be straight</h4>
-            <p>If something doesn't make sense for your business, we'll tell you. If there's a better way, we'll recommend it — even if it means less work for us.</p>
+            <p>If something doesn't make sense for your business, we'll tell you. If there's a better way, we'll recommend it, even if it means less work for us.</p>
           </div>
         </div>
       </div>
@@ -420,7 +443,7 @@
         <div class="section-label">What We Work With</div>
         <h2>Platforms and tools in our stack</h2>
         <p>
-          We're platform-agnostic and choose tools based on what fits your business — not what
+          We're platform-agnostic and choose tools based on what fits your business, not what
           we're most comfortable with. That said, here's a snapshot of the platforms and technologies
           we build with regularly.
         </p>
@@ -428,7 +451,7 @@
         <div class="tools-section">
           <div class="tools-grid">
             <div class="tool-category">
-              <h4>Web & Hosting</h4>
+              <h4>Web &amp; Hosting</h4>
               <p>Cloudflare, GitHub Pages, Vercel, custom HTML/CSS/JS builds</p>
             </div>
             <div class="tool-category">
@@ -436,7 +459,7 @@
               <p>Zapier, Make, n8n, Power Automate, custom API integrations</p>
             </div>
             <div class="tool-category">
-              <h4>CRM & Sales</h4>
+              <h4>CRM &amp; Sales</h4>
               <p>HubSpot, Salesforce, Pipedrive, Zoho CRM</p>
             </div>
             <div class="tool-category">
@@ -444,7 +467,7 @@
               <p>Asana, Monday.com, Notion, ClickUp, Trello</p>
             </div>
             <div class="tool-category">
-              <h4>Data & Analytics</h4>
+              <h4>Data &amp; Analytics</h4>
               <p>Google Analytics, Looker Studio, Tableau, Power BI</p>
             </div>
             <div class="tool-category">
@@ -456,7 +479,7 @@
               <p>Shopify, WooCommerce, Square, Stripe</p>
             </div>
             <div class="tool-category">
-              <h4>Cloud & Dev</h4>
+              <h4>Cloud &amp; Dev</h4>
               <p>Google Cloud, AWS, Azure, Python, GitHub, APIs</p>
             </div>
           </div>
@@ -504,11 +527,13 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Relay▸Launch. All rights reserved.</p>
+        <p>&copy; 2026 Relay▸Launch. All rights reserved.</p>
         <a href="mailto:hello@relaylaunch.com">hello@relaylaunch.com</a>
       </div>
     </div>
   </footer>
+
+  <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
 
   <script>
     const navToggle = document.querySelector('.nav-toggle');
@@ -523,6 +548,11 @@
       entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('show', window.scrollY > 400);
+    }, { passive: true });
   </script>
 
 </body>

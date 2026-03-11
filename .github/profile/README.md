@@ -4,7 +4,7 @@
 
 Most small businesses and startups don't need another consultant with a slide deck. They need someone who actually builds the website, wires the automations, sets up the workflows, and hands it all over *working*. That's what we do.
 
-We're a hands-on consulting practice that delivers real infrastructure — marketing systems, workflow automations, operational builds, and everything in between. No theory. No fluff. Just the digital backbone that lets you stop duct-taping tools together and start running your business.
+We're a hands-on consulting practice that delivers real infrastructure: marketing systems, workflow automations, operational builds, and everything in between. No theory. No fluff. Just the digital backbone that lets you stop duct-taping tools together and start running your business.
 
 ---
 
@@ -30,7 +30,7 @@ You're growing fast and your systems can't keep up. Spreadsheets that should be 
 
 - ERP migration, data mapping, and clean cutovers
 - Month-end close process design and financial workflows
-- Workflow architecture — intake forms, approvals, handoffs
+- Workflow architecture: intake forms, approvals, handoffs
 - System setup, configuration, and cross-platform integrations
 - Process documentation, SOPs, and team playbooks
 - KPI dashboards, operational reporting, and business intelligence
@@ -39,14 +39,14 @@ You're growing fast and your systems can't keep up. Spreadsheets that should be 
 
 ## How We Work
 
-Every engagement follows a clear path — no mystery, no runaround.
+Every engagement follows a clear path. No mystery, no runaround.
 
-**Intake** — We learn your business, your goals, and what's actually broken.
-**Analysis** — Deep-dive audit of your current state, tools, and gaps.
-**Strategy** — Custom plan and automation roadmap built for your situation.
-**Execute** — We build, automate, and support your team through launch.
+**Intake** - We learn your business, your goals, and what's actually broken.
+**Analysis** - Deep-dive audit of your current state, tools, and gaps.
+**Strategy** - Custom plan and automation roadmap built for your situation.
+**Execute** - We build, automate, and support your team through launch.
 
-We scope before we start. We document everything we build. And when we're done, your team owns it — no vendor lock-in, no dependency on us to keep it running.
+We scope before we start. We document everything we build. And when we're done, your team owns it. No vendor lock-in, no dependency on us to keep it running.
 
 ---
 
@@ -54,12 +54,12 @@ We scope before we start. We document everything we build. And when we're done, 
 
 | Package | What You Get | Range |
 |---|---|---|
-| **Signal** | Visibility and ops audit — tool stack review, bottleneck map, 30-day action plan | $500–$900 |
-| **Blueprint** | Full systems strategy — 90-day roadmap, automation opportunity map, tech stack recommendation | $1,200–$2,000 |
-| **Relay** | Complete build — custom website, live automations, email + social, unified dashboard, SOP library, 30-day support | $1,800–$6,000 |
-| **Sustain** | Monthly growth partner — 30 posts/mo, SEO maintenance, automation monitoring, strategy calls, priority support | $300–$500/mo |
+| **Signal** | Visibility and ops audit: tool stack review, bottleneck map, 30-day action plan | $500 - $900 |
+| **Blueprint** | Full systems strategy: 90-day roadmap, automation opportunity map, tech stack recommendation | $1,200 - $2,000 |
+| **Relay** | Complete build: custom website, live automations, email + social, unified dashboard, SOP library, 30-day support | $1,800 - $6,000 |
+| **Sustain** | Monthly growth partner: 30 posts/mo, SEO maintenance, automation monitoring, strategy calls, priority support | $300 - $500/mo |
 
-Every engagement starts with a conversation. We'll match you to the right level of support — or build something fully custom.
+Every engagement starts with a conversation. We'll match you to the right level of support or build something fully custom.
 
 ---
 
@@ -67,9 +67,9 @@ Every engagement starts with a conversation. We'll match you to the right level 
 
 The structure follows the work, not the other way around.
 
-- **Contract / Project-Based** — Scoped deliverables, clear milestones, defined timelines.
-- **W-2 / Embedded** — A dedicated resource embedded directly in your organization.
-- **Retainer / Ongoing** — Monthly partnership with priority access and continuous optimization.
+- **Contract / Project-Based** - Scoped deliverables, clear milestones, defined timelines.
+- **W-2 / Embedded** - A dedicated resource embedded directly in your organization.
+- **Retainer / Ongoing** - Monthly partnership with priority access and continuous optimization.
 
 ---
 
@@ -89,7 +89,7 @@ We practice what we preach. These are free to use, fork, and adapt:
 
 ## Let's Talk
 
-If your business needs something built, connected, and running — not just planned — we should talk.
+If your business needs something built, connected, and running (not just planned), we should talk.
 
 **[Start a Project](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml)** · **[Ask a Question](https://github.com/Relay-Launch/.github/issues/new?template=quick-question.yml)**
 
@@ -97,5 +97,4 @@ If your business needs something built, connected, and running — not just plan
 
 ---
 
-*Relay▸Launch — Build smarter. Launch faster. Grow with purpose.*
-
+*Relay▸Launch - Build smarter. Launch faster. Grow with purpose.*
