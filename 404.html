@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found — Relay▸Launch</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Let's get you back to Relay Launch.">
   <meta name="robots" content="noindex">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="theme-color" content="#238636">
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -31,7 +37,10 @@
       min-height: 100vh;
       text-align: center;
       padding: 24px;
+      -webkit-font-smoothing: antialiased;
     }
+
+    :focus-visible { outline: 2px solid var(--brand-accent-light); outline-offset: 2px; }
 
     a { color: var(--text-link); text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -44,8 +53,17 @@
     }
     .brand span { color: var(--brand-accent-light); }
 
+    .error-code {
+      font-size: 6rem;
+      font-weight: 800;
+      color: var(--brand-accent-light);
+      line-height: 1;
+      margin-bottom: 8px;
+      opacity: 0.3;
+    }
+
     h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 800;
       margin-bottom: 16px;
     }
@@ -62,6 +80,7 @@
       gap: 12px;
       flex-wrap: wrap;
       justify-content: center;
+      margin-bottom: 48px;
     }
 
     .btn-primary {
@@ -72,9 +91,10 @@
       border-radius: 6px;
       font-weight: 600;
       font-size: 0.95rem;
-      transition: background 0.2s;
+      transition: background 0.2s ease, transform 0.1s ease;
     }
     .btn-primary:hover { background: var(--brand-accent-light); text-decoration: none; }
+    .btn-primary:active { transform: scale(0.98); }
 
     .btn-secondary {
       display: inline-block;
@@ -85,21 +105,45 @@
       font-weight: 600;
       font-size: 0.95rem;
       border: 1px solid var(--brand-border);
-      transition: border-color 0.2s, background 0.2s;
+      transition: border-color 0.2s ease, background 0.2s ease;
     }
     .btn-secondary:hover { border-color: var(--text-secondary); background: var(--brand-surface); text-decoration: none; }
+
+    .helpful-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .helpful-links a {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      transition: color 0.2s ease;
+    }
+    .helpful-links a:hover { color: var(--text-primary); text-decoration: none; }
+
+    @media print {
+      body { background: #fff; color: #000; }
+    }
   </style>
 </head>
 <body>
 
-  <div class="brand">Relay<span>▸</span>Launch</div>
+  <a href="/" class="brand" style="text-decoration:none;">Relay<span>▸</span>Launch</a>
 
+  <div class="error-code">404</div>
   <h1>Page not found</h1>
   <p>The page you're looking for doesn't exist or has moved. Let's get you back on track.</p>
 
   <div class="actions">
     <a href="/" class="btn-primary">Back to Home</a>
-    <a href="solutions.html" class="btn-secondary">See Our Solutions</a>
+    <a href="/solutions.html" class="btn-secondary">See Our Solutions</a>
+  </div>
+
+  <div class="helpful-links">
+    <a href="/about.html">About Us</a>
+    <a href="/work-with-us.html">Work With Us</a>
+    <a href="mailto:hello@relaylaunch.com">Contact</a>
   </div>
 
 </body>

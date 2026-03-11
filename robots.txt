@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /.github/
+Disallow: /website/
 
 Sitemap: https://relaylaunch.com/sitemap.xml
