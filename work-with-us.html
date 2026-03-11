@@ -8,10 +8,37 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://relaylaunch.com/work-with-us.html">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="theme-color" content="#238636">
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://relaylaunch.com/work-with-us.html">
   <meta property="og:title" content="Work With Us — Relay▸Launch">
   <meta property="og:description" content="Contract, W-2, or retainer — we flex to fit what your business needs. Let's figure out the right engagement.">
+  <meta property="og:site_name" content="Relay▸Launch">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Work With Us — Relay▸Launch">
+  <meta name="twitter:description" content="Contract, W-2, or retainer — we flex to fit what your business needs. Let's figure out the right engagement.">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Work With Relay Launch",
+    "url": "https://relaylaunch.com/work-with-us.html",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Relay Launch",
+      "email": "hello@relaylaunch.com",
+      "url": "https://relaylaunch.com"
+    }
+  }
+  </script>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -23,31 +50,50 @@
       --brand-muted: #8b949e;
       --brand-border: #21262d;
       --brand-surface: #161b22;
+      --brand-surface-hover: #1c2128;
       --text-primary: #e6edf3;
       --text-secondary: #8b949e;
       --text-link: #58a6ff;
+      --radius-sm: 6px;
+      --radius-md: 8px;
+      --radius-lg: 10px;
+      --transition-fast: 0.2s ease;
     }
+
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
       background-color: var(--brand-dark);
       color: var(--text-primary);
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
     a { color: var(--text-link); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    :focus-visible { outline: 2px solid var(--brand-accent-light); outline-offset: 2px; }
+    a:focus:not(:focus-visible), button:focus:not(:focus-visible) { outline: none; }
+
     .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 
-    nav { border-bottom: 1px solid var(--brand-border); padding: 16px 0; }
+    nav {
+      border-bottom: 1px solid var(--brand-border); padding: 16px 0;
+      position: sticky; top: 0;
+      background: rgba(13, 17, 23, 0.85);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      z-index: 50;
+    }
     nav .container { display: flex; align-items: center; justify-content: space-between; }
     .brand { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); letter-spacing: -0.01em; }
     .brand span { color: var(--brand-accent-light); }
     nav ul { list-style: none; display: flex; gap: 24px; }
-    nav ul a { color: var(--text-secondary); font-size: 0.9rem; transition: color 0.2s; }
+    nav ul a { color: var(--text-secondary); font-size: 0.9rem; transition: color var(--transition-fast); padding: 4px 0; }
     nav ul a:hover { color: var(--text-primary); text-decoration: none; }
     nav ul a.active { color: var(--text-primary); }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: var(--text-primary); }
+    .nav-toggle svg { display: block; }
 
     .hero { padding: 80px 0 64px; text-align: center; }
     .hero-eyebrow {
@@ -90,10 +136,15 @@
     .engagement-card {
       background: var(--brand-surface);
       border: 1px solid var(--brand-border);
-      border-radius: 10px;
+      border-radius: var(--radius-lg);
       padding: 32px 28px;
       display: flex;
       flex-direction: column;
+      transition: border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .engagement-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
     }
     .engagement-card.featured {
       border-color: var(--brand-accent);
@@ -133,7 +184,7 @@
     .process-block {
       background: var(--brand-surface);
       border: 1px solid var(--brand-border);
-      border-radius: 10px;
+      border-radius: var(--radius-lg);
       padding: 40px 36px;
       margin-bottom: 32px;
     }
@@ -166,7 +217,7 @@
     .contact-block {
       background: var(--brand-surface);
       border: 1px solid var(--brand-accent);
-      border-radius: 10px;
+      border-radius: var(--radius-lg);
       padding: 40px 36px;
       text-align: center;
     }
@@ -189,13 +240,11 @@
     }
     .contact-info a {
       font-size: 0.9rem; color: var(--text-secondary);
-      transition: color 0.2s;
+      transition: color var(--transition-fast);
     }
     .contact-info a:hover { color: var(--text-primary); }
 
-    .faq-section {
-      margin-top: 32px;
-    }
+    .faq-section { margin-top: 32px; }
     .faq-item {
       border-bottom: 1px solid var(--brand-border);
       padding: 20px 0;
@@ -203,30 +252,71 @@
     .faq-item:last-child { border-bottom: none; }
     .faq-item h4 {
       font-size: 0.95rem; font-weight: 700; margin-bottom: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    .faq-item p {
+    .faq-item h4::after {
+      content: '+';
+      font-size: 1.2rem;
+      color: var(--brand-accent-light);
+      font-weight: 400;
+      transition: transform var(--transition-fast);
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+    .faq-item.open h4::after {
+      content: '-';
+    }
+    .faq-answer {
       font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;
       max-width: 640px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 200px;
+      opacity: 1;
     }
 
     .btn-primary {
       display: inline-block; background: var(--brand-accent); color: #fff;
-      padding: 12px 24px; border-radius: 6px;
-      font-weight: 600; font-size: 0.95rem; transition: background 0.2s;
+      padding: 12px 24px; border-radius: var(--radius-sm);
+      font-weight: 600; font-size: 0.95rem;
+      transition: background var(--transition-fast), transform 0.1s ease;
     }
     .btn-primary:hover { background: var(--brand-accent-light); text-decoration: none; }
+    .btn-primary:active { transform: scale(0.98); }
     .btn-secondary {
       display: inline-block; background: transparent; color: var(--text-primary);
-      padding: 12px 24px; border-radius: 6px;
+      padding: 12px 24px; border-radius: var(--radius-sm);
       font-weight: 600; font-size: 0.95rem;
       border: 1px solid var(--brand-border);
-      transition: border-color 0.2s, background 0.2s;
+      transition: border-color var(--transition-fast), background var(--transition-fast);
     }
     .btn-secondary:hover { border-color: var(--text-secondary); background: var(--brand-surface); text-decoration: none; }
 
-    footer { border-top: 1px solid var(--brand-border); padding: 32px 0; text-align: center; }
-    footer p { font-size: 0.85rem; color: var(--text-secondary); }
-    footer strong { color: var(--text-primary); }
+    footer {
+      border-top: 1px solid var(--brand-border);
+      padding: 48px 0 32px;
+    }
+    .footer-inner { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 32px; }
+    .footer-brand { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 12px; }
+    .footer-brand span { color: var(--brand-accent-light); }
+    .footer-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; max-width: 300px; }
+    .footer-col h4 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-primary); margin-bottom: 12px; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 8px; }
+    .footer-col a { font-size: 0.85rem; color: var(--text-secondary); transition: color var(--transition-fast); }
+    .footer-col a:hover { color: var(--text-primary); text-decoration: none; }
+    .footer-bottom { border-top: 1px solid var(--brand-border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 0.8rem; color: var(--text-secondary); }
+    .footer-bottom a { font-size: 0.8rem; color: var(--text-secondary); transition: color var(--transition-fast); }
+    .footer-bottom a:hover { color: var(--text-primary); }
 
     .skip-link {
       position: absolute; top: -100%; left: 16px;
@@ -236,11 +326,28 @@
     }
     .skip-link:focus { top: 0; text-decoration: none; }
 
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
     @media (max-width: 600px) {
       .hero { padding: 48px 0 40px; }
       section { padding: 48px 0; }
       .process-block { padding: 28px 20px; }
       .contact-block { padding: 28px 20px; }
+      nav ul { display: none; }
+      nav ul.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--brand-dark); border-bottom: 1px solid var(--brand-border); padding: 16px 24px; gap: 16px; }
+      .nav-toggle { display: block; }
+    }
+
+    @media print {
+      body { background: #fff; color: #000; }
+      nav, .contact-actions, .cta-section, .skip-link { display: none; }
+      .engagement-card, .process-block, .contact-block { border-color: #ccc; background: #f9f9f9; }
+      a { color: #000; }
+      .section-label, .brand span { color: #238636; }
     }
   </style>
 </head>
@@ -251,6 +358,9 @@
   <nav role="navigation" aria-label="Main navigation">
     <div class="container">
       <a href="index.html" class="brand" style="text-decoration:none;">Relay<span>▸</span>Launch</a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
       <ul>
         <li><a href="solutions.html">Solutions</a></li>
         <li><a href="index.html#services">Packages</a></li>
@@ -274,7 +384,7 @@
     <hr class="divider">
 
     <!-- ENGAGEMENT MODELS -->
-    <section>
+    <section class="fade-in">
       <div class="section-label">Engagement Models</div>
       <h2 class="section-title">Three ways to work together</h2>
       <p style="color: var(--text-secondary); margin-bottom: 36px; max-width: 600px;">
@@ -329,7 +439,7 @@
     <hr class="divider">
 
     <!-- HOW IT STARTS -->
-    <section>
+    <section class="fade-in">
       <div class="process-block">
         <div class="section-label">Getting Started</div>
         <h2>From first conversation to active project</h2>
@@ -363,35 +473,35 @@
     <hr class="divider">
 
     <!-- FAQ -->
-    <section>
+    <section class="fade-in">
       <div class="process-block">
         <div class="section-label">Common Questions</div>
         <h2>Before you reach out</h2>
 
         <div class="faq-section">
-          <div class="faq-item">
+          <div class="faq-item open">
             <h4>How do I know which engagement model is right?</h4>
-            <p>That's what the discovery call is for. Most businesses start with a contract engagement around a specific project, and some evolve into ongoing retainer partnerships once we've proven the fit. We'll recommend the structure that makes the most sense for your situation.</p>
+            <div class="faq-answer">That's what the discovery call is for. Most businesses start with a contract engagement around a specific project, and some evolve into ongoing retainer partnerships once we've proven the fit. We'll recommend the structure that makes the most sense for your situation.</div>
           </div>
           <div class="faq-item">
             <h4>What does a typical project timeline look like?</h4>
-            <p>It depends entirely on scope. A website build or automation setup can be turned around in a few weeks. A full operational buildout or platform migration is a multi-month engagement. We'll give you a realistic timeline upfront — not an optimistic one we can't hit.</p>
+            <div class="faq-answer">It depends entirely on scope. A website build or automation setup can be turned around in a few weeks. A full operational buildout or platform migration is a multi-month engagement. We'll give you a realistic timeline upfront — not an optimistic one we can't hit.</div>
           </div>
           <div class="faq-item">
             <h4>Do you work with businesses outside the US?</h4>
-            <p>Our primary service area is US-based businesses, but we've worked with companies across time zones. If the work can be done remotely and the communication works, we're open to it.</p>
+            <div class="faq-answer">Our primary service area is US-based businesses, but we've worked with companies across time zones. If the work can be done remotely and the communication works, we're open to it.</div>
           </div>
           <div class="faq-item">
             <h4>What industries do you work with?</h4>
-            <p>We're not industry-specific. Our two service tracks — small business growth and startup operations — apply across sectors. We've worked with professional services, retail, SaaS, food and beverage, construction, and more. The common thread is businesses that need real infrastructure, not just advice.</p>
+            <div class="faq-answer">We're not industry-specific. Our two service tracks — small business growth and startup operations — apply across sectors. We've worked with professional services, retail, SaaS, food and beverage, construction, and more. The common thread is businesses that need real infrastructure, not just advice.</div>
           </div>
           <div class="faq-item">
             <h4>Can you work with the tools we already use?</h4>
-            <p>Almost certainly. We're platform-agnostic and build with whatever fits your situation best. If you're already invested in specific tools, we'll work within that ecosystem. If you're starting from scratch, we'll help you pick the right stack.</p>
+            <div class="faq-answer">Almost certainly. We're platform-agnostic and build with whatever fits your situation best. If you're already invested in specific tools, we'll work within that ecosystem. If you're starting from scratch, we'll help you pick the right stack.</div>
           </div>
           <div class="faq-item">
             <h4>What happens after the project is done?</h4>
-            <p>Everything we build comes with documentation and a clean handoff. Your team will know how to run and maintain what we've set up. If you want ongoing support, we offer retainer engagements. But we never build in a way that forces you to keep us around.</p>
+            <div class="faq-answer">Everything we build comes with documentation and a clean handoff. Your team will know how to run and maintain what we've set up. If you want ongoing support, we offer retainer engagements. But we never build in a way that forces you to keep us around.</div>
           </div>
         </div>
       </div>
@@ -400,7 +510,7 @@
     <hr class="divider">
 
     <!-- CONTACT -->
-    <section>
+    <section class="fade-in">
       <div class="contact-block">
         <h2>Ready to start building?</h2>
         <p>
@@ -422,8 +532,66 @@
   </main>
 
   <footer>
-    <p><strong>Relay▸Launch</strong> — Build smarter. Launch faster. Grow with purpose.</p>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Relay<span>▸</span>Launch</div>
+          <p class="footer-desc">Operational clarity. Strategic momentum. Real results. We build the digital infrastructure that small businesses and startups actually need.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="solutions.html#growth">Small Business Growth</a></li>
+            <li><a href="solutions.html#systems">Startup Operations</a></li>
+            <li><a href="index.html#services">Service Packages</a></li>
+            <li><a href="work-with-us.html">Work With Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="https://github.com/Relay-Launch">GitHub</a></li>
+            <li><a href="mailto:hello@relaylaunch.com">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Relay▸Launch. All rights reserved.</p>
+        <a href="mailto:hello@relaylaunch.com">hello@relaylaunch.com</a>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('nav ul');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = navList.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-item h4').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const wasOpen = item.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        // Toggle clicked
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
