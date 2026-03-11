@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Work With Us — Relay▸Launch</title>
+  <title>Work With Us | Relay▸Launch</title>
   <meta name="description" content="Start a project with Relay Launch. Contract engagements, W-2 roles, and retainer partnerships for small businesses and startups.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://relaylaunch.com/work-with-us.html">
@@ -15,14 +15,14 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://relaylaunch.com/work-with-us.html">
-  <meta property="og:title" content="Work With Us — Relay▸Launch">
-  <meta property="og:description" content="Contract, W-2, or retainer — we flex to fit what your business needs. Let's figure out the right engagement.">
+  <meta property="og:title" content="Work With Us | Relay▸Launch">
+  <meta property="og:description" content="Contract, W-2, or retainer: we flex to fit what your business needs. Let's figure out the right engagement.">
   <meta property="og:site_name" content="Relay▸Launch">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Work With Us — Relay▸Launch">
-  <meta name="twitter:description" content="Contract, W-2, or retainer — we flex to fit what your business needs. Let's figure out the right engagement.">
+  <meta name="twitter:title" content="Work With Us | Relay▸Launch">
+  <meta name="twitter:description" content="Contract, W-2, or retainer: we flex to fit what your business needs. Let's figure out the right engagement.">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -95,7 +95,17 @@
     .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: var(--text-primary); }
     .nav-toggle svg { display: block; }
 
-    .hero { padding: 80px 0 64px; text-align: center; }
+    .hero { padding: 80px 0 64px; text-align: center; position: relative; }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 400px;
+      background: radial-gradient(ellipse, rgba(35, 134, 54, 0.08) 0%, transparent 70%);
+      pointer-events: none; z-index: 0;
+    }
+    .hero > * { position: relative; z-index: 1; }
     .hero-eyebrow {
       display: inline-block;
       background: rgba(35, 134, 54, 0.15);
@@ -329,6 +339,19 @@
     .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+    .back-to-top {
+      position: fixed; bottom: 24px; right: 24px;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--brand-surface); border: 1px solid var(--brand-border);
+      color: var(--text-primary); display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; cursor: pointer;
+      opacity: 0; transform: translateY(10px);
+      transition: opacity var(--transition-fast), transform var(--transition-fast), background var(--transition-fast);
+      z-index: 40; text-decoration: none;
+    }
+    .back-to-top:hover { background: var(--brand-accent); border-color: var(--brand-accent); text-decoration: none; }
+    .back-to-top.show { opacity: 1; transform: translateY(0); }
+
     @media (max-width: 768px) {
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
     }
@@ -344,7 +367,7 @@
 
     @media print {
       body { background: #fff; color: #000; }
-      nav, .contact-actions, .cta-section, .skip-link { display: none; }
+      nav, .contact-actions, .cta-section, .skip-link, .back-to-top { display: none; }
       .engagement-card, .process-block, .contact-block { border-color: #ccc; background: #f9f9f9; }
       a { color: #000; }
       .section-label, .brand span { color: #238636; }
@@ -377,7 +400,7 @@
       <h1>Tell us what you need built.</h1>
       <p class="hero-sub">
         Every engagement starts with a conversation. We'll figure out the right
-        scope, the right structure, and the right timeline — then we get to work.
+        scope, the right structure, and the right timeline, then we get to work.
       </p>
     </section>
 
@@ -388,7 +411,7 @@
       <div class="section-label">Engagement Models</div>
       <h2 class="section-title">Three ways to work together</h2>
       <p style="color: var(--text-secondary); margin-bottom: 36px; max-width: 600px;">
-        We structure engagements around what makes sense for your business — not
+        We structure engagements around what makes sense for your business, not
         what's easiest for us. Here's how we typically work.
       </p>
 
@@ -423,7 +446,7 @@
         <div class="engagement-card">
           <h3>Retainer / Ongoing Support</h3>
           <div class="tagline">Consistent monthly support that keeps momentum going</div>
-          <p>Monthly engagement with priority access, strategic reviews, and continuous optimization. For businesses that want someone who stays in the work with them — not just shows up once.</p>
+          <p>Monthly engagement with priority access, strategic reviews, and continuous optimization. For businesses that want someone who stays in the work with them, not just shows up once.</p>
           <ul>
             <li>Monthly strategy and performance reviews</li>
             <li>Priority project queue</li>
@@ -443,13 +466,13 @@
       <div class="process-block">
         <div class="section-label">Getting Started</div>
         <h2>From first conversation to active project</h2>
-        <p>We keep the onboarding process straightforward. No lengthy sales cycles, no corporate runaround — just a clear path from "we should talk" to "we're building."</p>
+        <p>We keep the onboarding process straightforward. No lengthy sales cycles, no corporate runaround. Just a clear path from "we should talk" to "we're building."</p>
 
         <div class="process-steps">
           <div class="p-step">
             <div class="p-step-num">1</div>
             <h4>Reach Out</h4>
-            <p>Submit a project request or send us a message. Tell us what's going on and what you need — as detailed or high-level as you want.</p>
+            <p>Submit a project request or send us a message. Tell us what's going on and what you need, as detailed or high-level as you want.</p>
           </div>
           <div class="p-step">
             <div class="p-step-num">2</div>
@@ -458,8 +481,8 @@
           </div>
           <div class="p-step">
             <div class="p-step-num">3</div>
-            <h4>Scope & Proposal</h4>
-            <p>We define the engagement — deliverables, timeline, structure, and investment. Clear expectations for both sides before any work starts.</p>
+            <h4>Scope &amp; Proposal</h4>
+            <p>We define the engagement: deliverables, timeline, structure, and investment. Clear expectations for both sides before any work starts.</p>
           </div>
           <div class="p-step">
             <div class="p-step-num">4</div>
@@ -485,7 +508,7 @@
           </div>
           <div class="faq-item">
             <h4>What does a typical project timeline look like?</h4>
-            <div class="faq-answer">It depends entirely on scope. A website build or automation setup can be turned around in a few weeks. A full operational buildout or platform migration is a multi-month engagement. We'll give you a realistic timeline upfront — not an optimistic one we can't hit.</div>
+            <div class="faq-answer">It depends entirely on scope. A website build or automation setup can be turned around in a few weeks. A full operational buildout or platform migration is a multi-month engagement. We'll give you a realistic timeline upfront, not an optimistic one we can't hit.</div>
           </div>
           <div class="faq-item">
             <h4>Do you work with businesses outside the US?</h4>
@@ -493,7 +516,7 @@
           </div>
           <div class="faq-item">
             <h4>What industries do you work with?</h4>
-            <div class="faq-answer">We're not industry-specific. Our two service tracks — small business growth and startup operations — apply across sectors. We've worked with professional services, retail, SaaS, food and beverage, construction, and more. The common thread is businesses that need real infrastructure, not just advice.</div>
+            <div class="faq-answer">We're not industry-specific. Our two service tracks (small business growth and startup operations) apply across sectors. We've worked with professional services, retail, SaaS, food and beverage, construction, and more. The common thread is businesses that need real infrastructure, not just advice.</div>
           </div>
           <div class="faq-item">
             <h4>Can you work with the tools we already use?</h4>
@@ -557,11 +580,13 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Relay▸Launch. All rights reserved.</p>
+        <p>&copy; 2026 Relay▸Launch. All rights reserved.</p>
         <a href="mailto:hello@relaylaunch.com">hello@relaylaunch.com</a>
       </div>
     </div>
   </footer>
+
+  <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
 
   <script>
     // Mobile nav toggle
@@ -591,6 +616,12 @@
       entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Back to top
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('show', window.scrollY > 400);
+    }, { passive: true });
   </script>
 
 </body>

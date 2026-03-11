@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solutions — Relay▸Launch</title>
-  <meta name="description" content="Two service tracks built for how businesses actually need help — digital growth for small businesses and operational infrastructure for startups.">
+  <title>Solutions | Relay▸Launch</title>
+  <meta name="description" content="Two service tracks built for how businesses actually need help: digital growth for small businesses and operational infrastructure for startups.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://relaylaunch.com/solutions.html">
 
@@ -15,13 +15,13 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://relaylaunch.com/solutions.html">
-  <meta property="og:title" content="Solutions — Relay▸Launch">
+  <meta property="og:title" content="Solutions | Relay▸Launch">
   <meta property="og:description" content="Digital growth infrastructure for small businesses. Operational systems for startups. Two tracks, one standard of work.">
   <meta property="og:site_name" content="Relay▸Launch">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Solutions — Relay▸Launch">
+  <meta name="twitter:title" content="Solutions | Relay▸Launch">
   <meta name="twitter:description" content="Digital growth infrastructure for small businesses. Operational systems for startups. Two tracks, one standard of work.">
 
   <!-- Structured Data -->
@@ -35,7 +35,7 @@
       "url": "https://relaylaunch.com"
     },
     "serviceType": ["Small Business Growth", "Startup Operations Build"],
-    "description": "Two service tracks — digital growth for small businesses and operational infrastructure for startups.",
+    "description": "Two service tracks: digital growth for small businesses and operational infrastructure for startups.",
     "areaServed": "US"
   }
   </script>
@@ -95,7 +95,17 @@
     .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: var(--text-primary); }
     .nav-toggle svg { display: block; }
 
-    .hero { padding: 80px 0 64px; text-align: center; }
+    .hero { padding: 80px 0 64px; text-align: center; position: relative; }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 400px;
+      background: radial-gradient(ellipse, rgba(35, 134, 54, 0.08) 0%, transparent 70%);
+      pointer-events: none; z-index: 0;
+    }
+    .hero > * { position: relative; z-index: 1; }
     .hero-eyebrow {
       display: inline-block;
       background: rgba(35, 134, 54, 0.15);
@@ -278,6 +288,19 @@
     .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+    .back-to-top {
+      position: fixed; bottom: 24px; right: 24px;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--brand-surface); border: 1px solid var(--brand-border);
+      color: var(--text-primary); display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; cursor: pointer;
+      opacity: 0; transform: translateY(10px);
+      transition: opacity var(--transition-fast), transform var(--transition-fast), background var(--transition-fast);
+      z-index: 40; text-decoration: none;
+    }
+    .back-to-top:hover { background: var(--brand-accent); border-color: var(--brand-accent); text-decoration: none; }
+    .back-to-top.show { opacity: 1; transform: translateY(0); }
+
     @media (max-width: 768px) {
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
     }
@@ -293,7 +316,7 @@
 
     @media print {
       body { background: #fff; color: #000; }
-      nav, .hero-actions, .cta-section, .skip-link { display: none; }
+      nav, .hero-actions, .cta-section, .skip-link, .back-to-top { display: none; }
       .track-block, .service-item, .diff-section { border-color: #ccc; background: #f9f9f9; }
       a { color: #000; }
       .section-label, .brand span { color: #238636; }
@@ -325,7 +348,7 @@
       <div class="hero-eyebrow">What We Build</div>
       <h1>Two tracks. One standard.</h1>
       <p class="hero-sub">
-        We work with two types of businesses — and we've structured everything
+        We work with two types of businesses, and we've structured everything
         around delivering exactly what each one needs. No filler. No fluff.
         Just the infrastructure that moves you forward.
       </p>
@@ -340,20 +363,20 @@
         <h2>Small Business Growth</h2>
         <div class="track-tagline">Marketing infrastructure, digital visibility, and the automations that bring customers in the door.</div>
         <p class="track-intro">
-          Most small businesses know they need a better online presence and smarter marketing — but they don't have
+          Most small businesses know they need a better online presence and smarter marketing, but they don't have
           the time, the team, or the technical know-how to build it themselves. That's where we come in.
           We set up everything from your Google Business page to your website to your lead capture automations
-          so you can focus on doing what you're already good at, while the digital side actually starts
+          so you can focus on doing what you're already good at while the digital side actually starts
           working for you.
         </p>
 
         <div class="service-grid">
           <div class="service-item">
             <h4>Marketing Strategy</h4>
-            <p>We map out where your customers are, what they're searching for, and how to put your business in front of them — then we build the systems to make it happen consistently.</p>
+            <p>We map out where your customers are, what they're searching for, and how to put your business in front of them. Then we build the systems to make it happen consistently.</p>
           </div>
           <div class="service-item">
-            <h4>SEO & Search Visibility</h4>
+            <h4>SEO &amp; Search Visibility</h4>
             <p>On-page optimization, keyword targeting, content structure, and technical SEO that gets your business ranking for the searches that actually matter to your bottom line.</p>
           </div>
           <div class="service-item">
@@ -362,14 +385,14 @@
           </div>
           <div class="service-item">
             <h4>Custom Website Design</h4>
-            <p>Fast, modern websites built for conversions — not just looks. Deployed on reliable infrastructure with performance baked in from the start.</p>
+            <p>Fast, modern websites built for conversions, not just looks. Deployed on reliable infrastructure with performance baked in from the start.</p>
           </div>
           <div class="service-item">
-            <h4>Lead Capture & CRM Automations</h4>
+            <h4>Lead Capture &amp; CRM Automations</h4>
             <p>Form submissions that route to your CRM, automatic follow-up sequences, appointment scheduling, and the handoff workflows that keep leads from falling through the cracks.</p>
           </div>
           <div class="service-item">
-            <h4>Referral & Growth Programs</h4>
+            <h4>Referral &amp; Growth Programs</h4>
             <p>Structured referral programs, recommendation systems, and partnership frameworks designed to generate warm leads from your existing network and client base.</p>
           </div>
         </div>
@@ -392,19 +415,19 @@
     <section id="systems" class="fade-in">
       <div class="track-block">
         <div class="section-label">Track 2</div>
-        <h2>Startup & Operations Build</h2>
+        <h2>Startup &amp; Operations Build</h2>
         <div class="track-tagline">System architecture, financial operations, and the infrastructure that keeps a growing company running.</div>
         <p class="track-intro">
-          When a company is scaling — or trying to — the operational gaps become impossible to ignore.
+          When a company is scaling, or trying to, the operational gaps become impossible to ignore.
           Spreadsheets that should be databases. Manual processes that eat entire days. Financial closes
           that take weeks when they should take hours. We step in and build the systems that make a
-          growing company actually function like one. ERP migrations, month-end close workflows,
-          process documentation, reporting dashboards — whatever the infrastructure gap is, we fill it.
+          growing company actually function like one: ERP migrations, month-end close workflows,
+          process documentation, reporting dashboards, and whatever else the infrastructure gap calls for.
         </p>
 
         <div class="service-grid">
           <div class="service-item">
-            <h4>ERP Migration & Implementation</h4>
+            <h4>ERP Migration &amp; Implementation</h4>
             <p>Full migration planning, data mapping, system configuration, and cutover execution. We handle the complexity so your team stays focused on running the business.</p>
           </div>
           <div class="service-item">
@@ -413,18 +436,18 @@
           </div>
           <div class="service-item">
             <h4>Workflow Architecture</h4>
-            <p>From intake forms to approval chains to handoff protocols — we design and build the workflows that keep work moving without bottlenecks or dropped balls.</p>
+            <p>From intake forms to approval chains to handoff protocols, we design and build the workflows that keep work moving without bottlenecks or dropped balls.</p>
           </div>
           <div class="service-item">
-            <h4>System Setup & Configuration</h4>
+            <h4>System Setup &amp; Configuration</h4>
             <p>Tool selection, platform configuration, user provisioning, and the integrations that tie everything together into one coherent operational stack.</p>
           </div>
           <div class="service-item">
-            <h4>Process Documentation & SOPs</h4>
+            <h4>Process Documentation &amp; SOPs</h4>
             <p>Detailed standard operating procedures, role-based playbooks, and training materials that let your team run systems consistently without depending on tribal knowledge.</p>
           </div>
           <div class="service-item">
-            <h4>Operational Reporting & Dashboards</h4>
+            <h4>Operational Reporting &amp; Dashboards</h4>
             <p>KPI frameworks, real-time dashboards, and performance tracking systems that give leadership the visibility they need to make grounded decisions.</p>
           </div>
         </div>
@@ -447,12 +470,12 @@
     <section class="fade-in">
       <div class="track-block" style="border-color: var(--brand-accent);">
         <div class="section-label">Flexible Engagement</div>
-        <h2>Contract work or dedicated roles — your call</h2>
+        <h2>Contract work or dedicated roles: your call</h2>
         <p class="track-intro">
           We offer both project-based contract engagements and traditional W-2 arrangements
           depending on what makes sense for your situation. Need someone embedded with your
           team full-time? We do that. Need a focused project scoped and delivered on a timeline?
-          We do that too. The structure follows the work — not the other way around.
+          We do that too. The structure follows the work, not the other way around.
         </p>
         <div class="service-grid">
           <div class="service-item">
@@ -488,19 +511,19 @@
         <div class="diff-grid">
           <div class="diff-item">
             <h4>Execution-first</h4>
-            <p>Strategy matters, but only when it ships. Every engagement produces real, working deliverables — not just documents.</p>
+            <p>Strategy matters, but only when it ships. Every engagement produces real, working deliverables, not just documents.</p>
           </div>
           <div class="diff-item">
             <h4>Modern tooling</h4>
-            <p>We use the best platforms available to build faster, smarter, and more reliably — so you get premium infrastructure on practical timelines.</p>
+            <p>We use the best platforms available to build faster, smarter, and more reliably so you get premium infrastructure on practical timelines.</p>
           </div>
           <div class="diff-item">
             <h4>Proven frameworks</h4>
-            <p>Structured methodologies for everything from project scoping to system architecture — so nothing gets missed and nothing gets wasted.</p>
+            <p>Structured methodologies for everything from project scoping to system architecture so nothing gets missed and nothing gets wasted.</p>
           </div>
           <div class="diff-item">
             <h4>Full ownership transfer</h4>
-            <p>Everything we build comes with documentation and training. When we're done, your team owns it — no vendor lock-in, no dependency.</p>
+            <p>Everything we build comes with documentation and training. When we're done, your team owns it. No vendor lock-in, no dependency.</p>
           </div>
         </div>
       </div>
@@ -511,7 +534,7 @@
     <!-- CTA -->
     <section class="cta-section">
       <h2>Let's figure out what you need</h2>
-      <p>Tell us what's going on with your business and we'll map out the right approach — no commitment, no pressure.</p>
+      <p>Tell us what's going on with your business and we'll map out the right approach. No commitment, no pressure.</p>
       <div class="hero-actions">
         <a href="work-with-us.html" class="btn-primary">Start a Conversation</a>
         <a href="index.html#services" class="btn-secondary">See Service Packages</a>
@@ -546,11 +569,13 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Relay▸Launch. All rights reserved.</p>
+        <p>&copy; 2026 Relay▸Launch. All rights reserved.</p>
         <a href="mailto:hello@relaylaunch.com">hello@relaylaunch.com</a>
       </div>
     </div>
   </footer>
+
+  <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
 
   <script>
     const navToggle = document.querySelector('.nav-toggle');
@@ -565,6 +590,11 @@
       entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('show', window.scrollY > 400);
+    }, { passive: true });
   </script>
 
 </body>
