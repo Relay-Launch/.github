@@ -601,13 +601,29 @@
 
     // FAQ accordion
     document.querySelectorAll('.faq-item h4').forEach(header => {
-      header.addEventListener('click', () => {
+      header.setAttribute('role', 'button');
+      header.setAttribute('tabindex', '0');
+      header.setAttribute('aria-expanded', header.parentElement.classList.contains('open'));
+
+      function toggleFaq() {
         const item = header.parentElement;
         const wasOpen = item.classList.contains('open');
-        // Close all
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-        // Toggle clicked
-        if (!wasOpen) item.classList.add('open');
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('h4').setAttribute('aria-expanded', 'false');
+        });
+        if (!wasOpen) {
+          item.classList.add('open');
+          header.setAttribute('aria-expanded', 'true');
+        }
+      }
+
+      header.addEventListener('click', toggleFaq);
+      header.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleFaq();
+        }
       });
     });
 

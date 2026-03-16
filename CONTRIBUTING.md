@@ -8,7 +8,7 @@ Thanks for your interest in contributing to Relay▸Launch. We welcome feedback,
 
 If you've found a bug in our website or documentation:
 
-1. Check the [existing issues](https://github.com/Relay-Launch/Main/issues) to see if it has already been reported
+1. Check the [existing issues](https://github.com/Relay-Launch/.github/issues) to see if it has already been reported
 2. Open a new issue with a clear description of the problem
 3. Include steps to reproduce the issue if applicable
 
@@ -36,4 +36,4 @@ We're always looking for ways to improve our materials and processes. Open an is
 
 ## Questions?
 
-If you're not sure about something, [open a question](https://github.com/Relay-Launch/Main/issues/new?template=quick-question.yml) and we'll point you in the right direction.
+If you're not sure about something, [open a question](https://github.com/Relay-Launch/.github/issues/new?template=quick-question.yml) and we'll point you in the right direction.
