@@ -48,7 +48,7 @@ Shared modules that the recipes build on. You can use these independently in you
 
 ### Runtime
 
-- **Python 3.8+** (tested on 3.8, 3.9, 3.10, 3.11, 3.12)
+- **Python 3.9+** (tested on 3.9, 3.10, 3.11, 3.12)
 - `pip` for package management
 - A Linux/macOS environment for production (Windows works for development)
 
@@ -115,8 +115,9 @@ pip install -r requirements.txt
 ### 2. Configure
 
 ```bash
-cp .env.example .env
-# Edit .env with your actual API keys and configuration
+# Create a .env file with your actual API keys (see Environment Variables above)
+touch .env
+# Edit .env with your values
 ```
 
 ### 3. Run a Recipe
