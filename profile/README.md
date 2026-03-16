@@ -1,100 +1,143 @@
-# Relay▸Launch
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Relay-Launch/.github/main/profile/repo-card.svg" alt="Relay▸Launch — Ops on Autopilot. You on Strategy." width="100%"/>
+</p>
 
-**We build the systems your business needs but you don't have time to figure out.**
+<p align="center">
+  <strong>Veteran-Owned Digital Infrastructure Consultancy</strong><br>
+  <em>310 specialist AI agents. 14 departments. One console.</em>
+</p>
 
-Most small businesses and startups don't need another consultant with a slide deck. They need someone who actually builds the website, wires the automations, sets up the workflows, and hands it all over *working*. That's what we do.
-
-We're a hands-on consulting practice that delivers real infrastructure: marketing systems, workflow automations, operational builds, and everything in between. No theory. No fluff. Just the digital backbone that lets you stop duct-taping tools together and start running your business.
+<p align="center">
+  <a href="https://relaylaunch.com"><img src="https://img.shields.io/badge/Website-relaylaunch.com-2ea043?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website"></a>&nbsp;
+  <a href="mailto:hello@relaylaunch.com"><img src="https://img.shields.io/badge/Email-hello%40relaylaunch.com-58a6ff?style=for-the-badge&logo=mail.ru&logoColor=white" alt="Email"></a>&nbsp;
+  <a href="https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml"><img src="https://img.shields.io/badge/Start_a_Project-238636?style=for-the-badge&logo=github&logoColor=white" alt="Start a Project"></a>
+</p>
 
 ---
 
-## Two Tracks, One Standard
+## Stop managing tools. Start running your business.
 
-We work with two kinds of businesses, and we've built everything around delivering exactly what each one needs.
+Most small businesses don't need another consultant with a slide deck. They need someone who actually builds the website, wires the automations, deploys the AI agents, and hands it all over **working**.
 
-### Small Business Growth
+We're a hands-on consultancy that delivers real infrastructure — powered by AI agents trained on *your* workflows, not generic models. No theory. No fluff. Just the digital backbone that replaces duct-taped tools with systems that run 24/7.
 
-You're great at what you do. But you didn't sign up to also be a marketer, SEO specialist, social media manager, and web developer. We handle the digital side so you can stay focused on your clients.
+**You own 100% of everything we build. No vendor lock-in.**
 
-- Marketing strategy and campaign infrastructure
-- SEO and search visibility that drives real traffic
-- Google Business optimization and local search ranking
-- Custom websites built for speed and conversions
-- Lead capture, CRM automations, and follow-up sequences
-- Social media systems and content scheduling
-- Referral and growth programs that generate warm leads
+---
 
-### Startup & Operations Build
+## The Relay System
 
-You're growing fast and your systems can't keep up. Spreadsheets that should be databases. Manual processes eating entire days. Month-end closes that take weeks instead of hours. We step in and build the infrastructure that makes a growing company actually function like one.
+Your entire operation — marketing, sales, content, ops, infrastructure, security, and more — managed through one unified system.
 
-- ERP migration, data mapping, and clean cutovers
-- Month-end close process design and financial workflows
-- Workflow architecture: intake forms, approvals, handoffs
-- System setup, configuration, and cross-platform integrations
-- Process documentation, SOPs, and team playbooks
-- KPI dashboards, operational reporting, and business intelligence
+<table>
+<tr>
+<td width="50%">
+
+### What You Get
+- **310 specialist AI agents** across 14 departments
+- Custom website built for speed and conversions
+- Live workflow automations (n8n-powered)
+- Email sequences, CRM, and lead capture
+- SEO, social media, and content systems
+- KPI dashboards and operational reporting
+- SOPs, playbooks, and process documentation
+- 99.9% uptime on Cloudflare infrastructure
+
+</td>
+<td width="50%">
+
+### 14 Departments
+`Marketing` · `Sales` · `Content` · `Ops`
+`Infrastructure` · `Security` · `Build` · `Brand`
+`Social` · `Strategy` · `Intelligence` · `Success`
+`Data` · `QA`
+
+### Built With
+`Astro` · `Cloudflare` · `n8n` · `Claude AI`
+`Stripe` · `Tailwind CSS` · `GitHub`
+
+</td>
+</tr>
+</table>
+
+---
+
+## Service Tiers
+
+| Tier | What You Get | Investment |
+|:-----|:-------------|:-----------|
+| **Relay Scan** | Automated 8-area infrastructure assessment, 5-page report, 30-min walkthrough | **$497** |
+| **Relay Blueprint** | Full diagnostic + 15-20 page roadmap with cost projections, 90-min walkthrough | **$1,497** |
+| **Relay Build** | Custom website, 3-5 automation workflows, email sequences, tool consolidation, 30-day support | **$2,997 - $4,997** |
+| **Relay Ops** | Ongoing operations: content, automation monitoring, SEO, monthly strategy call | **$797/mo** |
+| **Relay Ops Pro** | Full 14-department activation, 310 agents, advanced automations, quarterly business reviews | **$1,997/mo** |
+
+<details>
+<summary><strong>Additional Services</strong></summary>
+<br>
+
+| Service | Investment |
+|:--------|:-----------|
+| Custom AI Agent Build | $1,500 - $3,000 |
+| Workflow Automation (per workflow) | $1,000 - $2,500 |
+| AI Operations Partner (monthly) | $2,000 - $4,000/mo |
+
+</details>
+
+Every engagement starts with a conversation. We match you to the right level of support — or build something fully custom.
 
 ---
 
 ## How We Work
 
-Every engagement follows a clear path. No mystery, no runaround.
+```
+ Intake          Analysis          Strategy          Execute
+   │                │                 │                 │
+   ▼                ▼                 ▼                 ▼
+ We learn        Deep-dive         Custom plan       We build,
+ your business   audit of your     + automation      automate,
+ and what's      tools, gaps,      roadmap for       and support
+ broken          and state         your situation    through launch
+```
 
-**Intake** - We learn your business, your goals, and what's actually broken.
-**Analysis** - Deep-dive audit of your current state, tools, and gaps.
-**Strategy** - Custom plan and automation roadmap built for your situation.
-**Execute** - We build, automate, and support your team through launch.
-
-We scope before we start. We document everything we build. And when we're done, your team owns it. No vendor lock-in, no dependency on us to keep it running.
-
----
-
-## Service Packages
-
-| Package | What You Get | Range |
-|---|---|---|
-| **Signal** | Visibility and ops audit: tool stack review, bottleneck map, 30-day action plan | $500 - $900 |
-| **Blueprint** | Full systems strategy: 90-day roadmap, automation opportunity map, tech stack recommendation | $1,200 - $2,000 |
-| **Relay** | Complete build: custom website, live automations, email + social, unified dashboard, SOP library, 30-day support | $1,800 - $6,000 |
-| **Sustain** | Monthly growth partner: 30 posts/mo, SEO maintenance, automation monitoring, strategy calls, priority support | $300 - $500/mo |
-
-Every engagement starts with a conversation. We'll match you to the right level of support or build something fully custom.
-
----
-
-## Engagement Options
-
-The structure follows the work, not the other way around.
-
-- **Contract / Project-Based** - Scoped deliverables, clear milestones, defined timelines.
-- **W-2 / Embedded** - A dedicated resource embedded directly in your organization.
-- **Retainer / Ongoing** - Monthly partnership with priority access and continuous optimization.
+We scope before we start. We document everything we build. When we're done, your team owns it.
 
 ---
 
 ## Open-Source Resources
 
-We practice what we preach. These are free to use, fork, and adapt:
+We practice what we preach. Free to use, fork, and adapt:
 
 | Resource | What's Inside |
-|---|---|
-| **[Automation Templates](automation-templates/)** | Ready-to-import n8n workflows, platform comparison guide, automation readiness checklist |
-| **[SOP Starter Kit](sop-starter-kit/)** | Blank templates, 3 complete example SOPs, process mapping template, style guide |
-| **[Business Audit Framework](business-audit-framework/)** | 4 audit checklists, scoring rubric, priority matrix, Python scoring calculator |
-| **[KPI Dashboard Templates](kpi-dashboard-templates/)** | KPI selection guide, 3 dashboard specs, design principles, Python dashboard generators |
-| **[Integration Cookbook](integration-cookbook/)** | 4 production-ready Python integration recipes, reusable API client and webhook utilities |
+|:---------|:--------------|
+| [**Automation Templates**](https://github.com/Relay-Launch/.github/tree/main/automation-templates) | Production-ready n8n workflows, platform comparison guide, automation readiness checklist |
+| [**SOP Starter Kit**](https://github.com/Relay-Launch/.github/tree/main/sop-starter-kit) | Blank templates, 3 complete example SOPs, process mapping template, style guide |
+| [**Business Audit Framework**](https://github.com/Relay-Launch/.github/tree/main/business-audit-framework) | 4 audit checklists, scoring rubric, priority matrix, Python scoring calculator |
+| [**KPI Dashboard Templates**](https://github.com/Relay-Launch/.github/tree/main/kpi-dashboard-templates) | KPI selection guide, 3 dashboard specs, design principles, Python generators |
+| [**Integration Cookbook**](https://github.com/Relay-Launch/.github/tree/main/integration-cookbook) | 4 production-ready Python recipes, reusable API client and webhook utilities |
 
 ---
 
-## Let's Talk
+## Real Results
 
-If your business needs something built, connected, and running (not just planned), we should talk.
-
-**[Start a Project](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml)** · **[Ask a Question](https://github.com/Relay-Launch/.github/issues/new?template=quick-question.yml)**
-
-**Email:** hello@relaylaunch.com · **Website:** [relaylaunch.com](https://relaylaunch.com)
+<table>
+<tr>
+<td align="center"><strong>$18K+</strong><br><sub>Annual value recovered</sub></td>
+<td align="center"><strong>500+</strong><br><sub>Hours of manual work eliminated/yr</sub></td>
+<td align="center"><strong>94%</strong><br><sub>Less than hiring it out</sub></td>
+<td align="center"><strong>11+</strong><br><sub>Automations deployed per client</sub></td>
+</tr>
+</table>
 
 ---
 
-*Relay▸Launch - Build smarter. Launch faster. Grow with purpose.*
+<p align="center">
+  <a href="https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml"><strong>Start a Project</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/Relay-Launch/.github/issues/new?template=quick-question.yml"><strong>Ask a Question</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://relaylaunch.com"><strong>Visit Website</strong></a>
+</p>
+
+<p align="center">
+  <sub><strong>Relay▸Launch</strong> — Ops on Autopilot. You on Strategy.</sub><br>
+  <sub>Watertown, MA · Veteran-Owned · <a href="mailto:hello@relaylaunch.com">hello@relaylaunch.com</a> · +1-857-318-6498</sub>
+</p>
