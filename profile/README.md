@@ -3,141 +3,107 @@
 </p>
 
 <p align="center">
-  <strong>Veteran-Owned Digital Infrastructure Consultancy</strong><br>
-  <em>310 specialist AI agents. 14 departments. One console.</em>
+  <strong>Veteran-Owned AI Decision Platform & Digital Infrastructure Consultancy</strong><br>
+  <em>Multi-agent council debates. Auditable verdicts. Open-source foundations.</em>
 </p>
 
 <p align="center">
-  <a href="https://relaylaunch.com"><img src="https://img.shields.io/badge/Website-relaylaunch.com-2ea043?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website"></a>&nbsp;
-  <a href="mailto:hello@relaylaunch.com"><img src="https://img.shields.io/badge/Email-hello%40relaylaunch.com-58a6ff?style=for-the-badge&logo=mail.ru&logoColor=white" alt="Email"></a>&nbsp;
-  <a href="https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml"><img src="https://img.shields.io/badge/Start_a_Project-238636?style=for-the-badge&logo=github&logoColor=white" alt="Start a Project"></a>
+  <a href="https://relaylaunch.com"><img src="https://img.shields.io/badge/Website-relaylaunch.com-007AFF?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website"></a>&nbsp;
+  <a href="https://deck.relaylaunch.com"><img src="https://img.shields.io/badge/Relay_Deck-deck.relaylaunch.com-0F172A?style=for-the-badge&logo=vercel&logoColor=white" alt="Relay Deck"></a>&nbsp;
+  <a href="mailto:hello@relaylaunch.com"><img src="https://img.shields.io/badge/Email-hello%40relaylaunch.com-58a6ff?style=for-the-badge&logo=mail.ru&logoColor=white" alt="Email"></a>
 </p>
 
 ---
 
-## Stop managing tools. Start running your business.
+## CouncilVerse — Open-Source AI Council Formations
 
-Most small businesses don't need another consultant with a slide deck. They need someone who actually builds the website, wires the automations, deploys the AI agents, and hands it all over **working**.
+Multi-agent debate infrastructure. 15 structured methodologies. Three-valued voting (KEEP / REFUSE / ABSTAIN). Quality-weighted scoring, not headcount. Works with any LLM provider.
 
-We're a hands-on consultancy that delivers real infrastructure — powered by AI agents trained on *your* workflows, not generic models. No theory. No fluff. Just the digital backbone that replaces duct-taped tools with systems that run 24/7.
-
-**You own 100% of everything we build. No vendor lock-in.**
-
----
-
-## The Relay System
-
-Your entire operation — marketing, sales, content, ops, infrastructure, security, and more — managed through one unified system.
+```bash
+npx create-councilverse my-council
+```
 
 <table>
 <tr>
-<td width="50%">
+<td width="33%">
 
-### What You Get
-- **310 specialist AI agents** across 14 departments
-- Custom website built for speed and conversions
-- Live workflow automations (n8n-powered)
-- Email sequences, CRM, and lead capture
-- SEO, social media, and content systems
-- KPI dashboards and operational reporting
-- SOPs, playbooks, and process documentation
-- 99.9% uptime on Cloudflare infrastructure
+### [`councilverse-formations`](https://www.npmjs.com/package/@relaylaunch/councilverse-formations)
+15 debate methodologies — Strategy Room (OODA), Tribunal (Legal), Risk Council (Monte Carlo), Due Diligence (M&A), and more.
 
 </td>
-<td width="50%">
+<td width="33%">
 
-### 14 Departments
-`Marketing` · `Sales` · `Content` · `Ops`
-`Infrastructure` · `Security` · `Build` · `Brand`
-`Social` · `Strategy` · `Intelligence` · `Success`
-`Data` · `QA`
+### [`councilverse-voting`](https://www.npmjs.com/package/@relaylaunch/councilverse-voting)
+Three-valued voting with quality-weighted scoring. Based on the CAMP paper. Arguments scored by evidence, structure, and specificity.
 
-### Built With
-`Astro` · `Cloudflare` · `n8n` · `Claude AI`
-`Stripe` · `Tailwind CSS` · `GitHub`
+</td>
+<td width="33%">
+
+### [`create-councilverse`](https://www.npmjs.com/package/create-councilverse)
+Scaffold a working council project in 60 seconds. TypeScript configured. API key and go.
 
 </td>
 </tr>
 </table>
 
+**[View source on GitHub](https://github.com/Relay-Launch/councilverse)** · MIT Licensed
+
 ---
 
-## Service Tiers
+## Relay Deck — The Full Platform
+
+[Relay Deck](https://deck.relaylaunch.com) is the paid platform built on CouncilVerse. It adds everything you need for production AI decision-making:
+
+- **Verdict Library** — persistent searchable archive of all council decisions
+- **Precedent Search** — semantic search over past verdicts (Qdrant-powered)
+- **Reasoning Traces** — full audit trail per verdict (Langfuse)
+- **Embeddable Widgets** — iframe verdict cards for reports and dashboards
+- **A2A + MCP Protocols** — Google Agent-to-Agent and Model Context Protocol support
+- **Cryptographic Signing** — HMAC-SHA256 verdict manifests for compliance
+- **EU AI Act Compliance** — JSON-LD transparency manifests (ahead of Aug 2026 deadline)
+- **BYOK** — Bring Your Own Key, you control model costs
+
+[Try the playground](https://deck.relaylaunch.com/playground) · [Sign up](https://deck.relaylaunch.com/signup)
+
+---
+
+## Digital Infrastructure Consulting
+
+We also build complete digital infrastructure for small businesses — websites, automations, AI agents, and operations systems.
 
 | Tier | What You Get | Investment |
 |:-----|:-------------|:-----------|
-| **Relay Scan** | Automated 8-area infrastructure assessment, 5-page report, 30-min walkthrough | **$497** |
-| **Relay Blueprint** | Full diagnostic + 15-20 page roadmap with cost projections, 90-min walkthrough | **$1,497** |
-| **Relay Build** | Custom website, 3-5 automation workflows, email sequences, tool consolidation, 30-day support | **$2,997 - $4,997** |
-| **Relay Ops** | Ongoing operations: content, automation monitoring, SEO, monthly strategy call | **$797/mo** |
-| **Relay Ops Pro** | Full 14-department activation, 310 agents, advanced automations, quarterly business reviews | **$1,997/mo** |
+| **Free Scorecard** | Automated infrastructure assessment | **$0** |
+| **Relay Quick Fix** | Targeted 1-hour fix for a specific problem | **$197** |
+| **Relay Blueprint** | Full diagnostic + roadmap with cost projections | **$1,497** |
+| **Relay Build** | Custom website, automations, AI agents, 30-day support | **$3,997 - $6,997** |
+| **Relay Ops** | Ongoing operations, content, monitoring, monthly strategy call | **$997/mo** |
+| **Relay Ops Pro** | Full activation, advanced automations, quarterly business reviews | **$2,497/mo** |
 
-<details>
-<summary><strong>Additional Services</strong></summary>
-<br>
-
-| Service | Investment |
-|:--------|:-----------|
-| Custom AI Agent Build | $1,500 - $3,000 |
-| Workflow Automation (per workflow) | $1,000 - $2,500 |
-| AI Operations Partner (monthly) | $2,000 - $4,000/mo |
-
-</details>
-
-Every engagement starts with a conversation. We match you to the right level of support — or build something fully custom.
-
----
-
-## How We Work
-
-```
- Intake          Analysis          Strategy          Execute
-   │                │                 │                 │
-   ▼                ▼                 ▼                 ▼
- We learn        Deep-dive         Custom plan       We build,
- your business   audit of your     + automation      automate,
- and what's      tools, gaps,      roadmap for       and support
- broken          and state         your situation    through launch
-```
-
-We scope before we start. We document everything we build. When we're done, your team owns it.
+Every engagement starts with a conversation. You own 100% of everything we build.
 
 ---
 
 ## Open-Source Resources
 
-We practice what we preach. Free to use, fork, and adapt:
-
-| Resource | What's Inside |
-|:---------|:--------------|
-| [**Automation Templates**](https://github.com/Relay-Launch/.github/tree/main/automation-templates) | Production-ready n8n workflows, platform comparison guide, automation readiness checklist |
-| [**SOP Starter Kit**](https://github.com/Relay-Launch/.github/tree/main/sop-starter-kit) | Blank templates, 3 complete example SOPs, process mapping template, style guide |
-| [**Business Audit Framework**](https://github.com/Relay-Launch/.github/tree/main/business-audit-framework) | 4 audit checklists, scoring rubric, priority matrix, Python scoring calculator |
-| [**KPI Dashboard Templates**](https://github.com/Relay-Launch/.github/tree/main/kpi-dashboard-templates) | KPI selection guide, 3 dashboard specs, design principles, Python generators |
-| [**Integration Cookbook**](https://github.com/Relay-Launch/.github/tree/main/integration-cookbook) | 4 production-ready Python recipes, reusable API client and webhook utilities |
-
----
-
-## Real Results
-
-<table>
-<tr>
-<td align="center"><strong>$18K+</strong><br><sub>Annual value recovered</sub></td>
-<td align="center"><strong>500+</strong><br><sub>Hours of manual work eliminated/yr</sub></td>
-<td align="center"><strong>94%</strong><br><sub>Less than hiring it out</sub></td>
-<td align="center"><strong>11+</strong><br><sub>Automations deployed per client</sub></td>
-</tr>
-</table>
+| Resource | Description |
+|:---------|:------------|
+| [**CouncilVerse**](https://github.com/Relay-Launch/councilverse) | AI council formations, three-valued voting, project scaffolding |
+| [**Automation Templates**](https://github.com/Relay-Launch/.github/tree/main/automation-templates) | Production-ready n8n workflows and readiness checklists |
+| [**SOP Starter Kit**](https://github.com/Relay-Launch/.github/tree/main/sop-starter-kit) | Process documentation templates and style guides |
+| [**Business Audit Framework**](https://github.com/Relay-Launch/.github/tree/main/business-audit-framework) | Audit checklists, scoring rubric, priority matrix |
+| [**KPI Dashboard Templates**](https://github.com/Relay-Launch/.github/tree/main/kpi-dashboard-templates) | KPI selection guide and dashboard specs |
+| [**Integration Cookbook**](https://github.com/Relay-Launch/.github/tree/main/integration-cookbook) | Production-ready API recipes and webhook utilities |
 
 ---
 
 <p align="center">
-  <a href="https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml"><strong>Start a Project</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://github.com/Relay-Launch/.github/issues/new?template=quick-question.yml"><strong>Ask a Question</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/Relay-Launch/councilverse"><strong>CouncilVerse Repo</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://deck.relaylaunch.com/playground"><strong>Try the Playground</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://relaylaunch.com"><strong>Visit Website</strong></a>
 </p>
 
 <p align="center">
   <sub><strong>Relay▸Launch</strong> — Ops on Autopilot. You on Strategy.</sub><br>
-  <sub>Watertown, MA · Veteran-Owned · <a href="mailto:hello@relaylaunch.com">hello@relaylaunch.com</a> · +1-857-318-6498</sub>
+  <sub>Watertown, MA · Veteran-Owned · <a href="mailto:hello@relaylaunch.com">hello@relaylaunch.com</a></sub>
 </p>
