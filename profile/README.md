@@ -1,83 +1,113 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Relay-Launch/.github/main/profile/repo-card.svg" alt="RelayLaunch — AI Due Diligence Platform" width="100%"/>
-</p>
+<h1 align="center">
+  <img src="https://raw.githubusercontent.com/Relay-Launch/.github/main/profile/repo-card.svg" alt="RelayLaunch" width="100%"/>
+</h1>
 
-<h3 align="center">Every department. One AI.</h3>
-
-<p align="center">
-  <em>AI-powered due diligence that produces the actual deliverable — QoE reports, DD memos, risk packages — in hours, not weeks.</em>
-</p>
+<h2 align="center">We deploy AI operations systems that run your business &mdash;<br>not chatbots that talk about it.</h2>
 
 <p align="center">
-  <a href="https://relaylaunch.com"><img src="https://img.shields.io/badge/Website-relaylaunch.com-007AFF?style=for-the-badge&logo=globe&logoColor=white" alt="Website"></a>&nbsp;
-  <a href="https://deck.relaylaunch.com"><img src="https://img.shields.io/badge/Relay%E2%96%B8Deck-Platform-0F172A?style=for-the-badge&logo=vercel&logoColor=white" alt="Relay Deck"></a>&nbsp;
-  <a href="https://github.com/Relay-Launch/councilverse"><img src="https://img.shields.io/badge/CouncilVerse-Open_Source-10B981?style=for-the-badge&logo=github&logoColor=white" alt="CouncilVerse"></a>&nbsp;
-  <a href="mailto:hello@relaylaunch.com"><img src="https://img.shields.io/badge/Contact-hello%40relaylaunch.com-6366F1?style=for-the-badge&logo=mail.ru&logoColor=white" alt="Email"></a>
+  <strong>Auditable Intelligence:</strong> Where AI experts disagree. You decide.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/Relay-Launch/councilverse?style=social" alt="GitHub stars">&nbsp;
-  <img src="https://img.shields.io/npm/dt/@relaylaunch/councilverse-formations?label=npm%20downloads&color=007AFF" alt="npm downloads">&nbsp;
-  <img src="https://img.shields.io/badge/models-8%20across%204%20providers-F59E0B" alt="Multi-model">&nbsp;
-  <img src="https://img.shields.io/badge/practice%20areas-9-007AFF" alt="9 Practice Areas">&nbsp;
-  <img src="https://img.shields.io/badge/veteran--owned-USMC-0F172A" alt="Veteran-owned">
+  <img src="https://img.shields.io/badge/AI_Agents-210+-007AFF?style=for-the-badge&logo=robot&logoColor=white" alt="210+ Agents"/>
+  <img src="https://img.shields.io/badge/Skills-235-0F172A?style=for-the-badge&logo=lightning&logoColor=white" alt="235 Skills"/>
+  <img src="https://img.shields.io/badge/Models-8_across_4_providers-F59E0B?style=for-the-badge&logo=brain&logoColor=white" alt="8 Models"/>
+  <img src="https://img.shields.io/badge/Departments-14-10B981?style=for-the-badge&logo=building&logoColor=white" alt="14 Departments"/>
+  <img src="https://img.shields.io/badge/Veteran--Owned-USMC-0F172A?style=for-the-badge&logo=shield&logoColor=white" alt="Veteran-Owned"/>
+</p>
+
+<p align="center">
+  <a href="https://relaylaunch.com"><img src="https://img.shields.io/badge/relaylaunch.com-007AFF?style=flat-square&logo=globe&logoColor=white" alt="Website"></a>&nbsp;&nbsp;
+  <a href="https://deck.relaylaunch.com"><img src="https://img.shields.io/badge/Relay%E2%96%B8Deck-0F172A?style=flat-square&logo=vercel&logoColor=white" alt="Relay Deck"></a>&nbsp;&nbsp;
+  <a href="https://github.com/Relay-Launch/councilverse"><img src="https://img.shields.io/badge/CouncilVerse-Open_Source-10B981?style=flat-square&logo=github&logoColor=white" alt="CouncilVerse"></a>&nbsp;&nbsp;
+  <a href="mailto:hello@relaylaunch.com"><img src="https://img.shields.io/badge/hello%40relaylaunch.com-6366F1?style=flat-square&logo=mail.ru&logoColor=white" alt="Email"></a>
 </p>
 
 ---
 
-## What We Build
+## The Product Stack
 
-Most AI tools give you a chatbot. We produce the **artifact your firm sends to clients** — the QoE report, the DD memo, the risk package — with full provenance, multi-model reasoning, and audit trails.
+We don't sell websites. We deploy **complete AI operations systems** for service businesses.
 
-**Target ICP:** CPAs, M&A advisors, deal teams, and service businesses that need AI they can trust and verify.
+| # | Product | What It Does | For Whom |
+|:-:|:--------|:-------------|:---------|
+| 1 | **Relay Pulse** | Deployed AI ops per client -- post-visit engagement, wellness scoring, predictive analytics, automated win-back | Service businesses (clinics, salons, professional services) |
+| 2 | **Relay Deck** | SaaS command center -- client health dashboards, AI insights, notifications, multi-model council debates | Business owners and operators |
+| 3 | **CouncilVerse** | Open-source multi-agent debate engine -- 15 formations, three-valued voting, quality-weighted scoring | Developers building AI decision systems |
 
-### The Stack
-
-| Product | What It Does | Status |
-|:--------|:-------------|:-------|
-| **Relay Pulse** | Deployed AI ops system per client — post-visit engagement, wellness scoring, predictive analytics | Production |
-| **Relay Deck** | SaaS command center — document analysis, multi-model council debates, deliverable generation | Production |
-| **CouncilVerse** | Open-source multi-agent debate engine — formations, voting, scaffolding | MIT Licensed |
+> **The website is the bonus. The AI system is the product.**
 
 ---
 
-## How Multi-Model Council Works
+## Multi-Model Council Architecture
 
-We don't trust a single model. Every analysis runs through **heterogeneous council debates** — multiple AI models from different providers arguing from different training data, scored on evidence quality, not headcount.
+We don't trust a single model. Every analysis runs through **heterogeneous council debates** -- multiple AI models from different providers, arguing from different training data, scored on evidence quality.
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    COUNCIL DEBATE ENGINE                     │
-│                                                             │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐   │
-│  │ Claude   │  │ DeepSeek │  │ GLM-5.1  │  │ MiniMax  │   │
-│  │ Sonnet   │  │ V4-Flash │  │ (Zhipu)  │  │ M2.7     │   │
-│  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘   │
-│       │             │             │             │           │
-│       └─────────────┴──────┬──────┴─────────────┘           │
-│                            │                                │
-│                   ┌────────▼────────┐                       │
-│                   │  Free-MAD       │                       │
-│                   │  Weighted       │                       │
-│                   │  Synthesis      │                       │
-│                   └────────┬────────┘                       │
-│                            │                                │
-│                   ┌────────▼────────┐                       │
-│                   │  VERDICT        │                       │
-│                   │  + Dissent      │                       │
-│                   │  + Provenance   │                       │
-│                   │  + Audit Trail  │                       │
-│                   └─────────────────┘                       │
-└─────────────────────────────────────────────────────────────┘
+                           INPUT: Business Decision / Analysis Request
+                                          |
+                    +---------------------+---------------------+
+                    |                     |                     |
+              +-----v-----+        +-----v-----+        +-----v-----+
+              |  Provider  |        |  Provider  |        |  Provider  |
+              |  Cluster A |        |  Cluster B |        |  Cluster C |
+              |            |        |            |        |            |
+              | +--------+ |        | +--------+ |        | +--------+ |
+              | | Claude | |        | |DeepSeek| |        | | GLM-5  | |
+              | | Sonnet | |        | |V4-Flash| |        | | (Zhipu)| |
+              | +--------+ |        | +--------+ |        | +--------+ |
+              | +--------+ |        | +--------+ |        | +--------+ |
+              | | Claude | |        | | Gemini | |        | |MiniMax | |
+              | | Haiku  | |        | | Flash  | |        | | M2.7   | |
+              | +--------+ |        | +--------+ |        | +--------+ |
+              +-----+------+        +-----+------+        +-----+------+
+                    |                     |                     |
+                    +---------------------+---------------------+
+                                          |
+                               +----------v----------+
+                               |   FREE-MAD ENGINE   |
+                               |                     |
+                               |  - Position Papers  |
+                               |  - Cross-Exam       |
+                               |  - Evidence Scoring  |
+                               |  - Dissent Capture   |
+                               +----------+----------+
+                                          |
+                               +----------v----------+
+                               |      VERDICT         |
+                               |                     |
+                               |  Confidence Score    |
+                               |  Majority Opinion    |
+                               |  Dissenting Views    |
+                               |  Reasoning Traces    |
+                               |  HMAC Provenance     |
+                               |  Audit Trail         |
+                               +---------------------+
 ```
 
-**Why this matters:** When models from different training corpora agree, confidence is justified. When they disagree, the dissent surfaces risks a single model would miss.
+**When models from different training corpora agree, confidence is justified. When they disagree, the dissent surfaces risks a single model would miss.**
 
 ---
 
-## CouncilVerse — Open Source
+## SaaS Pricing
 
-Multi-agent debate infrastructure. 15 structured formations. Three-valued voting (KEEP / REFUSE / ABSTAIN). Quality-weighted scoring. Provider-agnostic.
+| Tier | Price | Seats | What You Get |
+|:-----|:------|:-----:|:-------------|
+| **Free Ops Scan** | $0 | -- | Instant AI operations audit for your business |
+| **Pro** | $299/mo | 1 | Full platform access, 48-hour trial |
+| **Team** | $999/mo | 5 | Multi-seat, priority support, month-to-month |
+| **Enterprise** | $3,000/mo | Unlimited | SSO, audit trails, dedicated support |
+| **Concierge** | $1,500 one-time | -- | Forensic analysis delivered in 7 days |
+
+<p align="center">
+  <a href="https://relaylaunch.com"><strong>Start with a Free Ops Scan &rarr;</strong></a>
+</p>
+
+---
+
+## CouncilVerse -- Open Source
+
+Multi-agent debate infrastructure for developers. MIT Licensed.
 
 ```bash
 npx create-councilverse my-council
@@ -88,13 +118,13 @@ npx create-councilverse my-council
 <td width="33%">
 
 ### [`councilverse-formations`](https://www.npmjs.com/package/@relaylaunch/councilverse-formations)
-15 debate formations including Strategy Room (OODA), Tribunal, Risk Council (Monte Carlo), and Due Diligence (M&A).
+15 structured debate formations: Strategy Room (OODA), Tribunal, Risk Council (Monte Carlo), Due Diligence (M&A).
 
 </td>
 <td width="33%">
 
 ### [`councilverse-voting`](https://www.npmjs.com/package/@relaylaunch/councilverse-voting)
-Three-valued voting with quality-weighted scoring. Arguments scored on evidence, structure, and specificity.
+Three-valued voting (KEEP / REFUSE / ABSTAIN) with quality-weighted scoring. Evidence over headcount.
 
 </td>
 <td width="33%">
@@ -106,14 +136,16 @@ Working council scaffold in 60 seconds. TypeScript configured. Drop in an API ke
 </tr>
 </table>
 
-**[Source on GitHub](https://github.com/Relay-Launch/councilverse)** · MIT Licensed
+<p align="center">
+  <a href="https://github.com/Relay-Launch/councilverse"><img src="https://img.shields.io/github/stars/Relay-Launch/councilverse?style=social" alt="GitHub stars"></a>&nbsp;&nbsp;
+  <a href="https://www.npmjs.com/package/@relaylaunch/councilverse-formations"><img src="https://img.shields.io/npm/dt/@relaylaunch/councilverse-formations?label=npm%20downloads&color=007AFF" alt="npm downloads"></a>
+</p>
 
 ---
 
-## Platform Capabilities
-
 <details>
-<summary><strong>Relay Deck — Production Features (click to expand)</strong></summary>
+<summary><strong>Platform Capabilities (click to expand)</strong></summary>
+<br>
 
 | Feature | Description |
 |:--------|:------------|
@@ -133,30 +165,21 @@ Working council scaffold in 60 seconds. TypeScript configured. Drop in an API ke
 
 <details>
 <summary><strong>Technical Architecture (click to expand)</strong></summary>
+<br>
 
 ```
-Frontend       Next.js 16 · React 19 · Tailwind CSS 4 · Vercel
+Frontend       Next.js 15 + React 19 + Tailwind CSS 4 + Vercel
 Backend        Supabase (Postgres + Auth + RLS + pgvector)
-AI Routing     LiteLLM gateway · 8 models · 4 providers
-Telemetry      Langfuse Cloud · structured reasoning traces
-PDF Engine     @react-pdf/renderer · 6 report templates
-Protocols      A2A JSON-RPC · MCP · HMAC-SHA256 signing
-Infra          Docker Compose (21 containers) · Cloudflare · GitHub Actions
+AI Routing     LiteLLM gateway + 8 models + 4 providers
+Ops Engine     Cloudflare Workers + Hono + D1/KV/Queues
+Telemetry      Langfuse Cloud + structured reasoning traces
+PDF Engine     @react-pdf/renderer + 6 report templates
+Protocols      A2A JSON-RPC + MCP + HMAC-SHA256 signing
+Website        Astro 5 + Tailwind 4 + Cloudflare Pages
+Infra          Docker Compose (21 containers) + GitHub Actions
 ```
 
 </details>
-
----
-
-## SaaS Pricing
-
-| Tier | Price | What You Get |
-|:-----|:------|:-------------|
-| **Free Ops Scan** | $0 | Instant AI operations audit |
-| **Pro** | $299/mo | Full platform, 1 seat, 48-hour trial |
-| **Team** | $999/mo | 5 seats, priority support |
-| **Enterprise** | $3,000/mo | Unlimited seats, SSO, audit trails |
-| **Concierge** | $1,500 one-time | Forensic analysis delivered in 7 days |
 
 ---
 
@@ -175,18 +198,22 @@ Infra          Docker Compose (21 containers) · Cloudflare · GitHub Actions
 
 ## Founder
 
-**Victor David Medina** — USMC Sergeant (E-5), Watertown MA. Building AI systems that do the work, not just talk about it.
+**Victor David Medina** -- USMC Sergeant (E-5), Watertown MA.
 
 8 years enterprise operations. Cloud/DevOps (AWS, Terraform, Cloudflare). Full-stack AI (Claude Code, multi-agent harnesses, MCP, A2A). Solo founder with AI leverage.
 
+Building AI systems that do the work, not just talk about it.
+
+---
+
 <p align="center">
-  <a href="https://relaylaunch.com"><strong>relaylaunch.com</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://deck.relaylaunch.com"><strong>Try Relay Deck</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://github.com/Relay-Launch/councilverse"><strong>CouncilVerse</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://relaylaunch.com"><strong>relaylaunch.com</strong></a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+  <a href="https://deck.relaylaunch.com"><strong>Try Relay Deck</strong></a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+  <a href="https://github.com/Relay-Launch/councilverse"><strong>CouncilVerse</strong></a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
   <a href="mailto:hello@relaylaunch.com"><strong>hello@relaylaunch.com</strong></a>
 </p>
 
 <p align="center">
-  <sub><strong>RelayLaunch</strong> · Veteran-Owned · Watertown, MA</sub><br>
-  <sub>Every department. One AI.</sub>
+  <sub><strong>RelayLaunch LLC</strong> &middot; Veteran-Owned &middot; Watertown, MA</sub><br>
+  <sub><em>Every department. One AI.</em></sub>
 </p>
