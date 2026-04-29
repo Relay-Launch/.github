@@ -19,3 +19,11 @@ jobs:
       - uses: anishathalye/proof-html@v1.1.0
         with:
           directory: ./
+          # Skip external link checks. The htmlproofer User-Agent gets
+          # 403'd / rate-limited by Cloudflare, GitHub asset CDNs, and
+          # img.shields.io, which made every PR run fail. We still
+          # validate HTML structure and internal links.
+          url_ignore_re: |
+            ^https?://
+          enforce_https: false
+          check_external_hash: false
