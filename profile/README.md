@@ -1,23 +1,83 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Relay-Launch/.github/main/profile/repo-card.svg" alt="Relay▸Launch · Multi-Agent Infrastructure and Cloud Systems" width="100%"/>
+  <img src="https://raw.githubusercontent.com/Relay-Launch/.github/main/profile/repo-card.svg" alt="RelayLaunch — AI Due Diligence Platform" width="100%"/>
+</p>
+
+<h3 align="center">Every department. One AI.</h3>
+
+<p align="center">
+  <em>AI-powered due diligence that produces the actual deliverable — QoE reports, DD memos, risk packages — in hours, not weeks.</em>
 </p>
 
 <p align="center">
-  <strong>Veteran-Owned. Multi-Agent Infrastructure. Cloud Systems for Small Teams.</strong><br>
-  <em>Auditable verdicts. Open-source foundations. Built by an engineer.</em>
+  <a href="https://relaylaunch.com"><img src="https://img.shields.io/badge/Website-relaylaunch.com-007AFF?style=for-the-badge&logo=globe&logoColor=white" alt="Website"></a>&nbsp;
+  <a href="https://deck.relaylaunch.com"><img src="https://img.shields.io/badge/Relay%E2%96%B8Deck-Platform-0F172A?style=for-the-badge&logo=vercel&logoColor=white" alt="Relay Deck"></a>&nbsp;
+  <a href="https://github.com/Relay-Launch/councilverse"><img src="https://img.shields.io/badge/CouncilVerse-Open_Source-10B981?style=for-the-badge&logo=github&logoColor=white" alt="CouncilVerse"></a>&nbsp;
+  <a href="mailto:hello@relaylaunch.com"><img src="https://img.shields.io/badge/Contact-hello%40relaylaunch.com-6366F1?style=for-the-badge&logo=mail.ru&logoColor=white" alt="Email"></a>
 </p>
 
 <p align="center">
-  <a href="https://relaylaunch.com"><img src="https://img.shields.io/badge/Website-relaylaunch.com-007AFF?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website"></a>&nbsp;
-  <a href="https://deck.relaylaunch.com"><img src="https://img.shields.io/badge/Relay_Deck-deck.relaylaunch.com-0F172A?style=for-the-badge&logo=vercel&logoColor=white" alt="Relay Deck"></a>&nbsp;
-  <a href="mailto:hello@relaylaunch.com"><img src="https://img.shields.io/badge/Email-hello%40relaylaunch.com-58a6ff?style=for-the-badge&logo=mail.ru&logoColor=white" alt="Email"></a>
+  <img src="https://img.shields.io/github/stars/Relay-Launch/councilverse?style=social" alt="GitHub stars">&nbsp;
+  <img src="https://img.shields.io/npm/dt/@relaylaunch/councilverse-formations?label=npm%20downloads&color=007AFF" alt="npm downloads">&nbsp;
+  <img src="https://img.shields.io/badge/models-8%20across%204%20providers-F59E0B" alt="Multi-model">&nbsp;
+  <img src="https://img.shields.io/badge/practice%20areas-9-007AFF" alt="9 Practice Areas">&nbsp;
+  <img src="https://img.shields.io/badge/veteran--owned-USMC-0F172A" alt="Veteran-owned">
 </p>
 
 ---
 
-## CouncilVerse · Open-Source Multi-Agent Framework
+## What We Build
 
-Multi-agent debate infrastructure. 15 structured formations. Three-valued voting (KEEP / REFUSE / ABSTAIN). Quality-weighted scoring, not headcount. Provider-agnostic.
+Most AI tools give you a chatbot. We produce the **artifact your firm sends to clients** — the QoE report, the DD memo, the risk package — with full provenance, multi-model reasoning, and audit trails.
+
+**Target ICP:** CPAs, M&A advisors, deal teams, and service businesses that need AI they can trust and verify.
+
+### The Stack
+
+| Product | What It Does | Status |
+|:--------|:-------------|:-------|
+| **Relay Pulse** | Deployed AI ops system per client — post-visit engagement, wellness scoring, predictive analytics | Production |
+| **Relay Deck** | SaaS command center — document analysis, multi-model council debates, deliverable generation | Production |
+| **CouncilVerse** | Open-source multi-agent debate engine — formations, voting, scaffolding | MIT Licensed |
+
+---
+
+## How Multi-Model Council Works
+
+We don't trust a single model. Every analysis runs through **heterogeneous council debates** — multiple AI models from different providers arguing from different training data, scored on evidence quality, not headcount.
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    COUNCIL DEBATE ENGINE                     │
+│                                                             │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐   │
+│  │ Claude   │  │ DeepSeek │  │ GLM-5.1  │  │ MiniMax  │   │
+│  │ Sonnet   │  │ V4-Flash │  │ (Zhipu)  │  │ M2.7     │   │
+│  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘   │
+│       │             │             │             │           │
+│       └─────────────┴──────┬──────┴─────────────┘           │
+│                            │                                │
+│                   ┌────────▼────────┐                       │
+│                   │  Free-MAD       │                       │
+│                   │  Weighted       │                       │
+│                   │  Synthesis      │                       │
+│                   └────────┬────────┘                       │
+│                            │                                │
+│                   ┌────────▼────────┐                       │
+│                   │  VERDICT        │                       │
+│                   │  + Dissent      │                       │
+│                   │  + Provenance   │                       │
+│                   │  + Audit Trail  │                       │
+│                   └─────────────────┘                       │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**Why this matters:** When models from different training corpora agree, confidence is justified. When they disagree, the dissent surfaces risks a single model would miss.
+
+---
+
+## CouncilVerse — Open Source
+
+Multi-agent debate infrastructure. 15 structured formations. Three-valued voting (KEEP / REFUSE / ABSTAIN). Quality-weighted scoring. Provider-agnostic.
 
 ```bash
 npx create-councilverse my-council
@@ -28,13 +88,13 @@ npx create-councilverse my-council
 <td width="33%">
 
 ### [`councilverse-formations`](https://www.npmjs.com/package/@relaylaunch/councilverse-formations)
-15 debate formations. Strategy Room (OODA), Tribunal, Risk Council (Monte Carlo), Due Diligence (M&A), and more.
+15 debate formations including Strategy Room (OODA), Tribunal, Risk Council (Monte Carlo), and Due Diligence (M&A).
 
 </td>
 <td width="33%">
 
 ### [`councilverse-voting`](https://www.npmjs.com/package/@relaylaunch/councilverse-voting)
-Three-valued voting with quality-weighted scoring. Based on the CAMP paper. Arguments scored on evidence, structure, specificity.
+Three-valued voting with quality-weighted scoring. Arguments scored on evidence, structure, and specificity.
 
 </td>
 <td width="33%">
@@ -50,88 +110,83 @@ Working council scaffold in 60 seconds. TypeScript configured. Drop in an API ke
 
 ---
 
-## Relay Deck · The Production Platform
+## Platform Capabilities
 
-[Relay Deck](https://deck.relaylaunch.com) is the paid platform built on CouncilVerse. Production AI decision-making with everything an audit team needs:
+<details>
+<summary><strong>Relay Deck — Production Features (click to expand)</strong></summary>
 
-- **Verdict Library**. Persistent, searchable archive of council decisions.
-- **Precedent Search**. Semantic search over past verdicts (Qdrant).
-- **Reasoning Traces**. Full audit trail per verdict (Langfuse).
-- **Embeddable Widgets**. Iframe verdict cards for reports and dashboards.
-- **A2A + MCP Protocols**. Google Agent-to-Agent and Model Context Protocol.
-- **Cryptographic Signing**. HMAC-SHA256 verdict manifests.
-- **EU AI Act Compliance**. JSON-LD transparency manifests, ahead of the Aug 2026 deadline.
-- **BYOK**. Bring your own key, control your model spend.
+| Feature | Description |
+|:--------|:------------|
+| **Multi-Model Councils** | 8 models from 4 providers debate each analysis |
+| **Deliverable Engine** | Generates QoE reports, DD memos, risk packages as PDF |
+| **Verdict Library** | Persistent, searchable archive of council decisions |
+| **Precedent Search** | Semantic search over past verdicts (pgvector) |
+| **Reasoning Traces** | Full audit trail per verdict (Langfuse) |
+| **Feedback Flywheel** | Accept/Edit/Reject trains the system on your preferences |
+| **Embeddable Widgets** | Iframe verdict cards for reports and dashboards |
+| **A2A + MCP Protocols** | Google Agent-to-Agent and Model Context Protocol bridges |
+| **HMAC-Signed Verdicts** | Cryptographic provenance for every decision |
+| **BYOK** | Bring your own API keys, control model spend |
+| **EU AI Act Ready** | JSON-LD transparency manifests |
 
-[Try the playground](https://deck.relaylaunch.com/playground) · [Sign up](https://deck.relaylaunch.com/signup)
+</details>
+
+<details>
+<summary><strong>Technical Architecture (click to expand)</strong></summary>
+
+```
+Frontend       Next.js 16 · React 19 · Tailwind CSS 4 · Vercel
+Backend        Supabase (Postgres + Auth + RLS + pgvector)
+AI Routing     LiteLLM gateway · 8 models · 4 providers
+Telemetry      Langfuse Cloud · structured reasoning traces
+PDF Engine     @react-pdf/renderer · 6 report templates
+Protocols      A2A JSON-RPC · MCP · HMAC-SHA256 signing
+Infra          Docker Compose (21 containers) · Cloudflare · GitHub Actions
+```
+
+</details>
 
 ---
 
-## Founder · Open to Engineering Roles
+## SaaS Pricing
 
-**Victor David Medina**. Veteran. Founder of Relay-Launch. I build multi-agent infrastructure and ship zero-to-one cloud systems for small teams.
-
-Currently open to **AI Infra / Agent Platform Engineer** and **Founding / Solutions Engineer** roles. US remote. Reach me at [hello@relaylaunch.com](mailto:hello@relaylaunch.com).
-
-### What I've shipped in this org
-
-- **CouncilVerse**. Multi-agent harness, three npm packages, 15 council formations, MIT licensed. Used in Relay Deck.
-- **Relay Deck**. Production multi-agent platform. Qdrant precedent search, Langfuse traces, HMAC-signed verdicts, A2A and MCP transport.
-- **[automation-templates/](https://github.com/Relay-Launch/.github/tree/main/automation-templates)**. Production n8n workflows with self-host playbooks and platform comparisons.
-- **[integration-cookbook/](https://github.com/Relay-Launch/.github/tree/main/integration-cookbook)**. Python services for Stripe, Slack, HubSpot, Sheets, plus webhook and email-report utilities.
-- **[business-audit-framework/](https://github.com/Relay-Launch/.github/tree/main/business-audit-framework)**. 8-area diagnostic, scoring rubric, priority matrix, 30/60/90 planning.
-- **[kpi-dashboard-templates/](https://github.com/Relay-Launch/.github/tree/main/kpi-dashboard-templates)**. KPI selection, dashboard specs, Sheets and HTML report generators.
-
-### Stack
-
-```
-Cloud         AWS · GCP · Azure · Cloudflare · Vercel
-IaC + CI      Terraform · GitHub Actions · Docker
-Languages     Python · TypeScript · Bash
-Agents + AI   Claude Code harness · MCP · A2A · Langfuse · Qdrant
-Automation    n8n · Zapier · Make · Power Automate
-Data + Ops    Postgres · BigQuery · Looker Studio · Sheets API
-```
-
----
-
-## Digital Infrastructure Consulting
-
-We also build complete digital infrastructure for small businesses. Websites, automations, agents, operations systems.
-
-| Tier | What You Get | Investment |
-|:-----|:-------------|:-----------|
-| **Free Scorecard** | Automated infrastructure assessment | **$0** |
-| **Relay Quick Fix** | Targeted 1-hour fix | **$197** |
-| **Relay Blueprint** | Full diagnostic and roadmap with cost projections | **$1,497** |
-| **Relay Build** | Custom website, automations, agents, 30-day support | **$3,997 – $6,997** |
-| **Relay Ops** | Ongoing operations, content, monitoring, monthly strategy call | **$997/mo** |
-| **Relay Ops Pro** | Full activation, advanced automations, quarterly business reviews | **$2,497/mo** |
-
-Every engagement starts with a conversation. You own 100% of what we build.
+| Tier | Price | What You Get |
+|:-----|:------|:-------------|
+| **Free Ops Scan** | $0 | Instant AI operations audit |
+| **Pro** | $299/mo | Full platform, 1 seat, 48-hour trial |
+| **Team** | $999/mo | 5 seats, priority support |
+| **Enterprise** | $3,000/mo | Unlimited seats, SSO, audit trails |
+| **Concierge** | $1,500 one-time | Forensic analysis delivered in 7 days |
 
 ---
 
 ## Open-Source Resources
 
-| Resource | Description |
-|:---------|:------------|
-| [**CouncilVerse**](https://github.com/Relay-Launch/councilverse) | Multi-agent harness, three-valued voting, project scaffolding |
-| [**automation-templates**](https://github.com/Relay-Launch/.github/tree/main/automation-templates) | Production n8n workflows and readiness checklists |
-| [**sop-starter-kit**](https://github.com/Relay-Launch/.github/tree/main/sop-starter-kit) | Process documentation templates and style guide |
-| [**business-audit-framework**](https://github.com/Relay-Launch/.github/tree/main/business-audit-framework) | Audit checklists, scoring rubric, priority matrix |
+| Resource | What's Inside |
+|:---------|:-------------|
+| [**CouncilVerse**](https://github.com/Relay-Launch/councilverse) | Multi-agent debate engine, 3 npm packages, MIT |
+| [**automation-templates**](https://github.com/Relay-Launch/.github/tree/main/automation-templates) | Production n8n workflows and self-host playbooks |
+| [**integration-cookbook**](https://github.com/Relay-Launch/.github/tree/main/integration-cookbook) | Python API recipes for Stripe, Slack, HubSpot, Sheets |
+| [**business-audit-framework**](https://github.com/Relay-Launch/.github/tree/main/business-audit-framework) | 8-area diagnostic, scoring rubric, priority matrix |
 | [**kpi-dashboard-templates**](https://github.com/Relay-Launch/.github/tree/main/kpi-dashboard-templates) | KPI selection guide and dashboard specs |
-| [**integration-cookbook**](https://github.com/Relay-Launch/.github/tree/main/integration-cookbook) | Production API recipes and webhook utilities |
+| [**sop-starter-kit**](https://github.com/Relay-Launch/.github/tree/main/sop-starter-kit) | Process documentation templates and style guide |
 
 ---
 
+## Founder
+
+**Victor David Medina** — USMC Sergeant (E-5), Watertown MA. Building AI systems that do the work, not just talk about it.
+
+8 years enterprise operations. Cloud/DevOps (AWS, Terraform, Cloudflare). Full-stack AI (Claude Code, multi-agent harnesses, MCP, A2A). Solo founder with AI leverage.
+
 <p align="center">
-  <a href="https://github.com/Relay-Launch/councilverse"><strong>CouncilVerse Repo</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://deck.relaylaunch.com/playground"><strong>Try the Playground</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://relaylaunch.com"><strong>Visit Website</strong></a>
+  <a href="https://relaylaunch.com"><strong>relaylaunch.com</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://deck.relaylaunch.com"><strong>Try Relay Deck</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/Relay-Launch/councilverse"><strong>CouncilVerse</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="mailto:hello@relaylaunch.com"><strong>hello@relaylaunch.com</strong></a>
 </p>
 
 <p align="center">
-  <sub><strong>Relay▸Launch</strong> · Multi-Agent Infrastructure. Cloud Systems for Small Teams.</sub><br>
-  <sub>Watertown, MA · Veteran-Owned · <a href="mailto:hello@relaylaunch.com">hello@relaylaunch.com</a></sub>
+  <sub><strong>RelayLaunch</strong> · Veteran-Owned · Watertown, MA</sub><br>
+  <sub>Every department. One AI.</sub>
 </p>
