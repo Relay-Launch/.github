@@ -6,7 +6,7 @@
 
 ## What This Is
 
-You're spending hours on tasks a machine should handle. Missed follow-ups, manual data entry, onboarding bottlenecks, invoicing headaches — we've seen these problems in almost every small business we work with.
+You're spending hours on tasks a machine should handle. Missed follow-ups, manual data entry, onboarding bottlenecks, invoicing headaches. We see these problems in almost every small business we work with.
 
 So we built this. A library of production-ready automation templates pulled from real client engagements. Each workflow has been deployed in live environments, refined against actual failure modes, and documented so you can adapt it to your stack without starting from scratch.
 
@@ -101,7 +101,7 @@ If you need help adapting a template to your specific setup, that's exactly what
 
 ## About Relay▸Launch
 
-[Relay▸Launch](https://relaylaunch.com) builds the systems small businesses and startups need but don't have time to figure out — marketing infrastructure, workflow automations, operational builds, and everything in between. We don't hand off slide decks. We build working systems your team can run from day one.
+[Relay▸Launch](https://relaylaunch.com) builds the systems small businesses and startups need but don't have time to figure out: marketing infrastructure, workflow automations, operational builds, and everything in between. We don't hand off slide decks. We build working systems your team can run from day one.
 
 **Get in touch:** [relaylaunch.com](https://relaylaunch.com) · hello@relaylaunch.com
 

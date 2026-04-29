@@ -195,8 +195,21 @@
       font-size: 1.2rem;
       color: var(--text-secondary);
       max-width: 600px;
-      margin: 0 auto 36px;
+      margin: 0 auto 16px;
     }
+    .hero-byline {
+      font-size: 0.95rem;
+      color: var(--text-tertiary, var(--text-secondary));
+      max-width: 600px;
+      margin: 0 auto 32px;
+      opacity: 0.85;
+    }
+    .hero-byline a {
+      color: var(--brand-accent-light, var(--brand-accent));
+      text-decoration: none;
+      border-bottom: 1px dotted currentColor;
+    }
+    .hero-byline a:hover { opacity: 1; }
     .hero-actions {
       display: flex;
       gap: 12px;
@@ -669,9 +682,12 @@
       <div class="hero-eyebrow">Ops on Autopilot. You on Strategy.</div>
       <h1 id="hero-heading">Relay<span class="arrow">▸</span>Launch</h1>
       <p class="hero-sub">
-        We consolidate your disconnected business tools into one integrated system.
-        Marketing, sales, content, and operations working together around the clock
-        — enterprise-level infrastructure at small business pricing.
+        We consolidate disconnected business tools into one integrated system.
+        Marketing, sales, content, and operations running together around the clock.
+        Enterprise-grade infrastructure at small-business pricing.
+      </p>
+      <p class="hero-byline">
+        Built by an engineer, not an agency. <a href="about.html">Read the founder bio</a>.
       </p>
       <div class="hero-actions">
         <a href="work-with-us.html" class="btn-primary">Start a Project</a>
