@@ -16,6 +16,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - uses: anishathalye/proof-html@v1.1.0
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          directory: ./
+          ruby-version: "3.3"
+
+      - name: Install html-proofer
+        run: gem install html-proofer --no-document
+
+      - name: Run html-proofer
+        env:
+          LANG: en_US.UTF-8
+          LC_ALL: en_US.UTF-8
+        run: |
+          htmlproofer \
+            --no-enforce-https \
+            --no-check-external-hash \
+            --ignore-empty-alt \
+            --ignore-missing-alt \
+            --ignore-urls "/^https?:\/\//" \
+            --checks Links,Images,Scripts \
+            ./
