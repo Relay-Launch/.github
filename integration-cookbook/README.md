@@ -6,9 +6,9 @@ Production-ready integration recipes for small businesses. Copy, configure, depl
 
 ## What This Is
 
-Your tools don't talk to each other. Stripe doesn't know about Slack. HubSpot doesn't sync to your spreadsheet. Every week, someone on your team is copying data from one screen to another — and occasionally getting it wrong.
+Your tools don't talk to each other. Stripe doesn't know about Slack. HubSpot doesn't sync to your spreadsheet. Every week, someone on your team is copying data from one screen to another, and occasionally getting it wrong.
 
-The Integration Cookbook is a collection of standalone Python scripts that fix exactly that. Each recipe connects tools your business already uses into automated workflows. Proper error handling, logging, environment variable configuration — structured for real deployment on a $5/month VPS, a Heroku dyno, or a serverless function.
+The Integration Cookbook is a collection of standalone Python scripts that fix exactly that. Each recipe connects tools your business already uses into automated workflows. Proper error handling, logging, environment variable configuration. Structured for real deployment on a $5/month VPS, a Heroku dyno, or a serverless function.
 
 Built and maintained by [Relay▸Launch](https://relaylaunch.com), a business consulting firm specializing in automation, operations, and strategic planning for small businesses.
 
@@ -32,7 +32,7 @@ Shared modules that the recipes build on. You can use these independently in you
 | Utility | Purpose |
 |---------|---------|
 | [Webhook Handler](utils/webhook_handler.py) | Reusable Flask-based webhook receiver with signature verification, retry handling, and structured logging |
-| [API Client](utils/api_client.py) | Base HTTP client class with rate limiting, automatic retries, and response caching — extend it for any REST API |
+| [API Client](utils/api_client.py) | Base HTTP client class with rate limiting, automatic retries, and response caching. Extend it for any REST API. |
 
 ---
 
@@ -174,11 +174,11 @@ These recipes are designed to be deployed however makes sense for your business:
 
 Every recipe is designed to be forked and modified. Common customizations:
 
-- **Change notification format** — Edit the message templates in the Slack/email recipes
-- **Add new webhook event types** — Extend the event handler dictionaries
-- **Swap CRM providers** — Replace the HubSpot API calls with your CRM's API
-- **Add database storage** — Replace CSV reads with SQLAlchemy queries
-- **Chain recipes together** — Use the webhook handler utility to pipe one recipe's output into another
+- **Change notification format.** Edit the message templates in the Slack/email recipes.
+- **Add new webhook event types.** Extend the event handler dictionaries.
+- **Swap CRM providers.** Replace the HubSpot API calls with your CRM's API.
+- **Add database storage.** Replace CSV reads with SQLAlchemy queries.
+- **Chain recipes together.** Use the webhook handler utility to pipe one recipe's output into another.
 
 ---
 
@@ -197,7 +197,7 @@ Found a bug? Have a recipe idea? We welcome contributions.
 
 - **Documentation issues**: Open a GitHub issue
 - **Implementation help**: [Contact Relay▸Launch](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml) for consulting
-- **Custom integrations**: We build bespoke automation for small businesses — [learn more](https://relaylaunch.com)
+- **Custom integrations**: We build bespoke automation for small businesses. [Learn more](https://relaylaunch.com).
 
 ---
 

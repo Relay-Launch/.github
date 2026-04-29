@@ -1,13 +1,13 @@
 # relaylaunch.com
 
-Company website for **RelayLaunch LLC** — built with Astro 5 + Tailwind CSS 4, deployed on Cloudflare Pages.
+Company website for **RelayLaunch LLC**. Built with Astro 5 + Tailwind CSS 4, deployed on Cloudflare Pages.
 
 ## Stack
 
 | Layer | Tech | Cost |
 |---|---|---|
-| Framework | Astro 5+ | — |
-| Styling | Tailwind CSS 4 | — |
+| Framework | Astro 5+ | n/a |
+| Styling | Tailwind CSS 4 | n/a |
 | Hosting | Cloudflare Pages | **$0/mo** |
 | CI/CD | GitHub Actions | **$0/mo** |
 
@@ -15,7 +15,7 @@ Company website for **RelayLaunch LLC** — built with Astro 5 + Tailwind CSS 4,
 
 | Route | File | Description |
 |---|---|---|
-| `/` | `src/pages/index.astro` | Home — hero, stats, services, HRC teaser, founder |
+| `/` | `src/pages/index.astro` | Home: hero, stats, services, HRC teaser, founder |
 | `/services` | `src/pages/services.astro` | Relay Scan / Blueprint / Build / Ops / Ops Pro with pricing |
 | `/about` | `src/pages/about.astro` | Victor's background, credentials, company mission |
 | `/contact` | `src/pages/contact.astro` | GitHub Issues intake, process walkthrough, FAQ |

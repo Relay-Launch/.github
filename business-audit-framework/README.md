@@ -2,7 +2,7 @@
 
 ## What This Is
 
-Most businesses know something is off. They're busy but not growing. Revenue looks healthy but profit margins are shrinking. The team is working hard but the same problems keep coming back. The issue isn't effort — it's visibility.
+Most businesses know something is off. They're busy but not growing. Revenue looks healthy but profit margins are shrinking. The team is working hard but the same problems keep coming back. The issue isn't effort. It's visibility.
 
 The Business Audit Framework gives you that visibility. It's a structured diagnostic toolkit that evaluates operational health, growth trajectory, and strategic positioning using a repeatable, evidence-based methodology. Each checklist is designed to expose root causes, not symptoms. A business that "feels busy" may score poorly on workflow efficiency. A business with strong revenue may reveal fragile customer retention. This framework makes those realities visible and actionable.
 
@@ -19,11 +19,11 @@ The framework follows a four-phase approach:
 
 ### Phase 1: Discovery Audit
 
-Run through each checklist relevant to the engagement scope. Every item is evaluated honestly — not aspirationally. The goal is to capture the current state, not the intended state. Each item receives a score from 1 (Critical Gap) to 5 (Optimized) using the scoring rubric provided.
+Run through each checklist relevant to the engagement scope. Every item is evaluated honestly, not aspirationally. The goal is to capture the current state, not the intended state. Each item receives a score from 1 (Critical Gap) to 5 (Optimized) using the scoring rubric provided.
 
 ### Phase 2: Scoring and Benchmarking
 
-Individual item scores roll up into category scores, which roll up into an overall Business Health Score. This score is not a grade — it is a diagnostic instrument. A score of 2.8 does not mean the business is failing; it means specific areas need attention and the framework will tell you which ones.
+Individual item scores roll up into category scores, which roll up into an overall Business Health Score. This score is not a grade. It is a diagnostic instrument. A score of 2.8 does not mean the business is failing; it means specific areas need attention and the framework will tell you which ones.
 
 ### Phase 3: Priority Matrix
 
@@ -72,7 +72,7 @@ Before scoring, collect the raw materials. This includes:
 
 ### Step 3: Score Each Item
 
-Walk through each checklist item and assign a score using the scoring rubric in `scoring/scoring-rubric.md`. Add notes for any item scored 3 or below — these notes become the foundation of the action plan.
+Walk through each checklist item and assign a score using the scoring rubric in `scoring/scoring-rubric.md`. Add notes for any item scored 3 or below. These notes become the foundation of the action plan.
 
 ### Step 4: Calculate the Health Score
 
@@ -86,9 +86,9 @@ Transfer all items scored 3 or below into the priority matrix template (`scoring
 
 Present the audit results with three components:
 
-1. **The Health Score** — a single number that captures overall business health
-2. **The Category Breakdown** — where strengths and weaknesses live
-3. **The Priority Action List** — what to fix first, second, and third
+1. **The Health Score.** A single number that captures overall business health.
+2. **The Category Breakdown.** Where strengths and weaknesses live.
+3. **The Priority Action List.** What to fix first, second, and third.
 
 ## Scoring Overview
 
@@ -127,4 +127,4 @@ Present the audit results with three components:
 
 ---
 
-Built by [Relay▸Launch](https://relaylaunch.com) — We build the systems small businesses and startups need but don't have time to figure out. [Start a conversation](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml).
+Built by [Relay▸Launch](https://relaylaunch.com). We build the systems small businesses and startups need but don't have time to figure out. [Start a conversation](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml).

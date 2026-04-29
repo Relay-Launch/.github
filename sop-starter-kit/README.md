@@ -8,7 +8,7 @@
 
 Your best employee goes on vacation and suddenly nobody knows how to run payroll, onboard a client, or close the books. Sound familiar?
 
-The SOP Starter Kit is a ready-to-use framework for documenting Standard Operating Procedures at your business. Blank templates, fully worked examples, and a style guide — everything you need to turn tribal knowledge into a real operational playbook your whole team can follow. Whether you have 3 employees or 30, undocumented processes are a liability. This kit fixes that.
+The SOP Starter Kit is a ready-to-use framework for documenting Standard Operating Procedures at your business. Blank templates, fully worked examples, and a style guide. Everything you need to turn tribal knowledge into a real operational playbook your whole team can follow. Whether you have 3 employees or 30, undocumented processes are a liability. This kit fixes that.
 
 ## Why SOPs Matter
 

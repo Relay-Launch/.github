@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Relay-Launch/.github/main/profile/repo-card.svg" alt="Relay▸Launch — Ops on Autopilot. You on Strategy." width="100%"/>
+  <img src="https://raw.githubusercontent.com/Relay-Launch/.github/main/profile/repo-card.svg" alt="Relay▸Launch · Multi-Agent Infrastructure and Cloud Systems" width="100%"/>
 </p>
 
 <p align="center">
-  <strong>Veteran-Owned AI Decision Platform & Digital Infrastructure Consultancy</strong><br>
-  <em>Multi-agent council debates. Auditable verdicts. Open-source foundations.</em>
+  <strong>Veteran-Owned. Multi-Agent Infrastructure. Cloud Systems for Small Teams.</strong><br>
+  <em>Auditable verdicts. Open-source foundations. Built by an engineer.</em>
 </p>
 
 <p align="center">
@@ -15,9 +15,9 @@
 
 ---
 
-## CouncilVerse — Open-Source AI Council Formations
+## CouncilVerse · Open-Source Multi-Agent Framework
 
-Multi-agent debate infrastructure. 15 structured methodologies. Three-valued voting (KEEP / REFUSE / ABSTAIN). Quality-weighted scoring, not headcount. Works with any LLM provider.
+Multi-agent debate infrastructure. 15 structured formations. Three-valued voting (KEEP / REFUSE / ABSTAIN). Quality-weighted scoring, not headcount. Provider-agnostic.
 
 ```bash
 npx create-councilverse my-council
@@ -28,59 +28,87 @@ npx create-councilverse my-council
 <td width="33%">
 
 ### [`councilverse-formations`](https://www.npmjs.com/package/@relaylaunch/councilverse-formations)
-15 debate methodologies — Strategy Room (OODA), Tribunal (Legal), Risk Council (Monte Carlo), Due Diligence (M&A), and more.
+15 debate formations. Strategy Room (OODA), Tribunal, Risk Council (Monte Carlo), Due Diligence (M&A), and more.
 
 </td>
 <td width="33%">
 
 ### [`councilverse-voting`](https://www.npmjs.com/package/@relaylaunch/councilverse-voting)
-Three-valued voting with quality-weighted scoring. Based on the CAMP paper. Arguments scored by evidence, structure, and specificity.
+Three-valued voting with quality-weighted scoring. Based on the CAMP paper. Arguments scored on evidence, structure, specificity.
 
 </td>
 <td width="33%">
 
 ### [`create-councilverse`](https://www.npmjs.com/package/create-councilverse)
-Scaffold a working council project in 60 seconds. TypeScript configured. API key and go.
+Working council scaffold in 60 seconds. TypeScript configured. Drop in an API key and run.
 
 </td>
 </tr>
 </table>
 
-**[View source on GitHub](https://github.com/Relay-Launch/councilverse)** · MIT Licensed
+**[Source on GitHub](https://github.com/Relay-Launch/councilverse)** · MIT Licensed
 
 ---
 
-## Relay Deck — The Full Platform
+## Relay Deck · The Production Platform
 
-[Relay Deck](https://deck.relaylaunch.com) is the paid platform built on CouncilVerse. It adds everything you need for production AI decision-making:
+[Relay Deck](https://deck.relaylaunch.com) is the paid platform built on CouncilVerse. Production AI decision-making with everything an audit team needs:
 
-- **Verdict Library** — persistent searchable archive of all council decisions
-- **Precedent Search** — semantic search over past verdicts (Qdrant-powered)
-- **Reasoning Traces** — full audit trail per verdict (Langfuse)
-- **Embeddable Widgets** — iframe verdict cards for reports and dashboards
-- **A2A + MCP Protocols** — Google Agent-to-Agent and Model Context Protocol support
-- **Cryptographic Signing** — HMAC-SHA256 verdict manifests for compliance
-- **EU AI Act Compliance** — JSON-LD transparency manifests (ahead of Aug 2026 deadline)
-- **BYOK** — Bring Your Own Key, you control model costs
+- **Verdict Library**. Persistent, searchable archive of council decisions.
+- **Precedent Search**. Semantic search over past verdicts (Qdrant).
+- **Reasoning Traces**. Full audit trail per verdict (Langfuse).
+- **Embeddable Widgets**. Iframe verdict cards for reports and dashboards.
+- **A2A + MCP Protocols**. Google Agent-to-Agent and Model Context Protocol.
+- **Cryptographic Signing**. HMAC-SHA256 verdict manifests.
+- **EU AI Act Compliance**. JSON-LD transparency manifests, ahead of the Aug 2026 deadline.
+- **BYOK**. Bring your own key, control your model spend.
 
 [Try the playground](https://deck.relaylaunch.com/playground) · [Sign up](https://deck.relaylaunch.com/signup)
 
 ---
 
+## Founder · Open to Engineering Roles
+
+**Victor David Medina**. Veteran. Founder of Relay-Launch. I build multi-agent infrastructure and ship zero-to-one cloud systems for small teams.
+
+Currently open to **AI Infra / Agent Platform Engineer** and **Founding / Solutions Engineer** roles. US remote. Reach me at [hello@relaylaunch.com](mailto:hello@relaylaunch.com).
+
+### What I've shipped in this org
+
+- **CouncilVerse**. Multi-agent harness, three npm packages, 15 council formations, MIT licensed. Used in Relay Deck.
+- **Relay Deck**. Production multi-agent platform. Qdrant precedent search, Langfuse traces, HMAC-signed verdicts, A2A and MCP transport.
+- **[automation-templates/](https://github.com/Relay-Launch/.github/tree/main/automation-templates)**. Production n8n workflows with self-host playbooks and platform comparisons.
+- **[integration-cookbook/](https://github.com/Relay-Launch/.github/tree/main/integration-cookbook)**. Python services for Stripe, Slack, HubSpot, Sheets, plus webhook and email-report utilities.
+- **[business-audit-framework/](https://github.com/Relay-Launch/.github/tree/main/business-audit-framework)**. 8-area diagnostic, scoring rubric, priority matrix, 30/60/90 planning.
+- **[kpi-dashboard-templates/](https://github.com/Relay-Launch/.github/tree/main/kpi-dashboard-templates)**. KPI selection, dashboard specs, Sheets and HTML report generators.
+
+### Stack
+
+```
+Cloud         AWS · GCP · Azure · Cloudflare · Vercel
+IaC + CI      Terraform · GitHub Actions · Docker
+Languages     Python · TypeScript · Bash
+Agents + AI   Claude Code harness · MCP · A2A · Langfuse · Qdrant
+Automation    n8n · Zapier · Make · Power Automate
+Data + Ops    Postgres · BigQuery · Looker Studio · Sheets API
+```
+
+---
+
 ## Digital Infrastructure Consulting
 
-We also build complete digital infrastructure for small businesses — websites, automations, AI agents, and operations systems.
+We also build complete digital infrastructure for small businesses. Websites, automations, agents, operations systems.
 
 | Tier | What You Get | Investment |
 |:-----|:-------------|:-----------|
 | **Free Scorecard** | Automated infrastructure assessment | **$0** |
-| **Relay Quick Fix** | Targeted 1-hour fix for a specific problem | **$197** |
-| **Relay Blueprint** | Full diagnostic + roadmap with cost projections | **$1,497** |
-| **Relay Build** | Custom website, automations, AI agents, 30-day support | **$3,997 - $6,997** |
+| **Relay Quick Fix** | Targeted 1-hour fix | **$197** |
+| **Relay Blueprint** | Full diagnostic and roadmap with cost projections | **$1,497** |
+| **Relay Build** | Custom website, automations, agents, 30-day support | **$3,997 – $6,997** |
 | **Relay Ops** | Ongoing operations, content, monitoring, monthly strategy call | **$997/mo** |
 | **Relay Ops Pro** | Full activation, advanced automations, quarterly business reviews | **$2,497/mo** |
 
-Every engagement starts with a conversation. You own 100% of everything we build.
+Every engagement starts with a conversation. You own 100% of what we build.
 
 ---
 
@@ -88,12 +116,12 @@ Every engagement starts with a conversation. You own 100% of everything we build
 
 | Resource | Description |
 |:---------|:------------|
-| [**CouncilVerse**](https://github.com/Relay-Launch/councilverse) | AI council formations, three-valued voting, project scaffolding |
-| [**Automation Templates**](https://github.com/Relay-Launch/.github/tree/main/automation-templates) | Production-ready n8n workflows and readiness checklists |
-| [**SOP Starter Kit**](https://github.com/Relay-Launch/.github/tree/main/sop-starter-kit) | Process documentation templates and style guides |
-| [**Business Audit Framework**](https://github.com/Relay-Launch/.github/tree/main/business-audit-framework) | Audit checklists, scoring rubric, priority matrix |
-| [**KPI Dashboard Templates**](https://github.com/Relay-Launch/.github/tree/main/kpi-dashboard-templates) | KPI selection guide and dashboard specs |
-| [**Integration Cookbook**](https://github.com/Relay-Launch/.github/tree/main/integration-cookbook) | Production-ready API recipes and webhook utilities |
+| [**CouncilVerse**](https://github.com/Relay-Launch/councilverse) | Multi-agent harness, three-valued voting, project scaffolding |
+| [**automation-templates**](https://github.com/Relay-Launch/.github/tree/main/automation-templates) | Production n8n workflows and readiness checklists |
+| [**sop-starter-kit**](https://github.com/Relay-Launch/.github/tree/main/sop-starter-kit) | Process documentation templates and style guide |
+| [**business-audit-framework**](https://github.com/Relay-Launch/.github/tree/main/business-audit-framework) | Audit checklists, scoring rubric, priority matrix |
+| [**kpi-dashboard-templates**](https://github.com/Relay-Launch/.github/tree/main/kpi-dashboard-templates) | KPI selection guide and dashboard specs |
+| [**integration-cookbook**](https://github.com/Relay-Launch/.github/tree/main/integration-cookbook) | Production API recipes and webhook utilities |
 
 ---
 
@@ -104,6 +132,6 @@ Every engagement starts with a conversation. You own 100% of everything we build
 </p>
 
 <p align="center">
-  <sub><strong>Relay▸Launch</strong> — Ops on Autopilot. You on Strategy.</sub><br>
+  <sub><strong>Relay▸Launch</strong> · Multi-Agent Infrastructure. Cloud Systems for Small Teams.</sub><br>
   <sub>Watertown, MA · Veteran-Owned · <a href="mailto:hello@relaylaunch.com">hello@relaylaunch.com</a></sub>
 </p>

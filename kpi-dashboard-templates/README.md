@@ -101,20 +101,20 @@ Before building, read [`frameworks/dashboard-design-principles.md`](frameworks/d
 
 ### Step 4: Build It
 
-**Option A — Google Sheets (fastest start):**
+**Option A. Google Sheets (fastest start):**
 ```bash
 pip install google-auth google-auth-oauthlib google-api-python-client
 python scripts/sheets-kpi-tracker.py
 ```
 This creates a formatted tracking spreadsheet in your Google Drive. See the script comments for Google Cloud project setup.
 
-**Option B — HTML Report from CSV:**
+**Option B. HTML Report from CSV:**
 ```bash
 python scripts/csv-to-dashboard.py your_metrics.csv --output dashboard.html
 ```
 Generates a standalone HTML dashboard you can open in any browser.
 
-**Option C — Manual build in your preferred tool:**
+**Option C. Manual build in your preferred tool:**
 Use the template specs as blueprints. Each template includes metric definitions, layout guidance, and formula references you can implement in any spreadsheet or BI tool.
 
 ### Step 5: Establish Cadence
@@ -166,7 +166,7 @@ kpi-dashboard-templates/
 
 ## About Relay▸Launch
 
-[Relay▸Launch](https://relaylaunch.com) builds the systems small businesses and startups need but don't have time to figure out — marketing infrastructure, workflow automations, operational builds, and everything in between. These KPI dashboard templates are part of our open toolkit. If you need help implementing a measurement system tailored to your business, [start a conversation](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml).
+[Relay▸Launch](https://relaylaunch.com) builds the systems small businesses and startups need but don't have time to figure out: marketing infrastructure, workflow automations, operational builds, and everything in between. These KPI dashboard templates are part of our open toolkit. If you need help implementing a measurement system tailored to your business, [start a conversation](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml).
 
 ---
 
