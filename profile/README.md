@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/AI_Agents-210+-007AFF?style=for-the-badge&logo=robot&logoColor=white" alt="210+ Agents"/>
-  <img src="https://img.shields.io/badge/Skills-235-0F172A?style=for-the-badge&logo=lightning&logoColor=white" alt="235 Skills"/>
+  <img src="https://img.shields.io/badge/Harness-540+_Components-007AFF?style=for-the-badge&logo=robot&logoColor=white" alt="540+ Components"/>
+  <img src="https://img.shields.io/badge/Skills-178-0F172A?style=for-the-badge&logo=lightning&logoColor=white" alt="178 Skills"/>
   <img src="https://img.shields.io/badge/Models-8_across_4_providers-F59E0B?style=for-the-badge&logo=brain&logoColor=white" alt="8 Models"/>
   <img src="https://img.shields.io/badge/Departments-14-10B981?style=for-the-badge&logo=building&logoColor=white" alt="14 Departments"/>
   <img src="https://img.shields.io/badge/Veteran--Owned-USMC-0F172A?style=for-the-badge&logo=shield&logoColor=white" alt="Veteran-Owned"/>
@@ -57,8 +57,8 @@ We don't trust a single model. Every analysis runs through **heterogeneous counc
               | | Sonnet | |        | |V4-Flash| |        | | (Zhipu)| |
               | +--------+ |        | +--------+ |        | +--------+ |
               | +--------+ |        | +--------+ |        | +--------+ |
-              | | Claude | |        | | Gemini | |        | |MiniMax | |
-              | | Haiku  | |        | | Flash  | |        | | M2.7   | |
+              | | Claude | |        | |DeepSeek| |        | |MiniMax | |
+              | | Haiku  | |        | |V4-Pro  | |        | | M2.7   | |
               | +--------+ |        | +--------+ |        | +--------+ |
               +-----+------+        +-----+------+        +-----+------+
                     |                     |                     |
@@ -118,7 +118,7 @@ npx create-councilverse my-council
 <td width="33%">
 
 ### [`councilverse-formations`](https://www.npmjs.com/package/@relaylaunch/councilverse-formations)
-15 structured debate formations: Strategy Room (OODA), Tribunal, Risk Council (Monte Carlo), Due Diligence (M&A).
+17 structured debate formations: Strategy Room (OODA), Tribunal, Risk Council (Monte Carlo), Due Diligence (M&A).
 
 </td>
 <td width="33%">
@@ -168,15 +168,15 @@ Working council scaffold in 60 seconds. TypeScript configured. Drop in an API ke
 <br>
 
 ```
-Frontend       Next.js 15 + React 19 + Tailwind CSS 4 + Vercel
+Frontend       Next.js 16 + React 19 + Tailwind CSS 4 + Vercel
 Backend        Supabase (Postgres + Auth + RLS + pgvector)
 AI Routing     LiteLLM gateway + 8 models + 4 providers
 Ops Engine     Cloudflare Workers + Hono + D1/KV/Queues
 Telemetry      Langfuse Cloud + structured reasoning traces
 PDF Engine     @react-pdf/renderer + 6 report templates
 Protocols      A2A JSON-RPC + MCP + HMAC-SHA256 signing
-Website        Astro 5 + Tailwind 4 + Cloudflare Pages
-Infra          Docker Compose (21 containers) + GitHub Actions
+Website        Astro 6 + Tailwind 4.2 + Cloudflare Pages
+Infra          Docker Compose (27 containers) + GitHub Actions
 ```
 
 </details>
