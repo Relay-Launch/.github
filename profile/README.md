@@ -27,13 +27,13 @@
 
 ## The Product Stack
 
-We don't sell websites. We deploy **complete AI operations systems** for service businesses.
+We don't sell websites. We deploy **complete AI operations systems** for founders, startups, and growing businesses.
 
 | # | Product | What It Does | For Whom |
 |:-:|:--------|:-------------|:---------|
 | 1 | **Relay Pulse** | Deployed AI ops per client -- post-visit engagement, wellness scoring, predictive analytics, automated win-back | Service businesses (clinics, salons, professional services) |
 | 2 | **Relay Deck** | SaaS command center -- client health dashboards, AI insights, notifications, multi-model council debates | Business owners and operators |
-| 3 | **CouncilVerse** | Open-source multi-agent debate engine -- 15 formations, three-valued voting, quality-weighted scoring | Developers building AI decision systems |
+| 3 | **CouncilVerse** | Open-source multi-agent debate engine -- 17 formations, three-valued voting, quality-weighted scoring | Developers building AI decision systems |
 
 > **The website is the bonus. The AI system is the product.**
 
@@ -215,5 +215,5 @@ Building AI systems that do the work, not just talk about it.
 
 <p align="center">
   <sub><strong>RelayLaunch LLC</strong> &middot; Veteran-Owned &middot; Watertown, MA</sub><br>
-  <sub><em>Every department. One AI.</em></sub>
+  <sub><em>Every part of your business. One AI.</em></sub>
 </p>

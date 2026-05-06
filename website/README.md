@@ -1,12 +1,12 @@
 # relaylaunch.com
 
-Company website for **RelayLaunch LLC**. Built with Astro 5 + Tailwind CSS 4, deployed on Cloudflare Pages.
+Company website for **RelayLaunch LLC**. Built with Astro 6 + Tailwind CSS 4, deployed on Cloudflare Pages.
 
 ## Stack
 
 | Layer | Tech | Cost |
 |---|---|---|
-| Framework | Astro 5+ | n/a |
+| Framework | Astro 6 | n/a |
 | Styling | Tailwind CSS 4 | n/a |
 | Hosting | Cloudflare Pages | **$0/mo** |
 | CI/CD | GitHub Actions | **$0/mo** |
