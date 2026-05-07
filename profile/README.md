@@ -9,18 +9,18 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Harness-540+_Components-007AFF?style=for-the-badge&logo=robot&logoColor=white" alt="540+ Components"/>
+  <img src="https://img.shields.io/badge/Harness-540+_Components-D97706?style=for-the-badge&logo=robot&logoColor=white" alt="540+ Components"/>
   <img src="https://img.shields.io/badge/Skills-178-0F172A?style=for-the-badge&logo=lightning&logoColor=white" alt="178 Skills"/>
   <img src="https://img.shields.io/badge/Models-8_across_4_providers-F59E0B?style=for-the-badge&logo=brain&logoColor=white" alt="8 Models"/>
-  <img src="https://img.shields.io/badge/Departments-14-10B981?style=for-the-badge&logo=building&logoColor=white" alt="14 Departments"/>
+  <img src="https://img.shields.io/badge/Departments-10_Rooms-10B981?style=for-the-badge&logo=building&logoColor=white" alt="10 Rooms"/>
   <img src="https://img.shields.io/badge/Veteran--Owned-USMC-0F172A?style=for-the-badge&logo=shield&logoColor=white" alt="Veteran-Owned"/>
 </p>
 
 <p align="center">
-  <a href="https://relaylaunch.com"><img src="https://img.shields.io/badge/relaylaunch.com-007AFF?style=flat-square&logo=globe&logoColor=white" alt="Website"></a>&nbsp;&nbsp;
+  <a href="https://relaylaunch.com"><img src="https://img.shields.io/badge/relaylaunch.com-D97706?style=flat-square&logo=globe&logoColor=white" alt="Website"></a>&nbsp;&nbsp;
   <a href="https://deck.relaylaunch.com"><img src="https://img.shields.io/badge/Relay%E2%96%B8Deck-0F172A?style=flat-square&logo=vercel&logoColor=white" alt="Relay Deck"></a>&nbsp;&nbsp;
   <a href="https://github.com/Relay-Launch/councilverse"><img src="https://img.shields.io/badge/CouncilVerse-Open_Source-10B981?style=flat-square&logo=github&logoColor=white" alt="CouncilVerse"></a>&nbsp;&nbsp;
-  <a href="mailto:hello@relaylaunch.com"><img src="https://img.shields.io/badge/hello%40relaylaunch.com-6366F1?style=flat-square&logo=mail.ru&logoColor=white" alt="Email"></a>
+  <a href="mailto:hello@relaylaunch.com"><img src="https://img.shields.io/badge/hello%40relaylaunch.com-3F3F46?style=flat-square&logo=mail.ru&logoColor=white" alt="Email"></a>
 </p>
 
 ---
@@ -33,7 +33,7 @@ We don't sell websites. We deploy **complete AI operations systems** for founder
 |:-:|:--------|:-------------|:---------|
 | 1 | **Relay Pulse** | Deployed AI ops per client -- post-visit engagement, wellness scoring, predictive analytics, automated win-back | Service businesses (clinics, salons, professional services) |
 | 2 | **Relay Deck** | SaaS command center -- client health dashboards, AI insights, notifications, multi-model council debates | Business owners and operators |
-| 3 | **CouncilVerse** | Open-source multi-agent debate engine -- 17 formations, three-valued voting, quality-weighted scoring | Developers building AI decision systems |
+| 3 | **CouncilVerse** | Open-source multi-agent debate engine -- 17 council modes, three-valued voting, quality-weighted scoring | Developers building AI decision systems |
 
 > **The website is the bonus. The AI system is the product.**
 
@@ -118,7 +118,7 @@ npx create-councilverse my-council
 <td width="33%">
 
 ### [`councilverse-formations`](https://www.npmjs.com/package/@relaylaunch/councilverse-formations)
-17 structured debate formations: Strategy Room (OODA), Tribunal, Risk Council (Monte Carlo), Due Diligence (M&A).
+17 structured council modes: Strategy Room (OODA), Tribunal, Risk Council (Monte Carlo), Due Diligence (M&A).
 
 </td>
 <td width="33%">
@@ -138,7 +138,7 @@ Working council scaffold in 60 seconds. TypeScript configured. Drop in an API ke
 
 <p align="center">
   <a href="https://github.com/Relay-Launch/councilverse"><img src="https://img.shields.io/github/stars/Relay-Launch/councilverse?style=social" alt="GitHub stars"></a>&nbsp;&nbsp;
-  <a href="https://www.npmjs.com/package/@relaylaunch/councilverse-formations"><img src="https://img.shields.io/npm/dt/@relaylaunch/councilverse-formations?label=npm%20downloads&color=007AFF" alt="npm downloads"></a>
+  <a href="https://www.npmjs.com/package/@relaylaunch/councilverse-formations"><img src="https://img.shields.io/npm/dt/@relaylaunch/councilverse-formations?label=npm%20downloads&color=D97706" alt="npm downloads"></a>
 </p>
 
 ---
