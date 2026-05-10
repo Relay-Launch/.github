@@ -5,20 +5,20 @@
 <h2 align="center">We deploy AI operations systems that run your business &mdash;<br>not chatbots that talk about it.</h2>
 
 <p align="center">
-  <strong>Auditable Intelligence:</strong> Where AI experts disagree. You decide.
+  <strong>Auditable Intelligence:</strong> Multiple AI models debate. You see the disagreements. You decide.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Harness-540+_Components-D97706?style=for-the-badge&logo=robot&logoColor=white" alt="540+ Components"/>
-  <img src="https://img.shields.io/badge/Skills-178-0F172A?style=for-the-badge&logo=lightning&logoColor=white" alt="178 Skills"/>
-  <img src="https://img.shields.io/badge/Models-8_across_4_providers-F59E0B?style=for-the-badge&logo=brain&logoColor=white" alt="8 Models"/>
-  <img src="https://img.shields.io/badge/Departments-10_Rooms-10B981?style=for-the-badge&logo=building&logoColor=white" alt="10 Rooms"/>
-  <img src="https://img.shields.io/badge/Veteran--Owned-USMC-0F172A?style=for-the-badge&logo=shield&logoColor=white" alt="Veteran-Owned"/>
+  <img src="https://img.shields.io/badge/Models-13_across_6_providers-D97706?style=for-the-badge&logo=brain&logoColor=white" alt="13 Models"/>
+  <img src="https://img.shields.io/badge/Rooms-10_Business_Domains-0D9488?style=for-the-badge&logo=building&logoColor=white" alt="10 Rooms"/>
+  <img src="https://img.shields.io/badge/Council_Modes-17-F59E0B?style=for-the-badge&logo=robot&logoColor=white" alt="17 Council Modes"/>
+  <img src="https://img.shields.io/badge/Tests-2,900+_Passing-10B981?style=for-the-badge&logo=check-circle&logoColor=white" alt="2,900+ Tests"/>
+  <img src="https://img.shields.io/badge/Veteran--Owned-USMC-09090B?style=for-the-badge&logo=shield&logoColor=white" alt="Veteran-Owned"/>
 </p>
 
 <p align="center">
   <a href="https://relaylaunch.com"><img src="https://img.shields.io/badge/relaylaunch.com-D97706?style=flat-square&logo=globe&logoColor=white" alt="Website"></a>&nbsp;&nbsp;
-  <a href="https://deck.relaylaunch.com"><img src="https://img.shields.io/badge/Relay%E2%96%B8Deck-0F172A?style=flat-square&logo=vercel&logoColor=white" alt="Relay Deck"></a>&nbsp;&nbsp;
+  <a href="https://deck.relaylaunch.com"><img src="https://img.shields.io/badge/Relay%E2%96%B8Deck-09090B?style=flat-square&logo=vercel&logoColor=white" alt="Relay Deck"></a>&nbsp;&nbsp;
   <a href="https://github.com/Relay-Launch/councilverse"><img src="https://img.shields.io/badge/CouncilVerse-Open_Source-10B981?style=flat-square&logo=github&logoColor=white" alt="CouncilVerse"></a>&nbsp;&nbsp;
   <a href="mailto:hello@relaylaunch.com"><img src="https://img.shields.io/badge/hello%40relaylaunch.com-3F3F46?style=flat-square&logo=mail.ru&logoColor=white" alt="Email"></a>
 </p>
@@ -31,17 +31,34 @@ We don't sell websites. We deploy **complete AI operations systems** for founder
 
 | # | Product | What It Does | For Whom |
 |:-:|:--------|:-------------|:---------|
-| 1 | **Relay Pulse** | Deployed AI ops per client -- post-visit engagement, wellness scoring, predictive analytics, automated win-back | Service businesses (clinics, salons, professional services) |
-| 2 | **Relay Deck** | SaaS command center -- client health dashboards, AI insights, notifications, multi-model council debates | Business owners and operators |
+| 1 | **Relay Pulse** | Deployed AI ops engine -- automated client follow-up, wellness scoring, win-back campaigns, voice AI morning briefs, AI cost metering, timezone-aware scheduling | Service businesses, professional services, startups |
+| 2 | **Relay Deck** | SaaS command center -- 10 Rooms, 17 Council Modes, eval pipeline, self-healing monitors, Ghost Teams, circuit breakers, state persistence | Business owners and operators |
 | 3 | **CouncilVerse** | Open-source multi-agent debate engine -- 17 council modes, three-valued voting, quality-weighted scoring | Developers building AI decision systems |
 
 > **The website is the bonus. The AI system is the product.**
 
 ---
 
+## What Makes This an Ambient Enterprise
+
+The system works in the background, without being asked:
+
+| Capability | What It Does |
+|:-----------|:------------|
+| **Morning Brief** | Pulse analyzes overnight data, generates a voice briefing, emails a digest before you check your phone |
+| **Ghost Teams** | Autonomous background agents quietly evaluate your business decisions and surface risks you missed |
+| **Self-Healing Monitor** | Detects drift in specialist accuracy, auto-applies corrections, logs learning events |
+| **Circuit Breakers** | If a model fails or gets expensive, the system degrades gracefully -- never crashes |
+| **Dissent Digest** | When AI models disagree, you see both sides. No hidden consensus, no buried dissent |
+| **Eval Pipeline** | PGR scoring, golden datasets, regression detection -- the system grades its own work |
+| **Cryptographic Signing** | Every verdict is Ed25519-signed with full provenance chain. Tamper-proof audit trail |
+| **Smart Model Router** | Routes queries to the cheapest capable model. Claude Opus for hard problems, DeepSeek for routine ones |
+
+---
+
 ## Multi-Model Council Architecture
 
-We don't trust a single model. Every analysis runs through **heterogeneous council debates** -- multiple AI models from different providers, arguing from different training data, scored on evidence quality.
+We don't trust a single model. Every analysis runs through **heterogeneous council debates** -- 13 models from 6 independent providers, arguing from different training data, scored on evidence quality.
 
 ```
                            INPUT: Business Decision / Analysis Request
@@ -49,19 +66,20 @@ We don't trust a single model. Every analysis runs through **heterogeneous counc
                     +---------------------+---------------------+
                     |                     |                     |
               +-----v-----+        +-----v-----+        +-----v-----+
-              |  Provider  |        |  Provider  |        |  Provider  |
-              |  Cluster A |        |  Cluster B |        |  Cluster C |
-              |            |        |            |        |            |
+              |  Anthropic |        |  DeepSeek  |        |  Zhipu AI |
+              |            |        |            |        |  + MiniMax |
               | +--------+ |        | +--------+ |        | +--------+ |
-              | | Claude | |        | |DeepSeek| |        | | GLM-5  | |
-              | | Sonnet | |        | |V4-Flash| |        | | (Zhipu)| |
+              | | Opus   | |        | |V4-Flash| |        | | GLM-5.1| |
               | +--------+ |        | +--------+ |        | +--------+ |
-              | +--------+ |        | +--------+ |        | +--------+ |
-              | | Claude | |        | |DeepSeek| |        | |MiniMax | |
-              | | Haiku  | |        | |V4-Pro  | |        | | M2.7   | |
-              | +--------+ |        | +--------+ |        | +--------+ |
-              +-----+------+        +-----+------+        +-----+------+
-                    |                     |                     |
+              | | Sonnet | |        | +--------+ |        | +--------+ |
+              | +--------+ |        | |V4-Pro  | |        | | M2.7   | |
+              | | Haiku  | |        | +--------+ |        | +--------+ |
+              | +--------+ |        +-----+------+        +-----+------+
+              +-----+------+              |                      |
+                    |            +--------+--------+             |
+                    |            |  Perplexity +   |             |
+                    |            |  Ollama (Local)  |             |
+                    |            +--------+--------+             |
                     +---------------------+---------------------+
                                           |
                                +----------v----------+
@@ -80,8 +98,8 @@ We don't trust a single model. Every analysis runs through **heterogeneous counc
                                |  Majority Opinion    |
                                |  Dissenting Views    |
                                |  Reasoning Traces    |
-                               |  HMAC Provenance     |
-                               |  Audit Trail         |
+                               |  Ed25519 Signature   |
+                               |  Full Audit Trail    |
                                +---------------------+
 ```
 
@@ -149,17 +167,22 @@ Working council scaffold in 60 seconds. TypeScript configured. Drop in an API ke
 
 | Feature | Description |
 |:--------|:------------|
-| **Multi-Model Councils** | 8 models from 4 providers debate each analysis |
-| **Deliverable Engine** | Generates QoE reports, DD memos, risk packages as PDF |
-| **Verdict Library** | Persistent, searchable archive of council decisions |
+| **Multi-Model Councils** | 13 models from 6 providers debate each analysis |
+| **10 Business Rooms** | Marketing, Operations, Client Retention, Finance, HR, Legal, Strategy, Content, Sales, Support |
+| **17 Council Modes** | Strategy Room (OODA), Tribunal, Risk Council, Due Diligence, Round Robin, Adversarial, and more |
+| **Morning Brief** | AI-generated daily digest with voice narration, email delivery, and approval workflow |
+| **Ghost Teams** | Autonomous background agents that quietly evaluate decisions and surface risks |
+| **Self-Healing Monitor** | Detects specialist drift, auto-corrects, logs learning events |
+| **Eval Pipeline** | PGR scoring, golden datasets, regression detection -- the system grades itself |
+| **Circuit Breakers** | Graceful degradation when models fail or costs spike |
 | **Precedent Search** | Semantic search over past verdicts (pgvector) |
-| **Reasoning Traces** | Full audit trail per verdict (Langfuse) |
+| **Ed25519 Signed Verdicts** | Cryptographic provenance for every decision |
+| **Smart Model Router** | Routes to cheapest capable model (80% cost reduction) |
 | **Feedback Flywheel** | Accept/Edit/Reject trains the system on your preferences |
-| **Embeddable Widgets** | Iframe verdict cards for reports and dashboards |
+| **Deliverable Engine** | QoE reports, DD memos, risk packages as PDF |
 | **A2A + MCP Protocols** | Google Agent-to-Agent and Model Context Protocol bridges |
-| **HMAC-Signed Verdicts** | Cryptographic provenance for every decision |
 | **BYOK** | Bring your own API keys, control model spend |
-| **EU AI Act Ready** | JSON-LD transparency manifests |
+| **EU AI Act Ready** | JSON-LD transparency manifests, bias detection, constitutional checks |
 
 </details>
 
@@ -170,13 +193,15 @@ Working council scaffold in 60 seconds. TypeScript configured. Drop in an API ke
 ```
 Frontend       Next.js 16 + React 19 + Tailwind CSS 4 + Vercel
 Backend        Supabase (Postgres + Auth + RLS + pgvector)
-AI Routing     LiteLLM gateway + 8 models + 4 providers
-Ops Engine     Cloudflare Workers + Hono + D1/KV/Queues
-Telemetry      Langfuse Cloud + structured reasoning traces
+AI Routing     LiteLLM gateway + 13 models + 6 providers
+Ops Engine     Cloudflare Workers + Hono + D1/KV/Queues/R2
+Voice AI       Kokoro TTS + R2 storage + HMAC presigned URLs
+Telemetry      Langfuse + structured reasoning traces
 PDF Engine     @react-pdf/renderer + 6 report templates
-Protocols      A2A JSON-RPC + MCP + HMAC-SHA256 signing
+Protocols      A2A JSON-RPC + MCP + Ed25519 signing
 Website        Astro 6 + Tailwind 4.2 + Cloudflare Pages
-Infra          Docker Compose (27 containers) + GitHub Actions
+Infra          Docker Compose (27 containers) + GitHub Actions CI
+Testing        2,900+ tests across 4 repos (Vitest + Wrangler)
 ```
 
 </details>
@@ -200,7 +225,7 @@ Infra          Docker Compose (27 containers) + GitHub Actions
 
 **Victor David Medina** -- USMC Sergeant (E-5), Watertown MA.
 
-8 years enterprise operations. Cloud/DevOps (AWS, Terraform, Cloudflare). Full-stack AI (Claude Code, multi-agent harnesses, MCP, A2A). Solo founder with AI leverage.
+8 years enterprise operations. Cloud infrastructure (AWS, Terraform, Cloudflare Workers). Full-stack AI systems (multi-model councils, autonomous agents, self-healing monitors). Building with Claude Code, GitHub Copilot, Gemini CLI, and Codex -- four AI tools working as a coordinated engineering team.
 
 Building AI systems that do the work, not just talk about it.
 
