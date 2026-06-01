@@ -1,0 +1,60 @@
+<svg width="1120" height="170" viewBox="0 0 1120 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Animated RelayLaunch owner approval loop</title>
+  <desc id="desc">A subtle animated workflow moving from business signals to revenue brief, council review, owner approval, and workflow action.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1C1917"/>
+      <stop offset="52%" stop-color="#292524"/>
+      <stop offset="100%" stop-color="#1C1917"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1120" height="170" rx="26" fill="url(#bg)"/>
+  <rect x="1" y="1" width="1118" height="168" rx="25" fill="none" stroke="#D6D3D1" stroke-opacity="0.18"/>
+  <path d="M120 86H1000" stroke="#78716C" stroke-opacity="0.42" stroke-width="3" stroke-linecap="round"/>
+
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <g fill="#292524" stroke="#D97706" stroke-width="2">
+      <circle cx="120" cy="86" r="31"/>
+      <circle cx="340" cy="86" r="31"/>
+      <circle cx="560" cy="86" r="31"/>
+      <circle cx="780" cy="86" r="31"/>
+      <circle cx="1000" cy="86" r="31"/>
+    </g>
+
+    <g fill="#F5F5F4" font-size="13" font-weight="800">
+      <text x="120" y="91">signal</text>
+      <text x="340" y="91">brief</text>
+      <text x="560" y="91">council</text>
+      <text x="780" y="91">approve</text>
+      <text x="1000" y="91">action</text>
+    </g>
+
+    <g fill="#A8A29E" font-size="12" font-weight="700">
+      <text x="120" y="136">data wakes up</text>
+      <text x="340" y="136">top 3 moves</text>
+      <text x="560" y="136">dissent visible</text>
+      <text x="780" y="136">owner decides</text>
+      <text x="1000" y="136">workflow runs</text>
+    </g>
+
+    <circle r="8" fill="#FBBF24" filter="url(#glow)">
+      <animateMotion dur="5.6s" repeatCount="indefinite" path="M120 86H1000"/>
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="780" cy="86" r="43" fill="none" stroke="#F59E0B" stroke-width="3" stroke-opacity="0.0">
+      <animate attributeName="r" values="35;48;35" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0;0.58;0" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <text x="560" y="36" fill="#FBBF24" font-size="14" font-weight="800" letter-spacing="1.6">AI PREPARES. YOU APPROVE.</text>
+  </g>
+</svg>

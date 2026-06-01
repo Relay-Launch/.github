@@ -31,6 +31,10 @@
   <a href="mailto:hello@relaylaunch.com"><img src="https://img.shields.io/badge/hello@relaylaunch.com-44403C?style=flat-square&logo=maildotru&logoColor=white" alt="Email"></a>
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Relay-Launch/.github/main/profile/approval-loop.svg" alt="Animated RelayLaunch owner-approved AI operations loop" width="100%"/>
+</p>
+
 ---
 
 ## Why RelayLaunch Exists
