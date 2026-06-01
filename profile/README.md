@@ -66,7 +66,7 @@ We don't trust a single model. Every analysis runs through **heterogeneous counc
                     +---------------------+---------------------+
                     |                     |                     |
               +-----v-----+        +-----v-----+        +-----v-----+
-              |  Anthropic |        |  DeepSeek  |        |  Zhipu AI |
+              |  Anthropic |        |  DeepSeek  |        |  Zhipu AI  |
               |            |        |            |        |  + MiniMax |
               | +--------+ |        | +--------+ |        | +--------+ |
               | | Opus   | |        | |V4-Flash| |        | | GLM-5.1| |
@@ -78,22 +78,22 @@ We don't trust a single model. Every analysis runs through **heterogeneous counc
               +-----+------+              |                      |
                     |            +--------+--------+             |
                     |            |  Perplexity +   |             |
-                    |            |  Ollama (Local)  |             |
+                    |            |  Ollama (Local) |             |
                     |            +--------+--------+             |
                     +---------------------+---------------------+
                                           |
                                +----------v----------+
-                               |   FREE-MAD ENGINE   |
-                               |                     |
-                               |  - Position Papers  |
-                               |  - Cross-Exam       |
+                               |   FREE-MAD ENGINE    |
+                               |                      |
+                               |  - Position Papers   |
+                               |  - Cross-Exam        |
                                |  - Evidence Scoring  |
                                |  - Dissent Capture   |
                                +----------+----------+
                                           |
                                +----------v----------+
                                |      VERDICT         |
-                               |                     |
+                               |                      |
                                |  Confidence Score    |
                                |  Majority Opinion    |
                                |  Dissenting Views    |
