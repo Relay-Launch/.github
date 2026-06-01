@@ -4,6 +4,8 @@
 
 <h2 align="center">We deploy AI operations systems that run your business &mdash;<br>not chatbots that talk about it.</h2>
 
+<p align="center"><strong>Every part of your business. One AI.</strong></p>
+
 <p align="center">
   <strong>Approved Operations:</strong> AI prepares the work and surfaces the decision &mdash; you approve. Multiple models debate; you see the disagreements.
 </p>
@@ -66,7 +68,7 @@ We don't trust a single model. Every analysis runs through **heterogeneous counc
                     +---------------------+---------------------+
                     |                     |                     |
               +-----v-----+        +-----v-----+        +-----v-----+
-              |  Anthropic |        |  DeepSeek  |        |  Zhipu AI  |
+              |  Anthropic |        |  DeepSeek  |        |  Zhipu AI |
               |            |        |            |        |  + MiniMax |
               | +--------+ |        | +--------+ |        | +--------+ |
               | | Opus   | |        | |V4-Flash| |        | | GLM-5.1| |
@@ -78,22 +80,22 @@ We don't trust a single model. Every analysis runs through **heterogeneous counc
               +-----+------+              |                      |
                     |            +--------+--------+             |
                     |            |  Perplexity +   |             |
-                    |            |  Ollama (Local) |             |
+                    |            |  Ollama (Local)  |             |
                     |            +--------+--------+             |
                     +---------------------+---------------------+
                                           |
                                +----------v----------+
-                               |   FREE-MAD ENGINE    |
-                               |                      |
-                               |  - Position Papers   |
-                               |  - Cross-Exam        |
+                               |   FREE-MAD ENGINE   |
+                               |                     |
+                               |  - Position Papers  |
+                               |  - Cross-Exam       |
                                |  - Evidence Scoring  |
                                |  - Dissent Capture   |
                                +----------+----------+
                                           |
                                +----------v----------+
                                |      VERDICT         |
-                               |                      |
+                               |                     |
                                |  Confidence Score    |
                                |  Majority Opinion    |
                                |  Dissenting Views    |
