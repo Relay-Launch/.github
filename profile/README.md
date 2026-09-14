@@ -8,10 +8,7 @@
 
 <p align="center">
   <strong>Approved Operations:</strong> AI prepares the work and surfaces the decision.<br>
-  <strong>You approve.</strong> Multiple models debate, you see the disagreements, then you decide.
-</p>
-
-<p align="center">
+  <strong>You approve.</strong> Multiple models debate, you see the disagreements, then you decide.<br>
   <em>AI prepares. You approve.</em>
 </p>
 
