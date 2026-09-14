@@ -270,9 +270,9 @@ Build harness   Claude Code + GitHub Copilot + Gemini CLI + Codex, synchronized 
 
 ---
 
-## Founder
+## Built by
 
-**Victor David Medina**, veteran founder, Watertown, MA.
+**Victor David Medina**, veteran engineer, Watertown, MA. [github.com/Victor-David-Medina](https://github.com/Victor-David-Medina)
 
 Eight years of enterprise operations. Cloud and platform infrastructure (Cloudflare Workers, AWS, Terraform). Full-stack AI systems: multi-model councils, owner-approved autonomy, self-healing monitors, CI-wired evals. Builds with a four-agent engineering harness (Claude Code, GitHub Copilot, Gemini CLI, Codex) running synchronized sprints with a trust-but-verify gate.
 
