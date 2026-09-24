@@ -1,182 +1,100 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/Relay-Launch/.github/main/profile/repo-card.svg" alt="RelayLaunch, Every part of your business. One AI." width="100%"/>
+  <img src="https://raw.githubusercontent.com/Relay-Launch/.github/main/profile/repo-card.svg" alt="RelayLaunch" width="100%"/>
 </h1>
 
-<h2 align="center">We deploy AI operations systems that <em>run</em> your business,<br>not chatbots that talk about it.</h2>
-
-<p align="center"><strong>Every part of your business. One AI.</strong></p>
+<h2 align="center">Get found. Get booked. Keep them.</h2>
 
 <p align="center">
-  <strong>Approved Operations:</strong> AI prepares the work and surfaces the decision.<br>
-  <strong>You approve.</strong> Multiple models debate, you see the disagreements, then you decide.
+  RelayLaunch helps local service businesses become readable to search engines and AI assistants,<br>
+  easier to book, and easier to keep. Every action is owner-approved.
 </p>
 
-<p align="center">
-  <em>AI prepares. You approve.</em>
-</p>
+<p align="center"><em>AI prepares. You approve.</em></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Models-15_across_7_providers-D97706?style=for-the-badge&logoColor=white" alt="15 models across 7 providers"/>
-  <img src="https://img.shields.io/badge/Engine-Cloudflare_Workers-0D9488?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare Workers engine"/>
+  <img src="https://img.shields.io/badge/Free_scan-31_checks-D97706?style=for-the-badge&logoColor=white" alt="Free scan: 31 checks"/>
+  <img src="https://img.shields.io/badge/Engine-Cloudflare_Workers-0F766E?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare Workers engine"/>
   <img src="https://img.shields.io/badge/Autonomy-Owner--Approved-F59E0B?style=for-the-badge&logoColor=white" alt="Owner-approved autonomy"/>
-  <img src="https://img.shields.io/badge/CouncilVerse-Open_Source-10B981?style=for-the-badge&logo=npm&logoColor=white" alt="CouncilVerse open source"/>
-  <img src="https://img.shields.io/badge/Veteran--Owned-USMC-44403C?style=for-the-badge&logoColor=white" alt="Veteran-owned"/>
+  <img src="https://img.shields.io/badge/Veteran--Owned-44403C?style=for-the-badge&logoColor=white" alt="Veteran-owned"/>
 </p>
 
 <p align="center">
   <a href="https://relaylaunch.com"><img src="https://img.shields.io/badge/relaylaunch.com-D97706?style=flat-square&logo=googlechrome&logoColor=white" alt="Website"></a>&nbsp;
-  <a href="https://deck.relaylaunch.com"><img src="https://img.shields.io/badge/Relay%E2%96%B8Deck-0C0A09?style=flat-square&logo=vercel&logoColor=white" alt="Relay Deck"></a>&nbsp;
-  <a href="https://github.com/Relay-Launch/councilverse"><img src="https://img.shields.io/badge/CouncilVerse-Open_Source-10B981?style=flat-square&logo=github&logoColor=white" alt="CouncilVerse"></a>&nbsp;
+  <a href="https://relaylaunch.com/scan/ai-visibility/"><img src="https://img.shields.io/badge/Run_the_free_scan-0C0A09?style=flat-square" alt="Run the free scan"></a>&nbsp;
+  <a href="https://github.com/Relay-Launch/councilverse"><img src="https://img.shields.io/badge/CouncilVerse-Open_Source-0F766E?style=flat-square&logo=github&logoColor=white" alt="CouncilVerse"></a>&nbsp;
   <a href="https://www.npmjs.com/org/relaylaunch"><img src="https://img.shields.io/badge/npm-@relaylaunch-CB3837?style=flat-square&logo=npm&logoColor=white" alt="npm org"></a>&nbsp;
   <a href="mailto:hello@relaylaunch.com"><img src="https://img.shields.io/badge/hello@relaylaunch.com-44403C?style=flat-square&logo=maildotru&logoColor=white" alt="Email"></a>
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Relay-Launch/.github/main/profile/approval-loop.svg" alt="Animated RelayLaunch owner-approved AI operations loop" width="100%"/>
+  <img src="https://raw.githubusercontent.com/Relay-Launch/.github/main/profile/approval-loop.svg" alt="Animated RelayLaunch owner-approved loop" width="100%"/>
 </p>
 
 ---
 
-## Why RelayLaunch Exists
+## What we do
 
-Most "AI for business" is a chat window. You still do the work; the AI just talks about it.
+Most owners do not know whether an AI assistant or a search engine can read who they are, where they are, and when they are open. We measure it, fix it on the site they already have, and keep it from drifting back.
 
-RelayLaunch is the opposite. We deploy a system that **does the operational work in the background** (client follow-up, win-back, slot rescue, reviews, morning briefs) and brings you the finished decision. You approve or skip. That's the whole interaction.
+1. **See the gap.** The free AI-Readiness scan answers 31 yes-or-no questions about your public site. Your score shows first; one optional email unlocks the itemized fix list.
+2. **Fix what it found.** The Get Found Fix Pass works through the 14 get-found checks with you watching. Each one flips, or you are told plainly why it cannot on your platform.
+3. **Keep it from drifting.** Site Care re-runs the 14 checks every month and handles small edits, hosting and updates.
+4. **Run the loop.** Starter gives you a short Morning Brief whenever something needs an owner decision.
 
-> **The website is the bonus. The deployed AI operations system is the product.**
-
----
-
-## The Product Stack
-
-| # | Product | What It Does | For Whom |
-|:-:|:--------|:-------------|:---------|
-| 1 | **Relay Pulse** | Deployed AI ops engine: automated client follow-up, win-back, slot rescue, wellness scoring, review lift, voice AI morning briefs, AI cost metering, timezone-aware scheduling. Runs on Cloudflare Workers. | Service businesses, professional services, startups |
-| 2 | **Relay Deck** | SaaS command center: Recovery Board, Action Brief, multi-model council review, eval pipeline, self-healing monitors, state persistence, circuit breakers. | Owners and operators |
-| 3 | **CouncilVerse** | Open-source multi-agent council engine: reusable council modes, quality-weighted voting, structured debate. Public on npm. | Developers building AI decision systems |
+[See all 31 checks &rarr;](https://relaylaunch.com/scan/checks/)
 
 ---
 
-## What Makes This an Ambient Enterprise
+## Pricing
 
-The system works in the background, without being asked, and never acts on a money decision without owner approval.
+Flat by design: no required setup fee, no usage meter, no annual lock, cancel anytime.
 
-| Capability | What It Does |
-|:-----------|:------------|
-| **Morning Brief** | Pulse analyzes overnight data, generates a voice briefing, and emails a digest before you open your phone |
-| **Owner-Approved Autonomy** | A five-level progressive-autonomy model with approval gates at every level. The owner stays in control of every action that touches money |
-| **Multi-Model Council** | Every analysis runs through models from different providers; agreement earns confidence, disagreement surfaces risk |
-| **Dissent Surfaced** | When models disagree, you see both sides. No hidden consensus, no buried dissent |
-| **Eval Pipeline** | Golden datasets, regression detection, grounding and faithfulness checks, wired into CI so the system grades its own work |
-| **Self-Healing Monitor** | Detects drift in specialist accuracy, applies corrections, and logs learning events |
-| **Circuit Breakers** | If a model fails or gets expensive, the system degrades gracefully instead of crashing |
-| **Smart Model Router** | Routes each query to the cheapest capable model: a frontier model for hard problems, a fast model for routine ones |
+| Rung | Price | What you get |
+|:-----|:------|:-------------|
+| **AI-Readiness Score** | $0 | 31 checks on your public site. Score first, email optional |
+| **Get Found Fix Pass** | $350 one-time | The 14 get-found checks fixed on your existing site, with you watching. Nothing renews |
+| **Site Care** | $149/mo | Upkeep for a site we built or fixed: hosting, SSL, uptime watch, up to 4 small edits a month, the 14 checks re-run monthly |
+| **Starter** | $199/mo | Owner-approved loop: get found, get booked, review lift, and a portable record of every approved action |
+| **Team** | $999/mo | 5 seats, month-to-month |
+| **Enterprise** | $3,000/mo | Unlimited seats, SSO, audit trails |
+| **Full Onboarding** | $5,995 one-time | Optional founder-led launch: a template-led Cloudflare website (up to 5 core pages), schema, analytics, and standard Relay workflows |
 
----
-
-## Multi-Model Council Architecture
-
-We don't trust a single model. Every analysis runs through a **heterogeneous council** of 15 cloud models across 7 independent providers (Anthropic, DeepSeek, xAI, Zhipu AI, MiniMax, Perplexity, Google), with optional local Ollama inference, routed through a single LiteLLM gateway. Models trained on different corpora argue from different priors, and the verdict is scored on evidence quality, not headcount.
-
-```
-                  INPUT  ·  Business decision / analysis request
-                                     │
-            ┌────────────────────────┼────────────────────────┐
-            │                        │                         │
-      ┌─────▼──────┐          ┌──────▼──────┐          ┌───────▼──────┐
-      │  Anthropic │          │   DeepSeek  │          │   Zhipu AI   │
-      │  Opus      │          │   V4-Flash  │          │   GLM-5.1    │
-      │  Sonnet    │          │   V4-Pro    │          │   + MiniMax  │
-      │  Haiku     │          │             │          │     M2.7     │
-      └─────┬──────┘          └──────┬──────┘          └───────┬──────┘
-            │                        │                         │
-            │              ┌─────────▼─────────┐               │
-            │              │  xAI Grok 4.x     │               │
-            │              │  Perplexity Sonar │               │
-            │              │  Google Gemini    │               │
-            │              │  Ollama (local)   │               │
-            │              └─────────┬─────────┘               │
-            └────────────────────────┼────────────────────────┘
-                                     │
-                       ┌─────────────▼─────────────┐
-                       │   LiteLLM GATEWAY ROUTER   │
-                       │   cheapest capable model   │
-                       └─────────────┬─────────────┘
-                                     │
-                       ┌─────────────▼─────────────┐
-                       │      COUNCIL DEBATE        │
-                       │   · Position papers        │
-                       │   · Cross-examination      │
-                       │   · Evidence scoring       │
-                       │   · Dissent capture        │
-                       └─────────────┬─────────────┘
-                                     │
-                       ┌─────────────▼─────────────┐
-                       │          VERDICT           │
-                       │   · Confidence score       │
-                       │   · Majority opinion       │
-                       │   · Dissenting views       │
-                       │   · Reasoning traces       │
-                       │   · Owner approval gate    │
-                       └────────────────────────────┘
-```
-
-**When models from different training corpora agree, confidence is justified. When they disagree, the dissent surfaces a risk a single model would have buried.**
-
----
-
-## The Engine Behind the Product
-
-RelayLaunch isn't assembled by hand. It's built and operated by a coordinated AI engineering harness, and that harness *is* the company's edge.
-
-### Four AI agents, one synchronized sprint
-
-**Claude Code · GitHub Copilot · Gemini CLI · Codex** run in synchronized sprints against shared handoff docs, with a trust-but-verify step where each agent's strongest output is re-checked before it ships. Parallel build, sequential ship, one source of truth.
-
-### The infrastructure spine
-
-A self-hosted Docker Compose stack of ~27 containers gives the harness a full local operations layer:
-
-| Layer | Stack |
-|:------|:------|
-| **Model gateway** | LiteLLM routing 15 cloud models across 7 providers, plus local Ollama on GPU |
-| **Vectors / RAG** | Qdrant + pgvector for retrieval and precedent search |
-| **Observability** | Langfuse (LLM traces) + Prometheus + Grafana + Loki |
-| **Edge proxy** | Traefik reverse proxy across services |
-| **Automation** | n8n workflow engine |
-| **Eval harness** | Golden datasets + regression detection + grounding/faithfulness checks, wired into CI |
-
-### Deployment fabric
-
-| Plane | Stack |
-|:------|:------|
-| **Execution engine** | Cloudflare Workers, multi-tenant: per-tenant D1 / KV / R2 / Queues, 40+ migrations |
-| **Data + auth** | Supabase Postgres with Row-Level Security |
-| **Governance** | AI incident-response playbook + escalation matrix; IBM 6-pillar + EU AI Act mapping |
-
----
-
-## SaaS Pricing
-
-| Tier | Price | Seats | What You Get |
-|:-----|:------|:-----:|:-------------|
-| **Free Ops Scan** | $0 | n/a | Instant AI operations audit for your business |
-| **Pilot (Outcome)** | $0 + $20 / recovered booking (cap $149/mo) | 1 | 30-day outcome-based pilot. You pay for results |
-| **Starter** | $149/mo | 1 | Top 3 daily actions, lapsed-client recovery, basic slot filling |
-| **Pro** | $299/mo | 1 | Full platform access, all integrations |
-| **Team** | $999/mo | 5 | Multi-seat, month-to-month |
-| **Enterprise** | $3,000/mo | Unlimited | SSO, audit trails, dedicated support |
-| **Concierge** | $1,500 one-time | n/a | Forensic operations analysis, delivered in 7 days |
+**Proof status:** no verified client outcomes are published yet. Samples stay labeled Sample, and we do not promise rankings, placement, or traffic.
 
 <p align="center">
-  <a href="https://relaylaunch.com"><strong>Start with a Free Ops Scan &rarr;</strong></a>
+  <a href="https://relaylaunch.com/scan/ai-visibility/"><strong>Run the free scan &rarr;</strong></a>
 </p>
 
 ---
 
-## CouncilVerse, Open Source
+## The product
 
-Multi-agent debate infrastructure for developers. Published on [npm under `@relaylaunch`](https://www.npmjs.com/org/relaylaunch).
+| Product | What it does |
+|:--------|:-------------|
+| **Relay Deck** | The owner's command center: Morning Brief, approvals, and the record of every approved action |
+| **Relay Pulse** | The operations engine on Cloudflare Workers that prepares the work behind the brief |
+| **CouncilVerse** | Open-source multi-agent review engine we use to check our own work (below) |
+
+---
+
+## How it's built
+
+RelayLaunch is built and operated by a small fleet of AI seats, each with one job, and a founder who approves what ships.
+
+| Seat | Job |
+|:-----|:----|
+| **Claude** | Builds code, keeps the rules, records what was measured |
+| **Gemini** | Research, design specs, and visual checks of what ships |
+| **Hermes** | Runs scheduled work on our own hardware: health probes, research fetches, nightly checks |
+| **Odysseus** | A workspace on local models for planning and drafts |
+
+Underneath: a self-hosted stack with a LiteLLM model gateway over local Ollama models and cloud providers, Qdrant for retrieval, Langfuse for traces, n8n for automation, and Prometheus/Grafana for monitoring. The website runs on Cloudflare Workers; Relay Deck runs on Railway with Supabase.
+
+---
+
+## CouncilVerse, open source
+
+Multi-agent review infrastructure for developers. Published on [npm under `@relaylaunch`](https://www.npmjs.com/org/relaylaunch).
 
 ```bash
 npx create-councilverse my-council
@@ -187,82 +105,32 @@ npx create-councilverse my-council
 <td width="33%" valign="top">
 
 ### [`councilverse-formations`](https://www.npmjs.com/package/@relaylaunch/councilverse-formations)
-Structured council modes: Strategy Room (OODA), Tribunal, Risk Council, Due Diligence, and more. Capability packs, not templates.
+Structured council modes: Strategy Room (OODA), Tribunal, Risk Council, Due Diligence, and more.
 
 </td>
 <td width="33%" valign="top">
 
 ### [`councilverse-voting`](https://www.npmjs.com/package/@relaylaunch/councilverse-voting)
-Quality-weighted voting (KEEP / REFUSE / ABSTAIN). Evidence over headcount, so the loudest model doesn't win.
+Quality-weighted voting (KEEP / REFUSE / ABSTAIN). Evidence over headcount.
 
 </td>
 <td width="33%" valign="top">
 
 ### [`create-councilverse`](https://www.npmjs.com/package/create-councilverse)
-A working council scaffold in 60 seconds. TypeScript configured. Drop in an API key and run.
+A working council scaffold. TypeScript configured. Drop in an API key and run.
 
 </td>
 </tr>
 </table>
 
-<p align="center">
-  <a href="https://github.com/Relay-Launch/councilverse"><img src="https://img.shields.io/github/stars/Relay-Launch/councilverse?style=social" alt="GitHub stars"></a>&nbsp;
-  <a href="https://www.npmjs.com/package/@relaylaunch/councilverse-formations"><img src="https://img.shields.io/npm/dt/@relaylaunch/councilverse-formations?label=npm%20downloads&color=D97706" alt="npm downloads"></a>
-</p>
-
 ---
 
-<details>
-<summary><strong>Platform capabilities (click to expand)</strong></summary>
-<br>
+## Open-source resources
 
-| Feature | Description |
-|:--------|:------------|
-| **Multi-Model Councils** | 15 models from 7 providers debate each analysis |
-| **Business Rooms** | Marketing, Operations, Client Retention, Finance, HR, Legal, Strategy, Content, Sales, Support |
-| **Council Modes** | Strategy Room (OODA), Tribunal, Risk Council, Due Diligence, Round Robin, Adversarial, and more |
-| **Morning Brief** | AI-generated daily digest with voice narration, email delivery, and an approval workflow |
-| **Owner-Approved Autonomy** | Five-level progressive-autonomy model with approval gates on every money-touching action |
-| **Self-Healing Monitor** | Detects specialist drift, corrects, and logs learning events |
-| **Eval Pipeline** | Golden datasets, regression detection, grounding/faithfulness checks, wired into CI |
-| **Circuit Breakers** | Graceful degradation when models fail or costs spike |
-| **Precedent Search** | Semantic search over past verdicts (Qdrant + pgvector) |
-| **Smart Model Router** | Routes to the cheapest capable model via the LiteLLM gateway |
-| **Feedback Flywheel** | Accept / Edit / Reject tunes the system to your preferences |
-| **A2A + MCP Protocols** | Agent-to-Agent and Model Context Protocol bridges |
-| **BYOK** | Bring your own API keys, control model spend |
-| **Governance Mapping** | IBM 6-pillar + EU AI Act mapping, incident-response playbook, escalation matrix |
-
-</details>
-
-<details>
-<summary><strong>Technical architecture (click to expand)</strong></summary>
-<br>
-
-```
-Frontend        Next.js 16 + React 19 + Tailwind CSS 4 + Vercel
-Backend         Supabase (Postgres + Auth + Row-Level Security + pgvector)
-AI routing      LiteLLM gateway · 15 cloud models · 7 providers · + local Ollama
-Ops engine      Cloudflare Workers + Hono · per-tenant D1 / KV / Queues / R2 · 40+ migrations
-Vectors / RAG   Qdrant + pgvector
-Eval harness    Golden datasets + regression detection + grounding/faithfulness · CI-wired
-Observability   Langfuse traces + Prometheus + Grafana + Loki
-Automation      n8n
-Website         Astro 6 + Tailwind 4.2 + Cloudflare Pages
-Infra spine     Docker Compose · ~27 containers (Traefik, LiteLLM, Langfuse, Qdrant, Ollama GPU, n8n …)
-Build harness   Claude Code + GitHub Copilot + Gemini CLI + Codex, synchronized w/ trust-but-verify
-```
-
-</details>
-
----
-
-## Open-Source Resources
-
-| Resource | What's Inside |
+| Resource | What's inside |
 |:---------|:-------------|
-| [**CouncilVerse**](https://github.com/Relay-Launch/councilverse) | Multi-agent debate engine, npm packages, MIT licensed |
-| [**automation-templates**](https://github.com/Relay-Launch/.github/tree/main/automation-templates) | Production n8n workflows and self-host playbooks |
+| [**CouncilVerse**](https://github.com/Relay-Launch/councilverse) | Multi-agent review engine, npm packages, MIT licensed |
+| [**automation-templates**](https://github.com/Relay-Launch/.github/tree/main/automation-templates) | n8n workflows and self-host playbooks |
 | [**integration-cookbook**](https://github.com/Relay-Launch/.github/tree/main/integration-cookbook) | API recipes for Stripe, Slack, HubSpot, Sheets |
 | [**business-audit-framework**](https://github.com/Relay-Launch/.github/tree/main/business-audit-framework) | 8-area diagnostic, scoring rubric, priority matrix |
 | [**kpi-dashboard-templates**](https://github.com/Relay-Launch/.github/tree/main/kpi-dashboard-templates) | KPI selection guide and dashboard specs |
@@ -272,22 +140,17 @@ Build harness   Claude Code + GitHub Copilot + Gemini CLI + Codex, synchronized 
 
 ## Founder
 
-**Victor David Medina**, veteran founder, Watertown, MA.
-
-Eight years of enterprise operations. Cloud and platform infrastructure (Cloudflare Workers, AWS, Terraform). Full-stack AI systems: multi-model councils, owner-approved autonomy, self-healing monitors, CI-wired evals. Builds with a four-agent engineering harness (Claude Code, GitHub Copilot, Gemini CLI, Codex) running synchronized sprints with a trust-but-verify gate.
-
-Building AI systems that do the work, not just talk about it.
+**Victor David Medina**, veteran founder, Watertown, MA. Builds RelayLaunch solo with the AI fleet above, on the rule that AI prepares the work and the owner approves it.
 
 ---
 
 <p align="center">
   <a href="https://relaylaunch.com"><strong>relaylaunch.com</strong></a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
-  <a href="https://deck.relaylaunch.com"><strong>Try Relay Deck</strong></a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+  <a href="https://relaylaunch.com/scan/ai-visibility/"><strong>Free scan</strong></a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
   <a href="https://github.com/Relay-Launch/councilverse"><strong>CouncilVerse</strong></a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
   <a href="mailto:hello@relaylaunch.com"><strong>hello@relaylaunch.com</strong></a>
 </p>
 
 <p align="center">
-  <sub><strong>RelayLaunch LLC</strong> &middot; Veteran-Owned &middot; Watertown, MA</sub><br>
-  <sub><em>Every part of your business. One AI.</em></sub>
+  <sub><strong>RelayLaunch LLC</strong> &middot; Veteran-Owned &middot; Watertown, MA</sub>
 </p>
