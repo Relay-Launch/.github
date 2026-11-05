@@ -38,8 +38,8 @@ Most owners do not know whether an AI assistant or a search engine can read who 
 
 1. **See the gap.** The free AI-Readiness scan answers 31 yes-or-no questions about your public site. Your score shows first; one optional email unlocks the itemized fix list.
 2. **Fix what it found.** The Get Found Fix Pass works through the 14 get-found checks with you watching. Each one flips, or you are told plainly why it cannot on your platform.
-3. **Keep it from drifting.** Site Care re-runs the 14 checks every month and handles small edits, hosting and updates.
-4. **Run the loop.** Starter gives you a short Morning Brief whenever something needs an owner decision.
+3. **Run the loop.** Starter, $199/mo, is the one monthly: the owner-approved Morning Brief loop (get found, get booked, review lift) plus the record of every approved action, and the 14 get-found checks re-run monthly with a short written note on what changed. On a site we built or fixed, it also carries hosting, SSL and uptime watch, security updates, and up to 4 small content edits a month.
+4. **Go further.** Full Onboarding, $5,995 one-time, payable 50/50: $2,997.50 deposit at signature, $2,997.50 on delivery. The founder-led launch: a template-led Cloudflare website (up to 5 core pages), schema, analytics, and standard Relay workflows.
 
 [See all 31 checks &rarr;](https://relaylaunch.com/scan/checks/)
 
@@ -53,11 +53,8 @@ Flat by design: no required setup fee, no usage meter, no annual lock, cancel an
 |:-----|:------|:-------------|
 | **AI-Readiness Score** | $0 | 31 checks on your public site. Score first, email optional |
 | **Get Found Fix Pass** | $350 one-time | The 14 get-found checks fixed on your existing site, with you watching. Nothing renews |
-| **Site Care** | $149/mo | Upkeep for a site we built or fixed: hosting, SSL, uptime watch, up to 4 small edits a month, the 14 checks re-run monthly |
-| **Starter** | $199/mo | Owner-approved loop: get found, get booked, review lift, and a portable record of every approved action |
-| **Team** | $999/mo | 5 seats, month-to-month |
-| **Enterprise** | $3,000/mo | Unlimited seats, SSO, audit trails |
-| **Full Onboarding** | $5,995 one-time | Optional founder-led launch: a template-led Cloudflare website (up to 5 core pages), schema, analytics, and standard Relay workflows |
+| **Starter** | $199/mo | Owner-approved loop: get found, get booked, review lift, and a portable record of every approved action - plus the 14 get-found checks re-run monthly with a short written note on what changed. On a site we built or fixed: hosting, SSL and uptime watch, security updates, and up to 4 small edits a month |
+| **Full Onboarding** | $5,995 one-time, payable 50/50: $2,997.50 deposit at signature, $2,997.50 on delivery | Optional founder-led launch: a template-led Cloudflare website (up to 5 core pages), schema, analytics, and standard Relay workflows |
 
 **Proof status:** no verified client outcomes are published yet. Samples stay labeled Sample, and we do not promise rankings, placement, or traffic.
 
