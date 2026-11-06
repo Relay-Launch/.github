@@ -6,7 +6,7 @@
 
 ## The Problem With Most Dashboards
 
-We have reviewed hundreds of business dashboards over the years, and roughly 80% of them share the same failure mode: they were built to display data rather than to support decisions. The result is a screen full of numbers that nobody looks at after the first two weeks.
+The common failure mode: dashboards built to display data rather than to support decisions. The result is a screen full of numbers that nobody looks at after the first two weeks.
 
 A good dashboard gets opened every morning. A great dashboard changes how a team operates. The difference is not the data — it is the design.
 

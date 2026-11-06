@@ -109,7 +109,7 @@ When a service sends you a webhook, you need to verify it's really from that ser
 
 ## Common Integration Patterns
 
-Over years of building integrations for small businesses, we see the same patterns again and again:
+We see the same patterns again and again:
 
 ### 1. Notification Routing
 
