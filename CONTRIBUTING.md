@@ -31,7 +31,6 @@ We're always looking for ways to improve our materials and processes. Open an is
 ## Code Style
 
 - HTML should be semantic and accessible (WCAG 2.1 AA)
-- CSS follows our existing custom property system (see `:root` variables in `index.html`)
 - Keep things simple and readable
 
 ## Questions?

@@ -8,7 +8,7 @@
 
 You're spending hours on tasks a machine should handle. Missed follow-ups, manual data entry, onboarding bottlenecks, invoicing headaches. We see these problems in almost every small business we work with.
 
-So we built this. A library of production-ready automation templates pulled from real client engagements. Each workflow has been deployed in live environments, refined against actual failure modes, and documented so you can adapt it to your stack without starting from scratch.
+So we built this. A library of automation templates, documented so you can adapt them to your stack without starting from scratch.
 
 ## Who It's For
 

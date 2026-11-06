@@ -6,7 +6,7 @@
 
 Not every process should be automated. Some processes aren't ready yet. Others aren't worth the effort. And a few will actually get worse if you automate them prematurely.
 
-This checklist helps you figure out which category your process falls into before you invest time and money building something. We use a version of this with every client engagement, and it's saved more than a few businesses from automating the wrong thing at the wrong time.
+This checklist helps you figure out which category your process falls into before you invest time and money building something.
 
 ---
 
@@ -246,7 +246,7 @@ Start with the process that scored highest. Get one automation running smoothly.
 
 If you want help identifying your highest-impact automation opportunities, we do exactly that in our operations audit. It's a structured assessment of your workflows, tools, and team that produces a prioritized automation roadmap tailored to your business.
 
-[Learn more at Relay▸Launch](https://relaylaunch.com) | [Book an operations audit](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml)
+[Learn more at Relay▸Launch](https://relaylaunch.com)
 
 ---
 

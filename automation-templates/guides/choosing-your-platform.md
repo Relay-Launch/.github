@@ -6,7 +6,7 @@
 
 We get asked this question more than any other: "Which automation tool should we use?"
 
-The honest answer is that it depends. But after implementing automations for dozens of small businesses across all four major platforms, we've developed a pretty clear sense of when each one shines and when it'll make you want to throw your laptop out the window.
+The honest answer is that it depends.
 
 This guide gives you our unfiltered take on Zapier, Make (formerly Integromat), n8n, and Microsoft Power Automate. We use all four regularly, and we don't have a sponsorship deal with any of them.
 
@@ -226,15 +226,7 @@ Most small businesses should start with Zapier or Make. Build your first few aut
 
 We've seen too many businesses spend weeks evaluating platforms when they could have had their first automation running in an afternoon. The best platform is the one you'll actually use.
 
-If you outgrow your starting platform -- and that's a great problem to have -- we can help you migrate. We've done it dozens of times, and it's less painful than you'd think.
-
----
-
-## Need Help Deciding?
-
-We offer a free 30-minute automation assessment call where we'll look at your specific tools, workflows, and team capabilities and give you a concrete recommendation. No pitch, no pressure -- just an honest opinion from people who've done this a lot.
-
-[Book a call with Relay▸Launch](https://github.com/Relay-Launch/.github/issues/new?template=project-request.yml)
+If you outgrow your starting platform -- and that's a great problem to have -- we can help you migrate.
 
 ---
 

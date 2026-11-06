@@ -8,7 +8,7 @@
 
 You can't improve what you're not measuring. And you can't make decisions from a dashboard nobody trusts.
 
-This is a collection of production-ready KPI dashboard templates, frameworks, and tooling built from years of implementing measurement systems for small and mid-size businesses. Every template, formula, and design pattern here has been deployed in real businesses generating between $500K and $50M in annual revenue. If you've ever stared at a blank spreadsheet wondering what to track, this collection will get you to a working measurement system in days rather than months.
+This is a collection of production-ready KPI dashboard templates, frameworks, and tooling built from years of implementing measurement systems for small and mid-size businesses. If you've ever stared at a blank spreadsheet wondering what to track, this collection will get you to a working measurement system in days rather than months.
 
 ---
 

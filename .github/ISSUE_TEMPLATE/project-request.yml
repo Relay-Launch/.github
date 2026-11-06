@@ -35,20 +35,6 @@ body:
     validations:
       required: false
 
-  - type: dropdown
-    id: package
-    attributes:
-      label: Which package are you interested in?
-      options:
-        - Signal — Visibility & Ops Audit
-        - Blueprint — Systems Strategy
-        - Relay — Build & Connect
-        - Sustain — Monthly Growth Support
-        - Not sure yet — I need guidance
-        - Something custom
-    validations:
-      required: true
-
   - type: textarea
     id: challenge
     attributes:
